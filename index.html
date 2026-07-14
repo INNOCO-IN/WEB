@@ -8,105 +8,270 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/styles.css">
-  <script src="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/_ds_bundle.js"></script>
-  <template id="__bundler_thumbnail">
-    <div style="width:100%;height:100%;background:#1E8A86;display:flex;align-items:center;justify-content:center;color:#FAF4E2;font-family:serif;font-size:38px;font-style:italic">IN</div>
-  </template>
-  <style>
-    body { margin:0; background:var(--color-paper); }
-    a { color: var(--color-teal); }
-    a:hover { color: var(--color-magenta); }
-  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #1A1613; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #E5188C; color: #FAF4E2; }
+  .home-card { text-decoration: none; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .home-card, .home-card h1, .home-card h2, .home-card h3, .home-card p, .home-card span, .home-card div { text-decoration: none; }
+  .home-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(26,22,19,0.18); }
+  @keyframes innoco-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .innoco-ticker-track { animation: none !important; }
+  }
+</style>
 </helmet>
-<dc-import name="SiteHeader" active="" hint-size="100%,76px"></dc-import>
-<main style="background:var(--color-paper)">
 
-  <section style="maxWidth:var(--content-max-width);margin:0 auto;padding:88px var(--content-side-padding) 64px;display:flex;flexDirection:column;alignItems:center;textAlign:center;gap:28px">
-    <h1 style="font:var(--text-display-1);fontFamily:var(--font-serif);color:var(--color-ink);margin:0;maxWidth:920px">What if ME and WE were never actually two things?</h1>
-    <p style="font:var(--text-body-lg);fontFamily:var(--font-serif);color:var(--color-ink);opacity:0.85;margin:0;maxWidth:640px">IN is a studio where we practice ME=WE through honest conversations and artful expressions.</p>
-    <p style="font:600 20px/1.4 var(--font-sans);letterSpacing:0.01em;color:var(--color-ink);margin:0;textTransform:uppercase">Start within. Share the space. Serve the whole.</p>
-    <p style="font:italic 500 32px/1.3 var(--font-serif);color:var(--color-teal);margin:0">Are you IN?</p>
-    <div style="display:flex;gap:16px;flexWrap:wrap;justifyContent:center;marginTop:8px">
-      <a href="ME-WE.dc.html" style="textDecoration:none;font:var(--text-button);fontFamily:var(--font-sans);letterSpacing:var(--tracking-button);background:var(--color-teal);color:var(--color-paper);borderRadius:var(--radius-pill);padding:14px 28px">Explore ME=WE</a>
-      <a href="Workshop.dc.html" style="textDecoration:none;font:var(--text-button);fontFamily:var(--font-sans);letterSpacing:var(--tracking-button);background:transparent;color:var(--color-ink);border:1.5px solid var(--color-ink);borderRadius:var(--radius-pill);padding:13px 27px">Join a Studio</a>
-      <a href="Connect.dc.html" style="textDecoration:none;font:var(--text-button);fontFamily:var(--font-sans);letterSpacing:var(--tracking-button);background:transparent;color:var(--color-ink);border:1.5px solid var(--color-ink);borderRadius:var(--radius-pill);padding:13px 27px">Connect</a>
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ===================== NAV ===================== -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(250,244,226,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(26,22,19,0.12);">
+    <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="index.html#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: #1A1613;">
+        <img src="innoco-mark.png" alt="INNOCO" style="height: 34px; width: auto; display: block;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 26px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 14.5px;">
+        <a href="about.html" style="color: #1A1613; text-decoration: none;">About IN</a>
+        <a href="me-we.html" style="color: #1A1613; text-decoration: none;">ME=WE</a>
+        <a href="workshops.html" style="color: #1A1613; text-decoration: none;">Workshop</a>
+        <a href="story.html" style="color: #1A1613; text-decoration: none;">Story</a>
+        <a href="connect.html" style="color: #1A1613; text-decoration: none;">Connect</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="connect.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.02em; text-decoration: none; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 9px 18px; white-space: nowrap;">Are you IN?</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="top" style="max-width: 1320px; margin: 0 auto; padding: 64px 28px 30px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end;">
+      <div style="flex: 1 1 540px; min-width: 300px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #1E8A86; margin-bottom: 24px;">Start within · Share the space · Serve the whole</div>
+        <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(42px, 6.2vw, 88px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 26px; text-wrap: balance;">What if <span style="font-style: italic; color: #E5188C;">ME</span> and <span style="font-style: italic; color: #1C6E92;">WE</span> were never actually two things?</h1>
+        <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(21px, 2.3vw, 27px); line-height: 1.5; max-width: 600px; color: rgba(26,22,19,0.82); margin: 0 0 30px;">IN is a studio where we practice ME=WE through honest conversations and artful expressions.</p>
+        <div style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: clamp(22px, 2.2vw, 28px); color: #1A1613; margin-bottom: 18px;">Are you IN?</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px;">
+          <a href="me-we.html" style="text-decoration: none; color: #FAF4E2; background: #1A1613; border: 1.5px solid #1A1613; border-radius: 999px; padding: 15px 28px;">Explore ME=WE</a>
+          <a href="#workshops" style="text-decoration: none; color: #1A1613; background: transparent; border: 1.5px solid #1A1613; border-radius: 999px; padding: 15px 28px;">Join a Studio</a>
+          <a href="connect.html" style="text-decoration: none; color: #1A1613; background: transparent; border: 1.5px solid #1A1613; border-radius: 999px; padding: 15px 28px;">Connect</a>
+        </div>
+      </div>
+      <div style="flex: 1 1 360px; min-width: 280px;">
+        <img src="https://picsum.photos/seed/innoco-hero/900/675" alt="Featured artwork" style="display:block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+      </div>
     </div>
   </section>
 
-  <section style="maxWidth:var(--content-max-width);margin:0 auto;padding:0 var(--content-side-padding) 80px">
-    <div style="aspectRatio:'16 / 9';background:var(--color-paper-dim);border:1px dashed var(--color-ink-40);display:flex;alignItems:center;justifyContent:center">
-      <span style="font:var(--text-caption);fontFamily:var(--font-sans);color:var(--text-muted);textTransform:uppercase;letterSpacing:0.08em">[ PHOTO — landing-hero: a real workshop moment, hands and materials ]</span>
-    </div>
-  </section>
+  <!-- ===================== GRID ===================== -->
+  <section id="mewe" style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 40px;">
+    <div style="column-width: 360px; column-gap: 22px;">
 
-  <section style="maxWidth:var(--content-max-width);margin:0 auto;padding:0 var(--content-side-padding) 100px">
-    <div style="display:flex;justifyContent:space-between;alignItems:baseline;marginBottom:28px;gap:16px;flexWrap:wrap">
-      <div style="font:var(--text-eyebrow);letterSpacing:var(--tracking-eyebrow);textTransform:uppercase;color:var(--color-teal)">FROM THE STUDIO</div>
-      <span title="OPEN ITEM: rotating feed switches to latest-first once Story archive has volume." style="display:inline-flex;alignItems:center;gap:6px;padding:3px 10px;border:1px dashed var(--color-ink-40);borderRadius:var(--radius-pill);font:var(--text-caption);fontFamily:var(--font-sans);color:var(--text-muted);cursor:help">
-        <span style="width:5px;height:5px;borderRadius:50%;background:var(--color-teal)"></span>REVIEW
-      </span>
-    </div>
-    <div style="{{ feedGridStyle }}">
-      <sc-for list="{{ feedCards }}" as="card" hint-placeholder-count="3">
-        <a href="{{ card.href }}" style="{{ card.wrapStyle }}" onMouseEnter="{{ card.onEnter }}">
-          <div style="position:relative;background:{{ card.accent }};color:{{ card.fg }};padding:28px 24px 24px 52px;minHeight:260px;display:flex;flexDirection:column;justifyContent:flex-end;gap:10px">
-            <div style="position:absolute;left:20px;top:24px;bottom:24px;display:flex;flexDirection:column;alignItems:center;gap:8px">
-              <span style="width:6px;height:6px;borderRadius:50%;background:{{ card.fg }}"></span>
-              <span style="writingMode:vertical-rl;textOrientation:mixed;transform:rotate(180deg);font:var(--text-label);letterSpacing:var(--tracking-label);textTransform:uppercase;opacity:0.85">{{ card.label }}</span>
-            </div>
-            <div style="font:var(--text-eyebrow);letterSpacing:var(--tracking-eyebrow);textTransform:uppercase;opacity:0.85">{{ card.kicker }}</div>
-            <div style="font:600 24px/1.3 var(--font-serif)">{{ card.title }}</div>
-            <div style="font:var(--text-body);fontFamily:var(--font-serif);opacity:0.92">{{ card.body }}</div>
+      <!-- ME=WE philosophy -->
+      <a href="me-we.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #1E8A86; color: #FAF4E2; padding: 30px 30px 32px 50px; min-height: 430px;">
+        <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.85);">Philosophy</div>
+        <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #FAF4E2;"></div>
+        <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 58px; line-height: 1.0; margin: 0 0 16px; letter-spacing: -0.01em;">ME = WE</h2>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.4; margin: 0 0 24px; color: rgba(250,244,226,0.92);">Separation may be felt, but relationships are structural. We are not outside the pattern — we are expressions of it.</p>
+        <div style="display: flex; flex-direction: column; gap: 13px; font-family: 'Newsreader', serif;">
+          <div style="border-top: 1px solid rgba(250,244,226,0.28); padding-top: 11px;"><span style="font-size: 23px; font-weight: 600;">ME ≠ WE</span><span style="display:block; font-size: 14px; color: rgba(250,244,226,0.75);">I remain inside my own frame.</span></div>
+          <div style="border-top: 1px solid rgba(250,244,226,0.28); padding-top: 11px;"><span style="font-size: 23px; font-weight: 600;">ME + WE</span><span style="display:block; font-size: 14px; color: rgba(250,244,226,0.75);">My choices ripple outward.</span></div>
+          <div style="border-top: 1px solid rgba(250,244,226,0.28); padding-top: 11px;"><span style="font-size: 23px; font-weight: 600;">(ME WE)</span><span style="display:block; font-size: 14px; color: rgba(250,244,226,0.75);">We face the challenge as one unit.</span></div>
+          <div style="border-top: 1px solid rgba(250,244,226,0.28); padding-top: 11px;"><span style="font-size: 23px; font-weight: 600;">ME = WE</span><span style="display:block; font-size: 14px; color: rgba(250,244,226,0.75);">When I move, the relational field moves.</span></div>
+        </div>
+      </a>
+
+      <!-- Core workshop (image) -->
+      <article id="workshops" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F3EAD0; color: #1A1613; padding-bottom: 26px;">
+        <div style="position: relative;">
+          <img src="https://picsum.photos/seed/innoco-core/900/675" alt="Workshop photo" style="display:block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+          <div style="position: absolute; left: 14px; top: 14px; background: #1A1613; color: #FAF4E2; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 11px;">Core Workshop · Start Here</div>
+        </div>
+        <div style="padding: 20px 26px 0 26px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 31px; line-height: 1.06; margin: 0 0 10px;"><a href="workshop-me-we-core.html" style="color: inherit; text-decoration: none;">ME=WE Möbius Making</a></h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.5; margin: 0 0 16px; color: rgba(26,22,19,0.78);">The first experience of ME=WE as something lived, not just explained. Craft a Möbius strip, question together, and see connection from a new angle. For everyone — start here.</p>
+          <a href="workshop-me-we-core.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.04em; color: #1E8A86; text-decoration: none;">View workshop →</a>
+        </div>
+      </article>
+
+      <!-- Möbius solid magenta -->
+      <a href="workshop-me-we-core.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #E5188C; color: #FAF4E2; padding: 28px 28px 30px 50px; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.9);">Workshop</div>
+          <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #FAF4E2;"></div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px;">60 min · hands-on art</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 50px; line-height: 0.98; margin: 0 0 14px;">Are you <span style="font-style: italic;">IN?</span></h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; margin: 0; color: rgba(250,244,226,0.95);">The ME=WE Möbius Making Workshop — craft a Möbius strip and rediscover how ME and WE are one continuous surface.</p>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 26px;">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px;">Sign up</span>
+          <span style="width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        </div>
+      </a>
+
+      <!-- How we work — yellow -->
+      <a href="me-we.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F4C63D; color: #1A1613; padding: 28px 28px 30px 50px; min-height: 320px;">
+        <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(26,22,19,0.7);">Method</div>
+        <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1A1613;"></div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 32px; line-height: 1.04; margin: 0 0 20px;">How we work</h3>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.3;">
+          <div style="border-top: 1.5px solid rgba(26,22,19,0.3); padding-top: 12px;">Deep listening, dialogue &amp; reflection</div>
+          <div style="border-top: 1.5px solid rgba(26,22,19,0.3); padding-top: 12px;">Head–Heart–Hand integrated facilitation</div>
+          <div style="border-top: 1.5px solid rgba(26,22,19,0.3); padding-top: 12px;">Small, real-life practice in homes, teams &amp; communities</div>
+          <div style="border-top: 1.5px solid rgba(26,22,19,0.3); padding-top: 12px;">Be a protagonist responsible for the shift</div>
+        </div>
+      </a>
+
+      <!-- Otto Scharmer quote -->
+      <article style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #FAF4E2; border: 1.5px solid #1A1613; color: #1A1613; padding: 30px 30px 28px 50px; min-height: 340px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(26,22,19,0.6);">Voices</div>
+          <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1A1613;"></div>
+          <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; line-height: 1.26; margin: 0; letter-spacing: -0.01em;">“We must move from the <span style="font-style: italic;">ego-system</span> to <span style="font-style: italic;">ecosystem</span> awareness — that considers others and includes the whole.”</p>
+        </div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; margin-top: 22px; color: rgba(26,22,19,0.7);">— Otto Scharmer</div>
+      </article>
+
+      <!-- Second Life (image) light blue -->
+      <a href="workshops.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #BDDAE7; color: #1A1613; padding-bottom: 26px;">
+        <div style="position: relative;">
+          <img src="https://picsum.photos/seed/innoco-youth/700/700" alt="Youth workshop photo" style="display:block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover;">
+          <div style="position: absolute; left: 14px; top: 14px; background: #FAF4E2; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 10px;">Workshop · For All</div>
+        </div>
+        <div style="padding: 20px 26px 0 26px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.06; margin: 0 0 10px;">ME=WE Second Life</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.78);">Self-care fundamentals — exercise, sleep, eating, meditation — built into steady, livable practice.</p>
+        </div>
+      </a>
+
+      <!-- Metanoia solid purple -->
+      <a href="workshop-metanoia.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #4B2E73; color: #FAF4E2; padding: 28px 28px 30px 50px; min-height: 320px;">
+        <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.85);">Workshop · Orgs</div>
+        <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #FAF4E2;"></div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 40px; line-height: 1.0; margin: 0 0 14px;">Metanoia</h3>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; color: rgba(250,244,226,0.75);">Change from within</div>
+        <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0;">Organizational transformation, 1 to 4 days. Multiple package options depending on depth and team size.</p>
+      </a>
+
+      <!-- The Shift cycle — soft pink -->
+      <a href="me-we.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F7C7D7; color: #1A1613; padding: 28px 28px 30px 50px; min-height: 340px;">
+        <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(26,22,19,0.6);">The Shift</div>
+        <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1A1613;"></div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.06; margin: 0 0 18px;">A living developmental cycle</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 9px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px;">
+          <span style="background: #FAF4E2; padding: 8px 14px; border-radius: 999px;">Recognition</span>
+          <span style="align-self: center; color: rgba(26,22,19,0.5);">→</span>
+          <span style="background: #FAF4E2; padding: 8px 14px; border-radius: 999px;">Participation</span>
+          <span style="align-self: center; color: rgba(26,22,19,0.5);">→</span>
+          <span style="background: #FAF4E2; padding: 8px 14px; border-radius: 999px;">Reflection</span>
+          <span style="align-self: center; color: rgba(26,22,19,0.5);">→</span>
+          <span style="background: #FAF4E2; padding: 8px 14px; border-radius: 999px;">Practice</span>
+          <span style="align-self: center; color: rgba(26,22,19,0.5);">→</span>
+          <span style="background: #FAF4E2; padding: 8px 14px; border-radius: 999px;">Re-participation</span>
+          <span style="align-self: center; color: rgba(26,22,19,0.5);">→</span>
+          <span style="background: #1A1613; color: #FAF4E2; padding: 8px 14px; border-radius: 999px;">Growth</span>
+        </div>
+      </a>
+
+      <!-- Story (image) -->
+      <a href="story.html" class="home-card" id="stories" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F3EAD0; color: #1A1613;">
+        <div style="position: relative;">
+          <img src="https://picsum.photos/seed/innoco-story/700/933" alt="Story image" style="display:block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;">
+          <div style="position: absolute; left: 14px; top: 14px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #FAF4E2; text-shadow: 0 1px 6px rgba(0,0,0,0.4);">Story</div>
+        </div>
+        <div style="padding: 20px 26px 26px 26px;">
+          <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 22px; line-height: 1.32; margin: 0 0 12px;">“Perhaps we were already connected.”</p>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.04em; color: rgba(26,22,19,0.6);">A participant reflection · ME=WE Core</div>
+        </div>
+      </a>
+
+      <!-- IN-Collectives nav — green halftone -->
+      <a id="collectives" href="in-collectives.html" style="text-decoration: none; position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; color: #FAF4E2; padding: 28px 28px 30px 50px; min-height: 380px; background-color: #2E8B57; background-image: radial-gradient(circle at 46% 64%, rgba(250,244,226,0.96) 0%, rgba(250,244,226,0.12) 64%), radial-gradient(circle, rgba(250,244,226,0.32) 1.1px, transparent 1.6px); background-size: 100% 100%, 9px 9px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #1A1613;">Network</div>
+          <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1A1613;"></div>
+        </div>
+        <div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 38px; line-height: 1.0; margin: 0 0 12px; color: #1A1613;">IN-Collectives</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; margin: 0; color: rgba(26,22,19,0.86); max-width: 280px;">Independent partners — not branches — who host studios and adapt ME=WE to their own local context.</p>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 24px;">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; color: #1A1613;">Host a studio</span>
+          <span style="width: 56px; height: 56px; border-radius: 50%; background: #1A1613; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 24px;">→</span>
+        </div>
+      </a>
+
+      <!-- Three-word alias / community ticker — black -->
+      <a href="story.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #1A1613; color: #FAF4E2; padding: 28px 0 30px 0; min-height: 280px; overflow: hidden;">
+        <div style="padding: 0 28px 0 50px;">
+          <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.7);">Community</div>
+          <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1E8A86;"></div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 28px; line-height: 1.1; margin: 0 0 8px;">Three-word aliases</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.4; margin: 0 0 22px; color: rgba(250,244,226,0.7);">How our community shows up — names kept private, presence kept public.</p>
+        </div>
+        <div style="position: relative; width: 100%; overflow: hidden; padding: 10px 0; border-top: 1px solid rgba(250,244,226,0.18); border-bottom: 1px solid rgba(250,244,226,0.18);">
+          <div class="innoco-ticker-track" style="display: inline-flex; gap: 30px; white-space: nowrap; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.02em; animation: innoco-ticker 22s linear infinite; will-change: transform;">
+            <span style="color: #F5A81E;">quiet brave river</span><span style="color: #1E8A86;">open warm tide</span><span style="color: #E5188C;">small bold spark</span><span style="color: #F4C63D;">slow kind light</span><span style="color: #BDDAE7;">deep rooted bloom</span><span style="color: #F5A81E;">quiet brave river</span><span style="color: #1E8A86;">open warm tide</span><span style="color: #E5188C;">small bold spark</span><span style="color: #F4C63D;">slow kind light</span><span style="color: #BDDAE7;">deep rooted bloom</span>
           </div>
-        </a>
-      </sc-for>
+        </div>
+      </a>
+
+      <!-- More workshops list — amber -->
+      <a href="workshops.html" class="home-card" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F5A81E; color: #1A1613; padding: 28px 28px 30px 50px; min-height: 340px;">
+        <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(26,22,19,0.7);">Series</div>
+        <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1A1613;"></div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.06; margin: 0 0 18px;">More in the ME=WE series</h3>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-top: 1.5px solid rgba(26,22,19,0.3); padding: 11px 0; font-family: 'Newsreader', serif; font-size: 20px;">Bucket List <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(26,22,19,0.6);">For All</span></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-top: 1.5px solid rgba(26,22,19,0.3); padding: 11px 0; font-family: 'Newsreader', serif; font-size: 20px;">Two Wings, Shifters <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(26,22,19,0.6);">Parents</span></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-top: 1.5px solid rgba(26,22,19,0.3); padding: 11px 0; font-family: 'Newsreader', serif; font-size: 20px;">Hero's Journey <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(26,22,19,0.6);">Neighbors</span></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-top: 1.5px solid rgba(26,22,19,0.3); padding: 11px 0; font-family: 'Newsreader', serif; font-size: 20px;">Pop-Up &amp; Global Lab <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(26,22,19,0.6);">Open</span></div>
+        </div>
+      </a>
+
+      <!-- About / why IN — blue halftone nav -->
+      <a href="about.html" class="home-card" id="about" style="position: relative; display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; color: #1A1613; padding: 28px 28px 30px 50px; min-height: 360px; background-color: #1C6E92; background-image: radial-gradient(circle at 42% 38%, rgba(250,244,226,0.97) 0%, rgba(250,244,226,0.1) 60%), radial-gradient(circle, rgba(250,244,226,0.32) 1.1px, transparent 1.6px); background-size: 100% 100%, 9px 9px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="position: absolute; left: 16px; top: 24px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #1A1613;">About</div>
+        <div style="position: absolute; left: 18px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: #1A1613;"></div>
+        <div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.06; margin: 0 0 12px;">Why IN exists</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; max-width: 290px; color: rgba(26,22,19,0.9);">We live in a time of fragmentation. When perception shifts, connection can be restored — and new patterns of action emerge from within.</p>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 24px;">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">Read about IN</span>
+          <span style="width: 56px; height: 56px; border-radius: 50%; background: #1A1613; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 24px;">→</span>
+        </div>
+      </a>
+
     </div>
   </section>
 
-</main>
-<dc-import name="SiteFooter" hint-size="100%,260px"></dc-import>
+  <!-- ===================== CTA BAND ===================== -->
+  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 8px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">The invitation</p>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(34px, 5vw, 64px); line-height: 1.04; margin: 0 0 14px; letter-spacing: -0.01em;">ME=WE is not something to adopt.<br>It is something to experience.</h2>
+      <p style="font-family: 'Newsreader', serif; font-size: 21px; margin: 0 0 32px; color: rgba(250,244,226,0.9);">If this resonates, step into the work.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="workshops.html" style="text-decoration: none; color: #1A1613; background: #FAF4E2; border-radius: 999px; padding: 15px 30px;">Find a workshop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="connect" style="background: #1A1613; color: #FAF4E2; padding: 56px 28px 32px; border-top: 1px solid rgba(26,22,19,0.20); box-sizing: border-box;">
+    <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <p style="font-family: Helvetica, Arial, sans-serif; font-weight: 300; font-size: 15px; line-height: 1.5; opacity: 0.55; max-width: 1250px; margin: 0;">
+        © 2016–2026 INNOCO. All rights reserved. The use of any content, video, photograph, illustration, or image on this website without the written permission of INNOCO is strictly prohibited. in.innoco@gmail.com · Seoul, Korea. ME=WE framework and workshop materials are shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+      </p>
+    </div>
+  </footer>
+
+</div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { activeCard: 0 };
-
-  componentDidMount() {
-    this._t = setInterval(() => {
-      this.setState((s) => ({ activeCard: (s.activeCard + 1) % 3 }));
-    }, 3600);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this._t);
-  }
-
-  renderVals() {
-    const raw = [
-      { label: 'WORKSHOP', kicker: 'CORE WORKSHOP · START HERE', title: 'ME=WE Möbius Making', body: 'The first experience of ME=WE as something lived, not explained.', href: 'Mobius Making.dc.html', accent: 'var(--color-teal)', fg: 'var(--color-paper)' },
-      { label: 'STORY', kicker: 'SIGNATURE STORY', title: 'Stories told by everyone. Owned by no one.', body: 'A teacher, a neighbor, a moment someone dared to try ME=WE — told in their own words.', href: 'Story.dc.html', accent: 'var(--color-amber)', fg: 'var(--color-ink)' },
-      { label: 'COMMUNITY', kicker: 'FOOD REVOLUTION', title: 'KULNA Community Garden', body: 'A classroom experiment that became a living ecosystem — since 2016.', href: 'Food Revolution.dc.html', accent: 'var(--color-deepblue)', fg: 'var(--color-paper)' },
-    ];
-    const feedCards = raw.map((c, i) => ({
-      ...c,
-      wrapStyle: {
-        textDecoration: 'none', display: 'block',
-        transform: this.state.activeCard === i ? 'translateY(-4px)' : 'translateY(0)',
-        boxShadow: this.state.activeCard === i ? 'var(--shadow-hover)' : 'none',
-        transition: 'transform 200ms cubic-bezier(0.4,0,0.2,1), box-shadow 200ms cubic-bezier(0.4,0,0.2,1)',
-      },
-      onEnter: () => this.setState({ activeCard: i }),
-    }));
-    return {
-      feedCards,
-      feedGridStyle: { display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 22 },
-    };
-  }
-}
-</script>
 </body>
 </html>

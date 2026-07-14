@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #1A1613; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1E8A86; color: #FAF4E2; }
+</style>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ===================== NAV ===================== -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(250,244,226,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(26,22,19,0.12);">
+    <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="index.html#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: #1A1613;">
+        <img src="innoco-mark.png" alt="INNOCO" style="height: 34px; width: auto; display: block;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 26px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 14.5px;">
+        <a href="about.html" style="color: #1A1613; text-decoration: none;">About IN</a>
+        <a href="me-we.html" style="color: #1A1613; text-decoration: none;">ME=WE</a>
+        <a href="workshops.html" style="color: #1A1613; text-decoration: none;">Workshop</a>
+        <a href="story.html" style="color: #1E8A86; text-decoration: none;">Story</a>
+        <a href="connect.html" style="color: #1A1613; text-decoration: none;">Connect</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="connect.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.02em; text-decoration: none; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 9px 18px; white-space: nowrap;">Are you IN?</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 66px 28px 40px;">
+    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #1E8A86; margin-bottom: 22px;">Story · ME=WE in action</div>
+    <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.99; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 15ch; text-wrap: balance;">Living evidence, not marketing hype.</h1>
+    <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.42; max-width: 660px; margin: 0; color: rgba(26,22,19,0.82);">Told through drawing, writing, and music — the traces our community leaves behind. Read what facilitators and participants carry out of the room, then share your own.</p>
+  </section>
+
+  <!-- ===================== READ · categories ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 12px 28px 8px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase;">
+      <span style="background: #1A1613; color: #FAF4E2; border-radius: 999px; padding: 9px 18px;">All</span>
+      <span style="border: 1.5px solid rgba(26,22,19,0.35); border-radius: 999px; padding: 9px 18px;">Story</span>
+      <span style="border: 1.5px solid rgba(26,22,19,0.35); border-radius: 999px; padding: 9px 18px;">Workshop epilogue</span>
+      <span style="border: 1.5px solid rgba(26,22,19,0.35); border-radius: 999px; padding: 9px 18px;">Tool</span>
+    </div>
+  </section>
+
+  <!-- ===================== STORY GRID ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 26px 28px 20px;">
+    <div style="column-width: 380px; column-gap: 22px;">
+
+      <!-- Featured epilogue (image) -->
+      <article style="display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F3EAD0; color: #1A1613;">
+        <div style="position: relative;">
+          <img src="https://picsum.photos/seed/innoco-epilogue/900/675" alt="Workshop" style="display:block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+          <div style="position: absolute; left: 14px; top: 14px; background: #FAF4E2; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 10px;">Workshop epilogue</div>
+        </div>
+        <div style="padding: 22px 26px 26px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 28px; line-height: 1.08; margin: 0 0 10px;">What the room taught the facilitator</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.44; margin: 0 0 14px; color: rgba(26,22,19,0.78);">A reflection written after a ME=WE Core session — on what shifted when the group stopped explaining and started building.</p>
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; color: rgba(26,22,19,0.6);">By a facilitator · ME=WE Core</span>
+        </div>
+      </article>
+
+      <!-- Quote story — teal -->
+      <article style="display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #1E8A86; color: #FAF4E2; padding: 30px 30px 32px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,244,226,0.78); margin-bottom: 18px;">Story</div>
+        <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: 28px; line-height: 1.26; margin: 0 0 18px;">“Perhaps we were already connected.”</p>
+        <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; color: rgba(250,244,226,0.82);">A participant reflection · ME=WE Core</span>
+      </article>
+
+      <!-- Drawing story (image) -->
+      <article style="display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #BDDAE7; color: #1A1613;">
+        <div style="position: relative;">
+          <img src="https://picsum.photos/seed/innoco-drawing/700/933" alt="Drawing" style="display:block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;">
+          <div style="position: absolute; left: 14px; top: 14px; background: #FAF4E2; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 10px;">Story · Drawing</div>
+        </div>
+        <div style="padding: 20px 26px 26px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 26px; line-height: 1.08; margin: 0 0 8px;">Two hands, one line</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.44; margin: 0; color: rgba(26,22,19,0.78);">A drawing made during Möbius Making — where the ME and WE surfaces became one.</p>
+        </div>
+      </article>
+
+      <!-- Tool card — amber -->
+      <article style="display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F5A81E; color: #1A1613; padding: 30px 30px 32px; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(26,22,19,0.7); margin-bottom: 16px;">Tool</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.04; margin: 0 0 12px;">The ME=WE Story card</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.82);">A small, printable prompt for naming one intentional action to experiment with after a session.</p>
+        </div>
+        <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.04em; margin-top: 22px;">Coming soon</span>
+      </article>
+
+      <!-- Music story — purple -->
+      <article style="display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #4B2E73; color: #FAF4E2; padding: 30px 30px 32px; min-height: 220px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,244,226,0.72); margin-bottom: 16px;">Story · Music</div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">A song for the whole</h3>
+        <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.9);">Recorded by a collective after a retreat — voices that learned to listen before they sang.</p>
+      </article>
+
+      <!-- Written story (image) -->
+      <article style="display: inline-block; width: 100%; vertical-align: top; break-inside: avoid; margin-bottom: 22px; background: #F3EAD0; color: #1A1613;">
+        <div style="position: relative;">
+          <img src="https://picsum.photos/seed/innoco-written/900/675" alt="Story" style="display:block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+          <div style="position: absolute; left: 14px; top: 14px; background: #FAF4E2; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 10px;">Story · Writing</div>
+        </div>
+        <div style="padding: 20px 26px 26px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 26px; line-height: 1.08; margin: 0 0 8px;">The week after the workshop</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.44; margin: 0; color: rgba(26,22,19,0.78);">A participant writes about the small action they chose — and what it changed at home.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== SHARE ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 40px 28px 20px;">
+    <div style="background: #F7C7D7; color: #1A1613; padding: 48px 44px 44px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between;">
+      <div style="flex: 1 1 460px; min-width: 300px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(26,22,19,0.6); margin-bottom: 14px;">Share</div>
+        <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.04; margin: 0 0 12px;">Carry a story out. Bring one back.</h2>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.46; margin: 0; max-width: 520px; color: rgba(26,22,19,0.82);">A drawing, a few lines, a recording — however the shift showed up for you. Your ME=WE Story becomes part of the living record.</p>
+      </div>
+      <a href="connect.html" style="text-decoration: none; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 15px 32px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; white-space: nowrap;">Share your story</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="background: #1A1613; color: #FAF4E2; padding: 56px 28px 32px; margin-top: 36px; border-top: 1px solid rgba(26,22,19,0.20); box-sizing: border-box;">
+    <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <p style="font-family: Helvetica, Arial, sans-serif; font-weight: 300; font-size: 15px; line-height: 1.5; opacity: 0.55; max-width: 1250px; margin: 0;">
+        © 2016–2026 INNOCO. All rights reserved. The use of any content, video, photograph, illustration, or image on this website without the written permission of INNOCO is strictly prohibited. in.innoco@gmail.com · Seoul, Korea. ME=WE framework and workshop materials are shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+      </p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

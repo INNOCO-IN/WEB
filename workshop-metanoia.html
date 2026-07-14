@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #1A1613; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #4B2E73; color: #FAF4E2; }
+</style>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ===================== NAV ===================== -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(250,244,226,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(26,22,19,0.12);">
+    <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="index.html#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: #1A1613;">
+        <img src="innoco-mark.png" alt="INNOCO" style="height: 34px; width: auto; display: block;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 26px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 14.5px;">
+        <a href="about.html" style="color: #1A1613; text-decoration: none;">About IN</a>
+        <a href="me-we.html" style="color: #1A1613; text-decoration: none;">ME=WE</a>
+        <a href="workshops.html" style="color: #1E8A86; text-decoration: none;">Workshop</a>
+        <a href="story.html" style="color: #1A1613; text-decoration: none;">Story</a>
+        <a href="connect.html" style="color: #1A1613; text-decoration: none;">Connect</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="connect.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.02em; text-decoration: none; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 9px 18px; white-space: nowrap;">Are you IN?</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO (accent band) ===================== -->
+  <section style="background: #4B2E73; color: #FAF4E2;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 22px 28px 0;">
+      <a href="workshops.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(250,244,226,0.78); text-decoration: none;">← All workshops</a>
+    </div>
+    <div style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 56px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+      <div style="flex: 1 1 560px; min-width: 300px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,244,226,0.88); margin-bottom: 20px;">Dedicated Workshop · For Organizations</div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 82px); line-height: 1.0; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 12ch; text-wrap: balance;">Metanoia</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(20px, 2.3vw, 27px); line-height: 1.45; max-width: 640px; margin: 0 0 34px; color: rgba(250,244,226,0.94);">Change from within. Surface the assumptions your organization holds, sense what wants to emerge, and commit — together — to a pathway of growth.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 9px 16px;">1–4 days · packages</span>
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 9px 16px;">For organizations</span>
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 9px 16px;">In-person · facilitated</span>
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 9px 16px;">Hosted by IN-Collectives</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="#register" style="text-decoration: none; color: #4B2E73; background: #FAF4E2; border: 1.5px solid #FAF4E2; border-radius: 999px; padding: 14px 28px;">Register now</a>
+      </div>
+      </div>
+
+      <!-- Stacked series buttons (right column) -->
+      <div style="flex: 0 0 340px; min-width: 280px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,244,226,0.78); margin-bottom: 2px;">The ME=WE series</div>
+        <a href="workshop-me-we-core.html" style="text-decoration: none; background: #E5188C; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.14);"><span><span style="display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,244,226,0.85);">For All</span><span style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 26px; line-height: 1.05; color: #FAF4E2;">Möbius Making</span></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 22px; color: #FAF4E2;">→</span></a>
+        <a href="workshops.html" style="text-decoration: none; background: #BDDAE7; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.14);"><span><span style="display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(26,22,19,0.6);">For Youth</span><span style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 26px; line-height: 1.05; color: #1A1613;">Second Life</span></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 22px; color: #1A1613;">→</span></a>
+        <a href="workshop-metanoia.html" style="text-decoration: none; background: #4B2E73; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.14);"><span><span style="display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,244,226,0.7);">Organizations</span><span style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 26px; line-height: 1.05; color: #FAF4E2;">Metanoia</span></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 22px; color: #FAF4E2;">→</span></a>
+        <a href="workshop-two-wings.html" style="text-decoration: none; background: #F5A81E; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.14);"><span><span style="display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(26,22,19,0.6);">For Parents</span><span style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 26px; line-height: 1.05; color: #1A1613;">Two Wings</span></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 22px; color: #1A1613;">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTRO + IMAGE ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 64px 28px 24px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 52px; align-items: flex-start;">
+      <div style="flex: 1 1 460px; min-width: 300px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #4B2E73; margin-bottom: 18px;">The invitation</div>
+        <p style="font-family: 'Newsreader', serif; font-size: clamp(21px, 2.2vw, 26px); line-height: 1.5; margin: 0 0 20px; letter-spacing: -0.005em;">Beneath the forest floor lies an invisible network — not just roots, but a living web connecting the whole ecosystem. Above ground, each tree appears separate. Below the surface, they are already linked.</p>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; margin: 0 0 18px; color: rgba(26,22,19,0.82);">Within us, a similar network exists — like the neural pathways connecting thought, memory, sensation, and choice. When that connection is disrupted, the body sends signals immediately. Connection is not optional; it is the condition that lets us function as a healthy whole.</p>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; margin: 0; color: rgba(26,22,19,0.82);">So why do we — already connected — so often push each other away and treat disconnection as normal? Perhaps connection isn't broken. Perhaps we simply haven't looked at it from another angle yet.</p>
+      </div>
+      <sc-if value="{{ showImage }}" hint-placeholder-val="{{ true }}">
+        <div style="flex: 1 1 380px; min-width: 280px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ws-metanoia-hero" shape="rect" placeholder="Drop workshop photo" style="display:block; width: 100%; aspect-ratio: 4 / 5;" hint-size="100%,460px"></x-import>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT WE CO-DESIGN ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 56px 28px 24px;">
+    <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.04; margin: 0 0 8px; letter-spacing: -0.01em;">What we co-design together</h2>
+    <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; max-width: 680px; margin: 0 0 40px; color: rgba(26,22,19,0.78);">It is not a session for listening to explanations. It is a time to see with your own eyes and build with your own hands. Every ME=WE workshop walks the same arc — six movements, head, heart, and hands in the same room.</p>
+    <div style="display: flex; flex-direction: column;">
+
+      <div style="display: flex; flex-wrap: wrap; gap: 26px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.18); padding: 24px 0;">
+        <span style="flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; background: #4B2E73; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px;">1</span>
+        <div style="flex: 0 0 auto; width: 190px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #4B2E73;">Ignite</div>
+        <div style="flex: 1 1 320px; font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.34;">Something wakes — curiosity, personal strengths, the sense that change is possible.</div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 26px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.18); padding: 24px 0;">
+        <span style="flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; background: #4B2E73; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px;">2</span>
+        <div style="flex: 0 0 auto; width: 190px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 0.04em; color: #4B2E73;">ME ≠ WE</div>
+        <div style="flex: 1 1 320px; font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.34;">I remain inside my own frame.</div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 26px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.18); padding: 24px 0;">
+        <span style="flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; background: #4B2E73; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px;">3</span>
+        <div style="flex: 0 0 auto; width: 190px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 0.04em; color: #4B2E73;">ME + WE</div>
+        <div style="flex: 1 1 320px; font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.34;">I begin to notice my choices ripple outward.</div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 26px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.18); padding: 24px 0;">
+        <span style="flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; background: #1A1613; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px;">4</span>
+        <div style="flex: 0 0 auto; width: 190px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 0.04em; color: #1A1613;">( ME WE )<span style="display:block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 10.5px; letter-spacing: 0.16em; color: #E5188C; margin-top: 3px;">THE FLIP</span></div>
+        <div style="flex: 1 1 320px; font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.34;">We connect and face something as one unit. This is the flip.</div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 26px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.18); padding: 24px 0;">
+        <span style="flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; background: #4B2E73; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px;">5</span>
+        <div style="flex: 0 0 auto; width: 190px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 0.04em; color: #4B2E73;">ME = WE</div>
+        <div style="flex: 1 1 320px; font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.34;">When I move, the relational field moves with me.</div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 26px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.18); border-bottom: 1.5px solid rgba(26,22,19,0.18); padding: 24px 0;">
+        <span style="flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; background: #F5A81E; color: #1A1613; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px;">6</span>
+        <div style="flex: 0 0 auto; width: 190px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #C8791A;">Glow</div>
+        <div style="flex: 1 1 320px; font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.34;">The shift settles into a warmth you carry back out into daily life.</div>
+      </div>
+
+    </div>
+    <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; max-width: 720px; margin: 30px 0 0; color: rgba(26,22,19,0.82);">The session closes with each participant articulating a personal <em>ME=WE Story</em> — a small, intentional action to experiment with. We don't promise dramatic transformation. But many leave saying: <span style="color: #4B2E73;">“Perhaps we were already connected.”</span></p>
+  </section>
+
+  <!-- ===================== HELPFUL WHEN (pink card) ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 40px 28px;">
+    <div style="background: #F7C7D7; padding: 44px 44px 40px;">
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(26px, 3vw, 38px); line-height: 1.08; margin: 0 0 28px;">This workshop is helpful when…</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px 40px;">
+        <div style="display: flex; gap: 14px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.25); padding-top: 14px;"><span style="flex:0 0 auto; color: #1A1613; font-weight: 800; font-family: 'Archivo', sans-serif;">→</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.35;">A team feels stalled or low in energy.</span></div>
+        <div style="display: flex; gap: 14px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.25); padding-top: 14px;"><span style="flex:0 0 auto; color: #1A1613; font-weight: 800; font-family: 'Archivo', sans-serif;">→</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.35;">Conversations are happening, but connection feels shallow.</span></div>
+        <div style="display: flex; gap: 14px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.25); padding-top: 14px;"><span style="flex:0 0 auto; color: #1A1613; font-weight: 800; font-family: 'Archivo', sans-serif;">→</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.35;">Direction exists, but clarity is fading.</span></div>
+        <div style="display: flex; gap: 14px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.25); padding-top: 14px;"><span style="flex:0 0 auto; color: #1A1613; font-weight: 800; font-family: 'Archivo', sans-serif;">→</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.35;">A group is preparing for its next stage.</span></div>
+        <div style="display: flex; gap: 14px; align-items: baseline; border-top: 1.5px solid rgba(26,22,19,0.25); padding-top: 14px;"><span style="flex:0 0 auto; color: #1A1613; font-weight: 800; font-family: 'Archivo', sans-serif;">→</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.35;">Leaders are reflecting on what structure they pass to the next generation.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DETAILS ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 24px 28px 40px;">
+    <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; margin: 0 0 26px;">The details</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5px; background: rgba(26,22,19,0.16); border: 1.5px solid rgba(26,22,19,0.16);">
+      <div style="background: #FAF4E2; padding: 22px 24px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(26,22,19,0.55); margin-bottom: 8px;">Duration</div><div style="font-family: 'Newsreader', serif; font-size: 22px;">1–4 days · packages</div></div>
+      <div style="background: #FAF4E2; padding: 22px 24px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(26,22,19,0.55); margin-bottom: 8px;">Group size</div><div style="font-family: 'Newsreader', serif; font-size: 22px;">One team or unit</div></div>
+      <div style="background: #FAF4E2; padding: 22px 24px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(26,22,19,0.55); margin-bottom: 8px;">Format</div><div style="font-family: 'Newsreader', serif; font-size: 22px;">In-person · facilitated</div></div>
+      <div style="background: #FAF4E2; padding: 22px 24px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(26,22,19,0.55); margin-bottom: 8px;">Facilitated by</div><div style="font-family: 'Newsreader', serif; font-size: 22px;">IN-Collectives</div></div>
+      <div style="background: #FAF4E2; padding: 22px 24px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(26,22,19,0.55); margin-bottom: 8px;">In the series</div><div style="font-family: 'Newsreader', serif; font-size: 22px;">Dedicated · Organizations</div></div>
+      <div style="background: #FAF4E2; padding: 22px 24px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(26,22,19,0.55); margin-bottom: 8px;">Languages</div><div style="font-family: 'Newsreader', serif; font-size: 22px;">EN · 繁 · 한</div></div>
+    </div>
+    <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; line-height: 1.5; margin: 16px 0 0; color: rgba(26,22,19,0.62);">Co-created by Yunsun Chung and IN-Collectives — and still evolving with every group that walks through it. Follow-up sessions available as a package.</p>
+  </section>
+
+  <!-- ===================== REGISTER CTA ===================== -->
+  <section id="register" style="background: #4B2E73; color: #FAF4E2; margin-top: 8px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <sc-if value="{{ regOpen }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em;">Step into the work.</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+            <a href="index.html#connect" style="text-decoration: none; color: #4B2E73; background: #FAF4E2; border-radius: 999px; padding: 15px 32px;">Register for this workshop</a>
+            <a href="index.html#connect" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px;">Ask a question</a>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ regClosed }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Currently full</p>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em;">Join the waitlist for the next round.</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+            <a href="index.html#connect" style="text-decoration: none; color: #4B2E73; background: #FAF4E2; border-radius: 999px; padding: 15px 32px;">Join the waitlist</a>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="background: #1A1613; color: #FAF4E2; padding: 56px 28px 32px; margin-top: 36px; border-top: 1px solid rgba(26,22,19,0.20); box-sizing: border-box;">
+    <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <p style="font-family: Helvetica, Arial, sans-serif; font-weight: 300; font-size: 15px; line-height: 1.5; opacity: 0.55; max-width: 1250px; margin: 0;">
+        © 2016–2026 INNOCO. All rights reserved. The use of any content, video, photograph, illustration, or image on this website without the written permission of INNOCO is strictly prohibited. in.innoco@gmail.com · Seoul, Korea. ME=WE framework and workshop materials are shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+      </p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 980}, &quot;showFeaturedImage&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Layout&quot;}, &quot;showRelated&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Layout&quot;}, &quot;registrationOpen&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Registration&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const regOpen = this.props.registrationOpen ?? true;
+    return {
+      showImage: this.props.showFeaturedImage ?? true,
+      showRelated: this.props.showRelated ?? true,
+      regOpen: regOpen,
+      regClosed: !regOpen,
+    };
+  }
+}
+</script>
+</body>
+</html>

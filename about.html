@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #1A1613; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1E8A86; color: #FAF4E2; }
+</style>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ===================== NAV ===================== -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(250,244,226,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(26,22,19,0.12);">
+    <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="index.html#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: #1A1613;">
+        <img src="innoco-mark.png" alt="INNOCO" style="height: 34px; width: auto; display: block;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 26px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 14.5px;">
+        <a href="about.html" style="color: #1E8A86; text-decoration: none;">About IN</a>
+        <a href="me-we.html" style="color: #1A1613; text-decoration: none;">ME=WE</a>
+        <a href="workshops.html" style="color: #1A1613; text-decoration: none;">Workshop</a>
+        <a href="story.html" style="color: #1A1613; text-decoration: none;">Story</a>
+        <a href="connect.html" style="color: #1A1613; text-decoration: none;">Connect</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="connect.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.02em; text-decoration: none; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 9px 18px; white-space: nowrap;">Are you IN?</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section style="background: #1E8A86; color: #FAF4E2;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 62px 28px 66px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.82); margin-bottom: 22px;">About · Get to know us</div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(42px, 6vw, 84px); line-height: 1.0; letter-spacing: -0.02em; margin: 0 0 24px; max-width: 16ch; text-wrap: balance;">We begin where change actually begins.</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(20px, 2.3vw, 27px); line-height: 1.42; max-width: 720px; margin: 0; color: rgba(250,244,226,0.94);">We live in a time of profound fragmentation — socially, environmentally, economically, and inwardly. While many efforts focus on fixing external systems, IN begins somewhere more fundamental: the quality of how we see ourselves and one another.</p>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT IS IN ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 64px 28px 20px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 52px; align-items: flex-start;">
+      <div style="flex: 0 0 220px; min-width: 200px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1E8A86;">What is IN?</div>
+      </div>
+      <div style="flex: 1 1 520px; min-width: 300px;">
+        <p style="font-family: 'Newsreader', serif; font-size: clamp(21px, 2.2vw, 27px); line-height: 1.46; margin: 0 0 20px; letter-spacing: -0.005em;">IN is an interactive learning studio dedicated to the practice of <span style="color: #1E8A86; font-style: italic;">Relational Alignment</span> — a space where people move beyond the illusion of separation and practice ME=WE in real life.</p>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; margin: 0; color: rgba(26,22,19,0.82);">We design the environments where individuals, teams, and communities experience a shift from isolation to integrated connection — allowing for more authentic and effective collaboration. When perception shifts, connection becomes possible. When relationships are renewed, new patterns of action emerge. Change cannot be forced, but we can meticulously design the conditions where it grows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW WE PRACTICE ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 56px 28px 20px;">
+    <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.04; margin: 0 0 8px; letter-spacing: -0.01em;">How we practice</h2>
+    <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; max-width: 680px; margin: 0 0 34px; color: rgba(26,22,19,0.78);">Most participants begin with the ME=WE Core Workshop, followed by deeper, ongoing practice in various forms. Our facilitated studios are:</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+      <div style="background: #BDDAE7; color: #1A1613; padding: 30px 28px 34px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 32px; margin-bottom: 16px;">01</div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 25px; line-height: 1.1; margin: 0 0 10px;">Interactive &amp; experiential</h3>
+        <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.78);">Moving beyond theory into felt experience — seen, built, and practiced.</p>
+      </div>
+      <div style="background: #F4C63D; color: #1A1613; padding: 30px 28px 34px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 32px; margin-bottom: 16px;">02</div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 25px; line-height: 1.1; margin: 0 0 10px;">Grounded in research</h3>
+        <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.78);">Informed by systemic and relational sciences, not slogans.</p>
+      </div>
+      <div style="background: #F7C7D7; color: #1A1613; padding: 30px 28px 34px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 32px; margin-bottom: 16px;">03</div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 25px; line-height: 1.1; margin: 0 0 10px;">Adaptable</h3>
+        <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.78);">Tailored to the unique needs of different communities and organizational contexts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METHODOLOGY (dark band) ===================== -->
+  <section style="max-width: 1320px; margin: 40px auto 0; padding: 0 28px;">
+    <div style="background: #1A1613; color: #FAF4E2; padding: 52px 44px 48px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;">
+        <div style="flex: 1 1 340px; min-width: 280px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1E8A86; margin-bottom: 16px;">Our methodology</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; margin: 0 0 14px;">We don't provide fixed answers.</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; margin: 0; color: rgba(250,244,226,0.8); max-width: 380px;">Instead, we facilitate a shared inquiry into the patterns that connect us.</p>
+        </div>
+        <div style="flex: 1 1 380px; min-width: 300px; display: flex; flex-direction: column;">
+          <div style="border-top: 1px solid rgba(250,244,226,0.24); padding: 16px 0; font-family: 'Newsreader', serif; font-size: 23px;">Deep listening &amp; dialogue</div>
+          <div style="border-top: 1px solid rgba(250,244,226,0.24); padding: 16px 0; font-family: 'Newsreader', serif; font-size: 23px;">Head–Heart–Hand integration</div>
+          <div style="border-top: 1px solid rgba(250,244,226,0.24); padding: 16px 0; font-family: 'Newsreader', serif; font-size: 23px;">Real-time interaction</div>
+          <div style="border-top: 1px solid rgba(250,244,226,0.24); border-bottom: 1px solid rgba(250,244,226,0.24); padding: 16px 0; font-family: 'Newsreader', serif; font-size: 23px;">Practical experiments</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE IN NETWORK ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 64px 28px 20px;">
+    <a href="in-collectives.html" style="text-decoration: none; color: #FAF4E2; display: block; position: relative; padding: 40px 40px 42px 40px; background-color: #2E8B57; background-image: radial-gradient(circle at 78% 30%, rgba(250,244,226,0.92) 0%, rgba(250,244,226,0.1) 58%), radial-gradient(circle, #FAF4E2 1.1px, transparent 1.6px); background-size: 100% 100%, 9px 9px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between;">
+        <div style="flex: 1 1 460px; min-width: 300px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1A1613; margin-bottom: 14px;">The IN network</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.02; margin: 0 0 14px; color: #1A1613;">IN grows through shared practice.</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.46; margin: 0; max-width: 560px; color: rgba(26,22,19,0.88);">Those who continue the journey may evolve into <strong>IN-Collectives</strong> — independent partners who host studios in their own local contexts. Not branches or franchises. Partners. Each contributes learning back into the wider network.</p>
+        </div>
+        <span style="width: 62px; height: 62px; border-radius: 50%; background: #1A1613; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 26px; flex: 0 0 auto;">→</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===================== FOUNDERS / PEOPLE ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 56px 28px 20px;">
+    <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.04; margin: 0 0 26px; letter-spacing: -0.01em;">The people behind IN</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px;">
+      <div style="background: #F3EAD0; color: #1A1613;">
+        <img src="https://picsum.photos/seed/innoco-yunsun/900/675" alt="Yunsun" style="display:block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+        <div style="padding: 22px 26px 26px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 8px;">IN-Collective · Founder</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 8px;">Yunsun</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.78);">Founder of IN and host of the studio's first collective. Designs and facilitates the ME=WE practice across communities.</p>
+        </div>
+      </div>
+      <div style="background: #F3EAD0; color: #1A1613;">
+        <img src="https://picsum.photos/seed/innoco-tony/900/675" alt="Tony" style="display:block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+        <div style="padding: 22px 26px 26px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 8px;">IN-Collective · Partner</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 8px;">Tony</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.42; margin: 0; color: rgba(26,22,19,0.78);">An independent partner adapting ME=WE to his own local context, carrying the practice into new communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO THIS IS FOR ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 56px 28px 20px;">
+    <div style="background: #4B2E73; color: #FAF4E2; padding: 48px 44px 44px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(250,244,226,0.72); margin-bottom: 16px;">Who this is for</div>
+      <p style="font-family: 'Newsreader', serif; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.28; margin: 0 0 30px; max-width: 760px;">We partner with those who care about how people learn, relate, and act together.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 10px 20px;">Individuals</span>
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 10px 20px;">Educators</span>
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 10px 20px;">Community organizers</span>
+        <span style="border: 1.5px solid rgba(250,244,226,0.5); border-radius: 999px; padding: 10px 20px;">Teams</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 56px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">The invitation</p>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 26px; letter-spacing: -0.01em;">The door is open.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="connect.html" style="text-decoration: none; color: #1E8A86; background: #FAF4E2; border-radius: 999px; padding: 15px 32px;">Begin a conversation</a>
+        <a href="me-we.html" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px;">Explore ME=WE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="background: #1A1613; color: #FAF4E2; padding: 56px 28px 32px; border-top: 1px solid rgba(26,22,19,0.20); box-sizing: border-box;">
+    <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <p style="font-family: Helvetica, Arial, sans-serif; font-weight: 300; font-size: 15px; line-height: 1.5; opacity: 0.55; max-width: 1250px; margin: 0;">
+        © 2016–2026 INNOCO. All rights reserved. The use of any content, video, photograph, illustration, or image on this website without the written permission of INNOCO is strictly prohibited. in.innoco@gmail.com · Seoul, Korea. ME=WE framework and workshop materials are shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+      </p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
