@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #3C8246; color: #FAF4E2; }
+  a { color: #1E8A86; }
+  a:hover { color: #146560; }
+  .ct-card { break-inside: avoid; margin-bottom: 18px; transition: transform 0.18s ease, box-shadow 0.18s ease; display: block; text-decoration: none; }
+  .ct-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(46,59,64,0.16); }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <dc-import name="Nav" active-page="community" hint-size="100%,64px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background: #3C8246; color: #FAF4E2;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 62px 28px 60px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FAF4E2; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #FAF4E2;">Constellation</span></div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.99; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 16ch; text-wrap: balance;">Points of light that form a shape none makes alone.</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2vw, 28px); line-height: 1.46; max-width: 720px; margin: 0; color: rgba(250,244,226,0.94);">The living collection of neighbor expressions — every ME=WE story, act, and creation. It is not a finished exhibition; it keeps growing as people add their own. Closer to a garden than a museum.</p>
+    </div>
+  </section>
+
+  <!-- COPY-PENDING NOTE -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 26px 28px 0;">
+    <div style="border-left: 3px solid #FAB414; background: rgba(250,180,20,0.12); padding: 16px 22px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.72);">Structure in place — copy pending from Yunsun. The wall below fills with real entries as they arrive; it is built to grow indefinitely, with no fixed end state.</div>
+  </section>
+
+  <!-- GROWING WALL -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 12px;">
+    <div style="column-width: 300px; column-gap: 18px;">
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #FAB414; color: #2E3B40; padding: 26px 26px 24px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 12px;">Song</div>
+        <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.3; margin: 0;">"The harmony was already in them."</p>
+      </a>
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #F3EAD0; color: #2E3B40; padding: 0;">
+        <image-slot id="ct-photo-1" shape="rect" placeholder="A neighbor's photo entry" style="display:block; width: 100%; aspect-ratio: 3 / 4;"></image-slot>
+        <div style="padding: 18px 22px 22px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 8px;">Photo</div>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; margin: 0; color: rgba(46,59,64,0.82);">A moment someone noticed ME=WE in the world.</p>
+        </div>
+      </a>
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #1E648C; color: #FAF4E2; padding: 26px 26px 24px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.8); margin-bottom: 12px;">Writing</div>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.92);">A short reflection a BridgeBuilder wrote after a gathering.</p>
+      </a>
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #F3EAD0; border: 1.5px solid #2E3B40; color: #2E3B40; padding: 26px 26px 24px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.55); margin-bottom: 12px;">Drawing</div>
+        <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 20px; line-height: 1.32; margin: 0;">"Perhaps we were already connected."</p>
+      </a>
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #E6328C; color: #FAF4E2; padding: 26px 26px 24px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.82); margin-bottom: 12px;">Act</div>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.92);">Something small a neighbor did that rippled outward.</p>
+      </a>
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #F3EAD0; color: #2E3B40; padding: 0;">
+        <image-slot id="ct-photo-2" shape="rect" placeholder="A creation — a neighbor's entry" style="display:block; width: 100%; aspect-ratio: 1 / 1;"></image-slot>
+        <div style="padding: 18px 22px 22px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 8px;">Creation</div>
+          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; margin: 0; color: rgba(46,59,64,0.82);">Made by a neighbor, shared with the collection.</p>
+        </div>
+      </a>
+
+      <a href="Story.EN.dc.html" class="ct-card" style="background: #46325A; color: #FAF4E2; padding: 26px 26px 24px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.78); margin-bottom: 12px;">Reflection</div>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.92);">A quiet noticing, placed along the Arc.</p>
+      </a>
+
+      <div class="ct-card" style="background: #FAF4E2; border: 1.5px dashed rgba(46,59,64,0.4); color: #2E3B40; padding: 30px 26px; text-align: center;">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 22px; line-height: 1.15; margin: 0 0 8px;">Your point of light</div>
+        <p style="font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.42; margin: 0 0 14px; color: rgba(46,59,64,0.7);">The collection keeps growing. Add yours.</p>
+        <a href="Story.EN.dc.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #1E8A86;">Add to Constellation →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT'S NEXT (future phase) -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 8px;">
+    <div style="background: #F3EAD0; padding: 34px 36px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between;">
+      <div style="flex: 1 1 420px; min-width: 280px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #3C8246; margin-bottom: 12px;">What's next</div>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.46; margin: 0; color: rgba(46,59,64,0.82); max-width: 60ch;">In a later phase, points will begin to talk to one another — leading to a Talk Series, and eventually open public contribution. The structure here is built so that can be added without a rebuild.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: #3C8246; color: #FAF4E2; margin-top: 36px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Add your light to the collection.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="Story.EN.dc.html" style="text-decoration: none; color: #3C8246; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Share your story</a>
+        <a href="ME=WE.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">What is ME=WE?</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 1300}}"></script>
+</body>
+</html>

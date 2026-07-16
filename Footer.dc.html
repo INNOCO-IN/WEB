@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  .in-foot-arc .ribbon-stroke { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: inFootArc 2.4s ease forwards; }
+  @keyframes inFootArc { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .in-foot-arc .ribbon-stroke { animation: none; stroke-dashoffset: 0; } }
+  .in-fcol a:hover { color: #E6328C; }
+  .in-social a:hover { color: #E6328C; }
+</style>
+</helmet>
+<footer style="background: #FAF4E2; color: #2E3B40;">
+  <div class="in-foot-arc" style="width: 100%; line-height: 0; position: relative; top: -1.5vw; margin-bottom: -1.5vw; z-index: 2;">
+    <svg viewBox="0 0 1500 120" width="100%" height="auto" preserveAspectRatio="none" style="display: block;" aria-hidden="true">
+      <path d="M0 0 L1500 0 L1500 59 C1150 63 900 57 620 60 C560 61 540 60 372 60 C250 61 130 60 0 60 Z" fill="#1E8A86"></path>
+      <path d="M0 60 C130 60 250 61 372 60 C540 60 560 61 620 60 C900 57 1150 63 1500 59 L1500 120 L0 120 Z" fill="#FAF4E2"></path>
+      <path class="ribbon-stroke" d="M0 60 C130 60 190 60 214 53 C244 44 250 22 233 21 C216 20 214 41 236 50 C262 61 300 62 372 60 C540 60 560 61 620 60 C900 57 1150 63 1500 59" fill="none" stroke="#2E3B40" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+    </svg>
+  </div>
+  <div style="max-width: 1320px; margin: 0 auto; padding: 40px 40px 44px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 0.7fr 0.5fr; gap: 28px; align-items: start;">
+
+      <div class="in-fcol">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="Manifesto.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Manifesto</a>
+          <a href="Collectives.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Collectives</a>
+          <a href="ME=WE.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">ME=WE</a>
+        </div>
+      </div>
+
+      <div class="in-fcol">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="Workshop.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Workshop</a>
+          <a href="Story.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Story</a>
+          <a href="Protagonist.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Protagonist</a>
+        </div>
+      </div>
+
+      <div class="in-fcol">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="Project.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Project</a>
+          <a href="Community.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Community</a>
+          <a href="Constellation.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Constellation</a>
+        </div>
+      </div>
+
+      <div class="in-fcol">
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <a href="Are-you-IN.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Are you IN?</a>
+        </div>
+      </div>
+
+      <div></div>
+
+      <div class="in-social" style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+        <a href="mailto:yunsun@innoco.co" aria-label="Email" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg></a>
+        <a href="https://www.youtube.com/@innoco7950" target="_blank" rel="noopener" aria-label="YouTube" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="https://www.instagram.com/innoco.co/" target="_blank" rel="noopener" aria-label="Instagram" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+      </div>
+
+    </div>
+    <div style="height: 1px; background: rgba(46,59,64,0.12); margin: 44px 0 20px;"></div>
+    <div style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; color: rgba(46,59,64,0.68);">© 2016–2026 IN (INNOCO) · Seoul, Korea · ME=WE shared under CC BY-NC-SA 4.0</div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 460}}"></script>
+</body>
+</html>

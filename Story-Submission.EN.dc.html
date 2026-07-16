@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #FAB414; color: #2E3B40; }
+  a { color: #B87A00; }
+  .in-field { width: 100%; font-family: 'Newsreader', serif; font-size: 18px; color: #2E3B40; background: #FAF4E2; border: 1.5px solid rgba(46,59,64,0.28); padding: 14px 16px; outline: none; }
+  .in-field:focus { border-color: #B87A00; }
+  .in-lbl { display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 8px; }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <dc-import name="Nav" active-page="Story.EN.dc.html" hint-size="100%,64px"></dc-import>
+
+  <!-- HERO (key color · amber) -->
+  <section style="background: #FAB414; color: #2E3B40;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 56px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; line-height: 1.1; text-transform: uppercase; color: rgba(46,59,64,0.7); margin-bottom: 24px;">Story Submission</div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(42px, 6vw, 80px); line-height: 1.0; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 18ch; text-wrap: balance;">Add your ME=WE story to the archive.</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.46; max-width: 720px; margin: 0; color: rgba(46,59,64,0.85);">A moment you lived, or one you noticed in someone else — in whatever form it takes. No length rules, no right answer. We read every one.</p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
+    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; line-height: 1.1; text-transform: uppercase; color: #B87A00; margin-bottom: 24px;">Tell it your way</div>
+    <div style="max-width: 720px; display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        <div style="flex: 1 1 240px;"><label class="in-lbl">Your name</label><input class="in-field" type="text" placeholder="First name is fine"></div>
+        <div style="flex: 1 1 240px;"><label class="in-lbl">Email</label><input class="in-field" type="email" placeholder="So we can reply"></div>
+      </div>
+      <div>
+        <label class="in-lbl">Is this something you…</label>
+        <div style="display: flex; flex-wrap: wrap; gap: 9px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">
+          <span style="background: #FAB414; color: #2E3B40; border-radius: 999px; padding: 10px 18px;">I lived it</span>
+          <span style="background: transparent; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 10px 18px;">I noticed it</span>
+        </div>
+      </div>
+      <div><label class="in-lbl">Your story</label><textarea class="in-field" rows="7" placeholder="Start anywhere — the moment, the shift, what stayed with you."></textarea></div>
+      <div><label class="in-lbl">Add an image or voice note (optional)</label><image-slot id="story-sub-upload" shape="rect" placeholder="Drop a photo, drawing, or scan" style="display: block; width: 100%; aspect-ratio: 16 / 7; height: 200px;"></image-slot></div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+        <a href="Story.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">Send my story</a>
+        <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; color: rgba(46,59,64,0.55);">You'll get a note back once we've read it.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA (teal · constant) -->
+  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 80px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Read what others have shared.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="Story.EN.dc.html" style="text-decoration: none; color: #1E8A86; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Back to Story</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

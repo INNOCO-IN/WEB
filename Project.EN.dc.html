@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #E6328C; color: #FAF4E2; }
+  a { color: #1E8A86; }
+  a:hover { color: #146560; }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <dc-import name="Nav" active-page="project" hint-size="100%,64px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background: #1E648C; color: #FAF4E2;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 62px 28px 60px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FAF4E2; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #FAF4E2;">Project</span></div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.99; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 15ch; text-wrap: balance;">The work, turned outward.</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2vw, 28px); line-height: 1.46; max-width: 720px; margin: 0; color: rgba(250,244,226,0.94);">Project briefs — current and past. What the work <em>was</em>: the intervention, where and when it ran, and who it served. The stories these projects produced live in <a href="Story.EN.dc.html" style="color: #FAF4E2; text-decoration: underline;">Story</a>; what they left behind lives in <a href="Community.EN.dc.html" style="color: #FAF4E2; text-decoration: underline;">Community</a>.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED — ASIA EXCHANGE / BRIDGEBUILDER -->
+  <section id="bridgebuilder" style="max-width: 1320px; margin: 0 auto; padding: 40px 28px 22px; scroll-margin-top: 80px;">
+    <div style="display: grid; grid-template-columns: 1.05fr 1fr; align-items: stretch; background: #1E8A86; color: #FAF4E2; overflow: hidden; min-height: 340px;">
+      <div style="position: relative; min-height: 280px;">
+        <image-slot id="project-asia-hero" shape="rect" placeholder="Young BridgeBuilders across a neighborhood, five-country feel" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+        <div style="position: absolute; left: 16px; top: 16px; background: #FAF4E2; color: #2E3B40; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 12px;">Flagship · 2026–2027</div>
+      </div>
+      <div style="padding: 40px 44px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
+        <div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.8); margin-bottom: 16px;">China · Japan · Korea · Nepal · Taiwan</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.02; margin: 0 0 14px; letter-spacing: -0.01em; text-wrap: balance;">ME=WE Asia Exchange</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.44; margin: 0 0 14px; color: rgba(250,244,226,0.92); max-width: 50ch;">A cross-border program in which young people called <strong>BridgeBuilders</strong> practice coherent community life in their own neighborhoods — across five countries, one shared question.</p>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.44; margin: 0; color: rgba(250,244,226,0.8); max-width: 50ch;">BridgeBuilder is also a stage on the practice path — <a href="Protagonist.EN.dc.html" style="color: #FAF4E2; text-decoration: underline;">see it on the Protagonist path →</a></p>
+        </div>
+        <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.04em; color: rgba(250,244,226,0.7);">The neighborhoods it grew live in Community →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT BRIEFS -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 20px 28px 20px;">
+    <div style="border-top: 1px solid rgba(46,59,64,0.14); padding-top: 26px; margin-bottom: 20px;">
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(26px, 3vw, 38px); line-height: 1.0; margin: 0; letter-spacing: -0.01em;">Project briefs</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px;">
+
+      <article style="display: flex; flex-direction: column; background: #F3EAD0; color: #2E3B40;">
+        <image-slot id="project-food-revolution" shape="rect" placeholder="The KULNA garden, students working" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
+        <div style="padding: 22px 24px 24px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">Zayed University, UAE · Since 2016</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">Food Revolution</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">KULNA Community Garden — a social lab that began as a classroom experiment in growing and sharing food together.</p>
+        </div>
+      </article>
+
+      <article style="display: flex; flex-direction: column; background: #BDDAE7; color: #2E3B40;">
+        <image-slot id="project-uae-camp" shape="rect" placeholder="The Sheraa group photo" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
+        <div style="padding: 22px 24px 24px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Sharjah, UAE · 2017</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">UAE Youth Camp</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">Six months building real social ventures — young people learning by doing, not by lecture.</p>
+        </div>
+      </article>
+
+      <article style="display: flex; flex-direction: column; background: #F7C7D7; color: #2E3B40;">
+        <image-slot id="project-unc" shape="rect" placeholder="Nepal bootcamp participants" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
+        <div style="padding: 22px 24px 24px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Lalitpur, Nepal · 2016–2018</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">UNC Social Innovation</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">A 9-day bootcamp connecting UAE and Nepal youth after the 2015 earthquake.</p>
+        </div>
+      </article>
+
+      <article style="display: flex; flex-direction: column; background: #F3EAD0; color: #2E3B40;">
+        <image-slot id="project-nepal-connect" shape="rect" placeholder="Nepal Connect — youth in the field" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
+        <div style="padding: 22px 24px 24px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">Nepal · Ongoing</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">Nepal Connect</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">Ongoing collaboration with Nepali youth partners — the program that seeded a lasting youth cluster. <span style="color: #E6328C;">Brief pending.</span></p>
+        </div>
+      </article>
+
+    </div>
+    <p style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13.5px; color: rgba(46,59,64,0.6); margin: 22px 0 0; max-width: 60ch;">A project and the community it created are not the same entry — the project is the intervention; the community is what remains. See both in <a href="Community.EN.dc.html">Community</a>.</p>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: #1E648C; color: #FAF4E2; margin-top: 44px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Bring a project to your own community.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #1E648C; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Start a conversation</a>
+        <a href="Protagonist.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">See the Protagonist path</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 1200}}"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/styles.css">
+  <script src="_ds/in-design-system-94f9dcdd-24c7-4f2a-93c7-7cddcb619c0e/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: var(--color-paper); color: var(--color-ink); font: var(--text-body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--color-teal); text-decoration: none; }
+    a:hover { color: var(--color-magenta); }
+    .arcline path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: arcdraw 2.4s ease forwards; }
+    @keyframes arcdraw { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .arcline path { animation: none; stroke-dashoffset: 0; } }
+  </style>
+</helmet>
+
+<dc-import name="Nav" active-page="Home.EN.dc.html" hint-size="100%,64px"></dc-import>
+
+<main id="top" style="max-width: 1320px; margin: 0 auto; padding: 0 40px;">
+
+  <section style="padding: 84px 0 72px 120px; min-height: 500px">
+    <div style="max-width: 1000px; position: relative;">
+      <div style="font-family: var(--font-serif); font-weight: 100; font-size: 130px; line-height: 0.95; color: #1E8A86; margin-bottom: 12px">IN is a studio</div>
+      <div style="font-family: var(--font-serif); font-weight: 100; font-size: 60px; line-height: 1.1; color: var(--color-slate); width: 800px; height: 300px">where we <em>practice</em> ME=WE through honest conversations and artful expressions.</div>
+    <span style="position: absolute; font-size: 300px; line-height: 0.6; opacity: 1; pointer-events: none; left: 565px; top: 326px; color: #1E8A86; font-family: Newsreader" aria-hidden="true">”</span></div>
+  </section>
+
+  <section style="padding: var(--space-9) 40px 100px;">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;">
+
+      <!-- 1 · ME=WE (slate) -->
+      <a href="ME=WE.EN.dc.html" style="position: relative; display: flex; flex-direction: column; text-decoration: none; background: var(--color-slate); color: var(--color-paper); padding: 32px 26px 32px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-paper);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .8;">ME=WE</span></div>
+        <div style="font-family: var(--font-serif); font-weight: 600; font-size: 46px; line-height: 1; margin-bottom: 18px;">ME=WE</div>
+        <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .9;">Separation may be felt, but relationship is structural. We are not outside the pattern — we are expressions of it.</p>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--color-paper); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 2 · Workshop / Möbius (magenta) -->
+      <a href="Workshop.EN.dc.html" style="position: relative; display: flex; flex-direction: column; text-decoration: none; background: var(--color-magenta); color: var(--color-paper); padding: 32px 26px 32px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-paper);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .8;">Workshop · For All</span></div>
+        <div style="font: var(--text-eyebrow); font-family: var(--font-sans); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .85; margin-bottom: 16px;">Start Here · 3 Hrs · Hands-On</div>
+        <div style="font-family: var(--font-serif); font-weight: 600; font-size: 32px; line-height: 1.12; margin-bottom: 16px;">We don't <em>teach</em> ME=WE.<br>We <em>practice</em> it, together.</div>
+        <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .9;">Möbius Making — the signature workshop. Fold a strip of paper and find that two sides were always one surface.</p>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; background: var(--color-ink); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 3 · Pathway (amber) -->
+      <a href="Protagonist.EN.dc.html" style="position: relative; display: flex; flex-direction: column; text-decoration: none; background: var(--color-amber); color: var(--color-ink); padding: 32px 26px 32px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-ink);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .7;">Pathway</span></div>
+        <div style="font-family: var(--font-serif); font-weight: 700; font-size: 27px; line-height: 1.14; margin-bottom: 16px;">Four depths<br>of one practice</div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="font: var(--text-body); font-family: var(--font-serif); padding: 10px 0; border-top: 1px solid rgba(46,59,64,.22); margin-right: 56px;">Neighbor</div>
+          <div style="font: var(--text-body); font-family: var(--font-serif); padding: 10px 0; border-top: 1px solid rgba(46,59,64,.22); margin-right: 56px;">Bridge Builder</div>
+          <div style="font: var(--text-body); font-family: var(--font-serif); padding: 10px 0; border-top: 1px solid rgba(46,59,64,.22); margin-right: 56px;">Facilitator</div>
+          <div style="font: var(--text-body); font-family: var(--font-serif); padding: 10px 0; border-top: 1px solid rgba(46,59,64,.22); margin-right: 56px;">IN-Collective</div>
+        </div>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; background: var(--color-ink); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 4 · Story (yellow · quote / pass it on) -->
+      <a href="Story.EN.dc.html" style="position: relative; display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; background: var(--color-yellow); color: var(--color-ink); padding: 32px 26px 28px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-ink);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .6;">Story</span></div>
+        <div style="font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 27px; line-height: 1.28; margin-bottom: 24px;">“Perhaps we were already connected.”</div>
+        <div style="font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-ink); opacity: .7; margin-right: 56px;">Pass it on →</div>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; background: var(--color-ink); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 5 · Community (photo) -->
+      <a href="Community.EN.dc.html" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; background: var(--color-green); color: var(--color-paper); padding: 30px 26px 30px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="home-community-photo" shape="rect" placeholder="Community photo — a gathering, workshop, or partner studio" hint-size="100%,100%" style="position: absolute; inset: 0; z-index: 0;"></x-import>
+        <div style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(46,59,64,.15) 0%, rgba(46,59,64,.78) 100%);"></div>
+        <div style="position: absolute; left: 22px; top: 28px; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-paper);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .9;">Community</span></div>
+        <div style="position: relative; z-index: 2;">
+          <div style="font-family: var(--font-serif); font-weight: 600; font-size: 29px; line-height: 1.14; margin-bottom: 12px;">A practice that kept traveling</div>
+          <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .95;">Dubai → Nepal → Canada → Seoul. Independent partners, one shared practice.</p>
+        </div>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; z-index: 2; width: 46px; height: 46px; border-radius: 50%; background: var(--color-ink); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 6 · Voices (outline · quote) -->
+      <div style="position: relative; display: flex; flex-direction: column; justify-content: center; background: var(--surface-card); border: 1.5px solid var(--color-ink); color: var(--color-ink); padding: 32px 30px 32px 54px; min-height: 340px;">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-ink);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .55;">Voices</span></div>
+        <p style="margin: 0 0 20px; font-family: var(--font-serif); font-weight: 500; font-size: 23px; line-height: 1.4;">“We must move from the <em>ego-system</em> to <em>ecosystem</em> awareness — that includes the whole.”</p>
+        <div style="font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-ink-40);">— Otto Scharmer</div>
+      </div>
+
+      <!-- 7 · News (red) -->
+      <a href="Community.EN.dc.html" style="position: relative; display: flex; flex-direction: column; text-decoration: none; background: var(--color-red); color: var(--color-paper); padding: 32px 26px 32px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-paper);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .8;">News</span></div>
+        <div style="font: var(--text-eyebrow); font-family: var(--font-sans); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--color-yellow); margin-bottom: 12px;">September 5, 2026</div>
+        <div style="font-family: var(--font-serif); font-weight: 700; font-size: 27px; line-height: 1.14; margin-bottom: 12px;">BridgeBuilder Virtual Pilot Lab</div>
+        <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .9;">A first online gathering for BridgeBuilders across the ME=WE Asia Exchange — five countries, one shared practice.</p>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--color-paper); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 8 · Projects (photo) -->
+      <a href="Workshop.EN.dc.html" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; background: var(--color-navy); color: var(--color-paper); padding: 30px 26px 30px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="home-projects-photo" shape="rect" placeholder="Projects photo — a collaboration, exhibit, or field project" hint-size="100%,100%" style="position: absolute; inset: 0; z-index: 0;"></x-import>
+        <div style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(26,38,58,.12) 0%, rgba(26,38,58,.8) 100%);"></div>
+        <div style="position: absolute; left: 22px; top: 28px; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-paper);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .9;">Projects</span></div>
+        <div style="position: relative; z-index: 2;">
+          <div style="font-family: var(--font-serif); font-weight: 600; font-size: 29px; line-height: 1.14; margin-bottom: 12px;">Where the practice takes form</div>
+          <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .95;">Collaborations, exhibits, and field work — ME=WE made visible in the world.</p>
+        </div>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; z-index: 2; width: 46px; height: 46px; border-radius: 50%; background: var(--color-paper); color: var(--color-ink); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+      <!-- 9 · Manifesto (ink) -->
+      <a href="Manifesto.EN.dc.html" style="position: relative; display: flex; flex-direction: column; justify-content: center; text-decoration: none; background: var(--color-ink); color: var(--color-paper); padding: 32px 26px 32px 54px; min-height: 340px; transition: transform .16s var(--ease-standard), box-shadow .16s var(--ease-standard);" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(46,59,64,.18);">
+        <div style="position: absolute; left: 22px; top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-magenta);"></span><span style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font: var(--text-label); font-family: var(--font-sans); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: .7;">Read</span></div>
+        <div style="font-family: var(--font-serif); font-weight: 600; font-size: 30px; line-height: 1.12; margin-bottom: 14px;">Make possibilities <em>happen</em></div>
+        <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .82;">The IN Manifesto — nine things we hold true, for now.</p>
+        <sc-if value="{{ arrows }}" hint-placeholder-val="{{ true }}"><span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--color-paper); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span></sc-if>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<section style="padding: 0 40px 100px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
+  <x-import component-from-global-scope="INDesignSystem_94f9dc.Button" variant="nav" href="ME=WE.EN.dc.html" hint-size="auto,48px">Explore ME=WE</x-import>
+  <x-import component-from-global-scope="INDesignSystem_94f9dc.Button" variant="secondary" href="Workshop.EN.dc.html" hint-size="auto,48px">Join a Studio</x-import>
+  <x-import component-from-global-scope="INDesignSystem_94f9dc.Button" variant="secondary" href="Are-you-IN.EN.dc.html" hint-size="auto,48px">Connect</x-import>
+</section>
+
+<footer style="background: var(--color-paper);">
+  <sc-if value="{{ showArcLine }}" hint-placeholder-val="{{ true }}">
+    <div style="width: 100%; line-height: 0; padding-top: 28px;">
+      <svg class="arcline" viewBox="0 0 1500 80" width="100%" height="auto" style="display: block;" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51" fill="none" stroke="var(--color-ink)" stroke-width="6" stroke-linecap="round"></path></svg>
+    </div>
+  </sc-if>
+  <div style="max-width: 1320px; margin: 0 auto; padding: 40px 80px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 0.7fr 0.5fr; gap: 28px; align-items: start;">
+
+      <!-- START WITHIN -->
+      <div>
+        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">Start Within</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="Manifesto.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">IN-Manifesto</a>
+          <a href="ME=WE.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">ME=WE</a>
+          <a href="Collectives.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">IN-Collectives</a>
+        </div>
+      </div>
+
+      <!-- SHARE THE SPACE -->
+      <div>
+        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">Share the Space</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="Workshop.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Workshop</a>
+          <a href="Story.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Story</a>
+          <a href="Protagonist.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Protagonist</a>
+        </div>
+      </div>
+
+      <!-- SERVE THE WHOLE -->
+      <div>
+        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">Serve the Whole</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="Community.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Project</a>
+          <a href="Community.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Community</a>
+          <span style="color: var(--color-ink-40); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Constellation</span>
+        </div>
+      </div>
+
+      <!-- FLIP CONNECT -->
+      <div>
+        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">Flip Connect</div>
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <a href="Are-you-IN.EN.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Are you IN?</a>
+        </div>
+      </div>
+
+      <!-- 5 · spacer -->
+      <div></div>
+
+      <!-- 6 · social -->
+      <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+        <a href="mailto:in.innoco@gmail.com" aria-label="Email" style="color: var(--color-ink); display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg></a>
+        <a href="#" aria-label="Twitter / X" style="color: var(--color-ink); display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"></path></svg></a>
+        <a href="#" aria-label="YouTube" style="color: var(--color-ink); display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg></a>
+      </div>
+
+    </div>
+    <div style="height: 1px; background: var(--color-ink-12); margin: 44px 0 20px;"></div>
+    <div style="font: var(--text-caption); font-family: var(--font-sans); color: var(--color-ink-40);">© 2016–2026 IN (INNOCO) · Seoul, Korea · ME=WE shared under CC BY-NC-SA 4.0</div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 1400}, &quot;cardArrows&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Card wall&quot;}, &quot;showArcLine&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Footer&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showArcLine: this.props.showArcLine ?? true,
+      arrows: this.props.cardArrows ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>

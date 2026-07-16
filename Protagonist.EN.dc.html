@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #E6328C; color: #FAF4E2; }
+  a { color: #1E8A86; }
+  a:hover { color: #166b68; }
+  .stage { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .stage:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(46,59,64,0.16); }
+</style>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
+
+  <dc-import name="Nav" active-page="mewe" hint-size="100%,64px"></dc-import>
+
+  <!-- ===================== HERO ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 20px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #F05A28; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #F05A28;">Protagonist</span></div>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between;">
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.99; letter-spacing: -0.02em; margin: 0; max-width: 16ch; text-wrap: balance;">Everyone here is a protagonist.</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2vw, 28px); line-height: 1.44; max-width: 460px; margin: 0; color: rgba(46,59,64,0.82);">Not a ladder of ranks — a continuing process. Everyone starts at the door, and moves as far inward as they choose: participant, bridge builder, facilitator, IN-Collective.</p>
+    </div>
+  </section>
+
+  <!-- ===================== STAGES ===================== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 20px;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+
+      <!-- Stage 1 -->
+      <a href="Workshop.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; color: #FAF4E2; padding: 34px 36px; background-color: #F05A28">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">1</div>
+        <div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">Neighbor <span style="color: rgba(250,244,226,0.6);">/</span> Participant</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.92);">Anyone who has taken part in a workshop. The door in — no commitment beyond showing up and staying curious.</p>
+        </div>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Find a workshop
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        </span>
+      </a>
+
+      <!-- Stage 2 -->
+      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; background: #F05A28; color: #FAF4E2; padding: 34px 36px;">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">2</div>
+        <div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">Bridge Builder</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.92);">An apprentice track — learning to hold space, working closely alongside a mentor before facilitating on your own.</p>
+        </div>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Apply as a Bridge Builder
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        </span>
+      </a>
+
+      <!-- Stage 3 -->
+      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; background: #F05A28; color: #FAF4E2; padding: 34px 36px;">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">3</div>
+        <div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">Facilitator <span style="color: rgba(250,244,226,0.7);">(Pathfinder)</span></h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.94);">Leads workshops independently and carries the practice forward — trusted to adapt ME=WE to the room in front of them.</p>
+        </div>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Start a conversation
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        </span>
+      </a>
+
+      <!-- Stage 4 -->
+      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; background: #F05A28; color: #FAF4E2; padding: 34px 36px;">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">4</div>
+        <div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">IN-Collective</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.92);">A full partner — hosting IN's work in their own community and context. Not a branch, but an independent collective carrying the practice.</p>
+        </div>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Start a conversation
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        </span>
+      </a>
+
+    </div>
+    <p style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; color: rgba(46,59,64,0.55); margin: 22px 0 0;">Stages 3 and 4 aren't self-serve sign-ups — they begin with a conversation. &nbsp;<a href="Project.EN.dc.html#bridgebuilder" style="color: #1E8A86; font-weight: 700; text-decoration: underline;">See the live BridgeBuilder program →</a></p>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 44px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Wherever you are on the path</p>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">The next step is always just one conversation away.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="Workshop.EN.dc.html" style="text-decoration: none; color: #1E8A86; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Find a workshop</a>
+        <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Start a conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+
+</div>
+</x-dc>
+</body>
+</html>

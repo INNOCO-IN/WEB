@@ -1,33 +1,28 @@
-# IN (INNOCO) — Static Website
+# IN Website — Vercel deploy bundle
 
-Plain static HTML site. **No build step, no framework, no dependencies.** Every page is a self-contained `.html` file sharing one `styles.css`. Any static host serves it as-is.
+Static, client-rendered build of the IN site (English). Pages are self-contained
+Design Component HTML files; the shared runtime (`support.js`) renders them in the
+browser, so **no build step is required** — this is a plain static site.
 
 ## Deploy to Vercel
 
-**Option A — drag & drop**
-1. Go to vercel.com → *Add New… → Project*.
-2. Drag this whole `in-website` folder onto the page (or zip it and upload).
-3. Deploy. No settings to change — Vercel detects a static site automatically.
+1. Install the CLI: `npm i -g vercel`
+2. From this folder: `vercel` (follow prompts), then `vercel --prod`
 
-**Option B — Vercel CLI**
-```bash
-cd in-website
-vercel        # preview deploy
-vercel --prod # production
-```
+Or: drag this folder into the Vercel dashboard (New Project → deploy static),
+or connect a Git repo containing these files. Framework preset: **Other**.
+No build command, output directory = this folder.
 
-**Option C — Git**
-Push this folder to a repo, import it in Vercel. Framework preset: **Other** (nothing to configure).
+## Structure
 
-## What's here
-- `index.html` — home page (site root `/`).
-- `*.EN.html` — all other pages (Workshop, ME=WE, Story, Community, Project, Manifesto, and every detail page). Links between pages are relative, so navigation works locally and when deployed.
-- `styles.css` — design tokens (colors, type, spacing) + shared component styles. Loaded by every page.
-- `IN_Logo.png` — logo used in the nav.
-- `vercel.json` — enables clean URLs (`/Workshop.EN` instead of `/Workshop.EN.html`).
+- `index.html` — redirects to `Home.EN.dc.html` (site entry).
+- `*.EN.dc.html` — the pages.
+- `Nav.dc.html`, `Footer.dc.html` — shared header/footer, loaded by each page.
+- `support.js`, `image-slot.js` — runtime + image-drop helper.
+- `_ds/` — IN design-system bundle + tokens/styles.
+- `team/` — team photos and the ME=WE arc strip.
+- `IN_Logo.png` — logo.
+- `vercel.json` — keeps file extensions; serves `index.html` at `/`.
 
-## Notes
-- **Fonts** load from Google Fonts (Newsreader + Archivo) via `@import` in `styles.css` — needs internet at view time. To self-host, download both families and swap the `@import` for local `@font-face` rules.
-- **Photos** are placeholders (hatched boxes labelled with what belongs there). Replace each `<div class="in-imgslot">` with a real `<img src="...">`. Drop image files into this folder and reference them relatively.
-- **Forms** (Are you IN?, Story submission) are static markup — wire up a form handler / endpoint if you need submissions.
-- This was generated from the design prototypes; it reproduces their look and copy. It is not wired to a CMS.
+Home is the entry point. All inter-page links are relative and keep the
+`.dc.html` extension, so the folder works as-is on any static host.
