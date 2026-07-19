@@ -27,6 +27,27 @@
   .ws-arrow { transition: transform 0.18s ease; }
 </style>
 <script src="./image-slot.js"></script>
+<style id="in-mobile">
+@media (max-width: 1000px){
+  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
+  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
+  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
+}
+@media (max-width: 600px){
+  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
+  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
+  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
+}
+</style>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -46,7 +67,7 @@
   </section>
 
   <!-- ===================== FILTER CHIPS ===================== -->
-<section style="max-width: 1320px; margin: 60px auto 0; padding: 0 28px 26px;">
+<section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px 26px;">
     <div style="display: flex; flex-wrap: wrap; gap: 9px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.02em; white-space: nowrap;">
       <span style="background: #2E3B40; color: #FAF4E2; border-radius: 999px; padding: 9px 18px;">All workshops</span>
       <span style="background: transparent; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 18px;">For All</span>
@@ -64,7 +85,7 @@
         <image-slot id="workshop-mobius-hero" shape="rect" placeholder="Someone holding a Möbius strip they made" style="position: absolute; inset: 0; width: 100%; height: 100%; left: -9px; top: -1px"></image-slot>
         <div style="position: absolute; left: 16px; top: 16px; background: #FAF4E2; color: #2E3B40; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 12px;">Signature · Start here</div>
       </div>
-      <div style="padding: 40px 44px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; background-color: #EEAF05; height: 360px; position: static">
+      <div style="padding: 40px 44px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; background-color: #EEAF05; min-height: 360px; position: static">
         <div>
           <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.8); margin-bottom: 16px;">The signature workshop · For All</div>
           <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.0; margin: 0 0 16px; letter-spacing: -0.01em; text-wrap: balance;">Möbius Making</h2>
@@ -175,7 +196,7 @@
   </section>
 
   <!-- ===================== CTA BAND ===================== -->
-  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 44px;">
+  <section style="background: #E6328C; color: #FAF4E2; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Not sure where to start?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Begin with Möbius Making. Everything else grows from it.</h2>
@@ -187,7 +208,7 @@
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+  <div id="connect"><dc-import name="Footer" cta="#E6328C" loop="0.171" hint-size="100%,460px"></dc-import></div>
 
 </div>
 </x-dc>

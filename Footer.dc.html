@@ -18,13 +18,34 @@
   .in-fcol a:hover { color: #E6328C; }
   .in-social a:hover { color: #E6328C; }
 </style>
+<style id="in-mobile">
+@media (max-width: 1000px){
+  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
+  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
+  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
+}
+@media (max-width: 600px){
+  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
+  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
+  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
+}
+</style>
 </helmet>
 <footer style="background: #FAF4E2; color: #2E3B40;">
   <div class="in-foot-arc" style="width: 100%; line-height: 0; position: relative; top: -1.5vw; margin-bottom: -1.5vw; z-index: 2;">
     <svg viewBox="0 0 1500 120" width="100%" height="auto" preserveAspectRatio="none" style="display: block;" aria-hidden="true">
-      <path d="M0 0 L1500 0 L1500 59 C1150 63 900 57 620 60 C560 61 540 60 372 60 C250 61 130 60 0 60 Z" fill="#1E8A86"></path>
-      <path d="M0 60 C130 60 250 61 372 60 C540 60 560 61 620 60 C900 57 1150 63 1500 59 L1500 120 L0 120 Z" fill="#FAF4E2"></path>
-      <path class="ribbon-stroke" d="M0 60 C130 60 190 60 214 53 C244 44 250 22 233 21 C216 20 214 41 236 50 C262 61 300 62 372 60 C540 60 560 61 620 60 C900 57 1150 63 1500 59" fill="none" stroke="#2E3B40" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+      <rect x="0" y="0" width="1500" height="60" fill="{{ bandFill }}"></rect>
+      <rect x="0" y="60" width="1500" height="60" fill="#FAF4E2"></rect>
+      <path class="ribbon-stroke" d="{{ ribbonPath }}" fill="none" stroke="{{ strokeColor }}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
     </svg>
   </div>
   <div style="max-width: 1320px; margin: 0 auto; padding: 40px 40px 44px;">
@@ -63,9 +84,10 @@
       <div></div>
 
       <div class="in-social" style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
-        <a href="mailto:yunsun@innoco.co" aria-label="Email" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg></a>
-        <a href="https://www.youtube.com/@innoco7950" target="_blank" rel="noopener" aria-label="YouTube" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="mailto:hi@innoco.co" aria-label="Email" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg></a>
         <a href="https://www.instagram.com/innoco.co/" target="_blank" rel="noopener" aria-label="Instagram" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="https://www.youtube.com/@innoco7950" target="_blank" rel="noopener" aria-label="YouTube" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="https://x.com/cyunsun" target="_blank" rel="noopener" aria-label="X" style="color: #2E3B40; display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
       </div>
 
     </div>
@@ -74,6 +96,27 @@
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 460}}"></script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 460}}">class Component extends DCLogic {
+  renderVals() {
+    const c = this.props.cta;
+    const hasCta = c && c !== 'false' && c !== false;
+    let loop = parseFloat(this.props.loop);
+    if (isNaN(loop)) loop = 0.15;
+    loop = Math.max(0, Math.min(1, loop));
+    const L = Math.round(150 + loop * 1200);
+    const ribbonPath = 'M0 60 L' + (L-70) + ' 60 C' + (L-34) + ' 60 ' + (L-24) + ' 53 ' + (L-19) + ' 53 C' + (L+11) + ' 44 ' + (L+17) + ' 22 ' + L + ' 21 C' + (L-17) + ' 20 ' + (L-19) + ' 41 ' + (L+3) + ' 50 C' + (L+10) + ' 55 ' + (L+34) + ' 60 ' + (L+70) + ' 60 L1500 60';
+    const bandFill = hasCta ? String(c) : '#FAF4E2';
+    let strokeColor = '#2E3B40';
+    if (hasCta) {
+      const hex = String(c).replace('#','');
+      if (hex.length === 6) {
+        const r = parseInt(hex.slice(0,2),16), g = parseInt(hex.slice(2,4),16), b = parseInt(hex.slice(4,6),16);
+        const lum = (0.299*r + 0.587*g + 0.114*b);
+        strokeColor = lum < 150 ? '#FAF4E2' : '#2E3B40';
+      }
+    }
+    return { bandFill, ribbonPath, strokeColor };
+  }
+}</script>
 </body>
 </html>

@@ -20,6 +20,27 @@
   a:hover { color: #146560; }
 </style>
 <script src="./image-slot.js"></script>
+<style id="in-mobile">
+@media (max-width: 1000px){
+  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
+  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
+  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
+}
+@media (max-width: 600px){
+  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
+  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
+  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
+}
+</style>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -27,7 +48,7 @@
   <dc-import name="Nav" active-page="project" hint-size="100%,64px"></dc-import>
 
   <!-- HERO -->
-  <section style="background: #1E648C; color: #FAF4E2;">
+  <section style="background: #1E5A64; color: #FAF4E2;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 62px 28px 60px;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FAF4E2; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #FAF4E2;">Project</span></div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.99; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 15ch; text-wrap: balance;">The work, turned outward.</h1>
@@ -63,37 +84,53 @@
 
       <article style="display: flex; flex-direction: column; background: #F3EAD0; color: #2E3B40;">
         <image-slot id="project-food-revolution" shape="rect" placeholder="The KULNA garden, students working" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px;">
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">Zayed University, UAE · Since 2016</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">Food Revolution</h3>
-          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">KULNA Community Garden — a social lab that began as a classroom experiment in growing and sharing food together.</p>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F0961E;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">Project</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">Zayed University, UAE · Since 2016</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">Food Revolution</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(46,59,64,0.78);">KULNA Community Garden — a social lab that began as a classroom experiment in growing and sharing food together.</p>
+            <a href="Project-Food-Revolution.EN.dc.html" aria-label="Open Food Revolution" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+          </div>
         </div>
       </article>
 
       <article style="display: flex; flex-direction: column; background: #BDDAE7; color: #2E3B40;">
         <image-slot id="project-uae-camp" shape="rect" placeholder="The Sheraa group photo" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px;">
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Sharjah, UAE · 2017</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">UAE Youth Camp</h3>
-          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">Six months building real social ventures — young people learning by doing, not by lecture.</p>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F0961E;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">Project</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Sharjah, UAE · 2017</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">UAE Youth Camp</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(46,59,64,0.78);">Six months building real social ventures — young people learning by doing, not by lecture.</p>
+            <a href="Project-UAE-Youth-Social-Innovation.EN.dc.html" aria-label="Open UAE Youth Camp" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+          </div>
         </div>
       </article>
 
       <article style="display: flex; flex-direction: column; background: #F7C7D7; color: #2E3B40;">
         <image-slot id="project-unc" shape="rect" placeholder="Nepal bootcamp participants" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px;">
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Lalitpur, Nepal · 2016–2018</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">UNC Social Innovation</h3>
-          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">A 9-day bootcamp connecting UAE and Nepal youth after the 2015 earthquake.</p>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F0961E;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">Project</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Lalitpur, Nepal · 2016–2018</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">9 Day-Residential Social Innovation Bootcamp</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(46,59,64,0.78);">A 9-day bootcamp connecting UAE and Nepal youth after the 2015 earthquake.</p>
+            <a href="Project-UNC.EN.dc.html" aria-label="Open UNC Social Innovation" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+          </div>
         </div>
       </article>
 
       <article style="display: flex; flex-direction: column; background: #F3EAD0; color: #2E3B40;">
         <image-slot id="project-nepal-connect" shape="rect" placeholder="Nepal Connect — youth in the field" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px;">
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">Nepal · Ongoing</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">Nepal Connect</h3>
-          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">Ongoing collaboration with Nepali youth partners — the program that seeded a lasting youth cluster. <span style="color: #E6328C;">Brief pending.</span></p>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F0961E;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">Project</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">UNC DOCUMENTARY</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">UAE-Nepal-Connect</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(46,59,64,0.78);">Ongoing collaboration with Nepali youth partners — the program that seeded a lasting youth cluster. <span style="color: #E6328C;">Brief pending.</span></p>
+            <a href="Community-Nepal-Youth-Cluster.EN.dc.html" aria-label="Open Nepal Connect" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+          </div>
         </div>
       </article>
 
@@ -102,7 +139,7 @@
   </section>
 
   <!-- CTA -->
-  <section style="background: #1E648C; color: #FAF4E2; margin-top: 44px;">
+  <section style="background: #1E5A64; color: #FAF4E2; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Bring a project to your own community.</h2>
@@ -113,7 +150,7 @@
     </div>
   </section>
 
-  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+  <div id="connect"><dc-import name="Footer" cta="#1E5A64" loop="0.489" hint-size="100%,460px"></dc-import></div>
 
 </div>
 </x-dc>

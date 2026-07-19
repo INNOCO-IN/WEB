@@ -16,10 +16,31 @@
   html, body { margin: 0; padding: 0; }
   body { background: #FAF4E2; color: #262A38; -webkit-font-smoothing: antialiased; }
   ::selection { background: #3C8246; color: #FAF4E2; }
-  .tm-photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #F3EAD0; filter: grayscale(0.15) contrast(1.02); }
-  .tm-ph-block { width: 100%; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: 0.02em; }
-  .tm-more { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.04em; color: #3C8246; background: none; border: none; padding: 0; cursor: pointer; text-align: left; }
+  .tm-photo { width: 70%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #F3EAD0; border-radius: 50%; filter: grayscale(0.15) contrast(1.02); }
+  .tm-ph-block { width: 70%; aspect-ratio: 1 / 1; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: 0.02em; }
+  .tm-more { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.04em; color: #43326D; background: none; border: none; padding: 0; cursor: pointer; text-align: left; }
   .tm-more:hover { color: #E6328C; }
+</style>
+<style id="in-mobile">
+@media (max-width: 1000px){
+  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
+  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
+  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
+}
+@media (max-width: 600px){
+  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
+  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
+  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
+}
 </style>
 </helmet>
 
@@ -27,42 +48,24 @@
 
   <dc-import name="Nav" active-page="about" hint-size="100%,64px"></dc-import>
 
-  <!-- ===================== HERO (green band) ===================== -->
-  <section style="background: #3C8246; color: #FAF4E2;">
+  <!-- ===================== HERO (plum band) ===================== -->
+  <section style="background: #46325A; color: #FAF4E2;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 56px;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FAF4E2; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #FAF4E2;">Collectives</span></div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 22px; text-wrap: balance;">IN-Collectives</h1>
-      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2vw, 28px); line-height: 1.44; max-width: 760px; margin: 0 0 20px; color: rgba(250,244,226,0.94);">IN grows with independent partners and collaborators, called IN-Collectives. We are the team behind the workshops — a close-knit group of like-minded people who want to bring out the best in themselves and society. Working in their own communities across diverse fields — teaching, hosting workshops, developing local initiatives — each brings ME=WE into their own context. Each IN-Collective contributes learning back into the wider studio network, allowing the work to grow through shared experience. We are all about spreading joy, sparking creativity, and helping one another make the world a better place.</p>
-      <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; max-width: 640px; margin: 0; color: #FAF4E2; border-left: 3px solid rgba(250,244,226,0.5); padding-left: 22px;">"So, let's roll up our sleeves and co-design our future together, with the wisdom of experience and the curiosity of youth guiding our way. Welcome to INNOCO, where our collective story is just beginning."<span style="display: block; font-style: normal; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; margin-top: 14px; color: rgba(250,244,226,0.75);">— Yunsun Chung</span></p>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-style: italic; font-size: 50px; line-height: 1.2; max-width: 800px; margin: 0 0 20px; color: #FAF4E2;">IN grows with independent partners and collaborators, called IN-Collectives.</p>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 30px; line-height: 1.4; max-width: 800px; margin: 0; color: rgba(250,244,226,0.92);">We are the team behind the workshops — a close-knit group of like-minded people who want to bring out the best in themselves and society. Working in their own communities across diverse fields — teaching, hosting workshops, developing local initiatives — each brings ME=WE into their own context. Each IN-Collective contributes learning back into the wider studio network, allowing the work to grow through shared experience. We are all about spreading joy, sparking creativity, and helping one another make the world a better place.</p>
     </div>
   </section>
 
-  <!-- ===================== SEOUL HUB TEAM ===================== -->
-  <section style="max-width: 1320px; margin: 0 auto; padding: 56px 28px 24px;">
-    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #3C8246; margin-bottom: 8px;">Seoul Hub Team</div>
-    <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.04; margin: 0 0 34px; letter-spacing: -0.01em; text-wrap: balance;">The people running the studio day to day.</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 26px;">
-      <article>
-        <div style="width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: #F3EAD0;"><img src="team/01_Yunsun.jpg" alt="Yunsun Chung" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; transform: scale(1.35); transform-origin: 50% 15%;"></div>
-        <div style="padding: 16px 2px 0;"><h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 23px; line-height: 1.1; margin: 0 0 4px;">Yunsun Chung</h3><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.03em; color: rgba(38,42,56,0.65); margin-bottom: 10px;">Founder, CEO &amp; Facilitation Lead</div><p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.45; margin: 0; color: rgba(38,42,56,0.75);">Designs and facilitates the ME=WE practice, and hosts the studio's first collective.</p></div>
-      </article>
-      <article>
-        <img src="team/12_Tony.jpg" alt="Tony Huyuhua" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #F3EAD0;">
-        <div style="padding: 16px 2px 0;"><h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 23px; line-height: 1.1; margin: 0 0 4px;">Tony Huyuhua</h3><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.03em; color: rgba(38,42,56,0.65); margin-bottom: 10px;">CTO / Technical Officer</div><p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.45; margin: 0; color: rgba(38,42,56,0.75);">Engineer and community practitioner based in Taiwan, connecting community, education, and technology.</p></div>
-      </article>
-      <article>
-        <div style="width: 100%; aspect-ratio: 1 / 1; background: #F3EAD0; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 28px; color: rgba(38,42,56,0.45);">ES</div>
-        <div style="padding: 16px 2px 0;"><h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 23px; line-height: 1.1; margin: 0 0 4px;">Eunhye Shin</h3><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.03em; color: rgba(38,42,56,0.65); margin-bottom: 10px;">Youth Coordinator &amp; Facilitator</div><p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.45; margin: 0; color: rgba(38,42,56,0.75);">Junior youth animator and physical trainer. <span style="color: #E6328C;">Photo pending.</span></p></div>
-      </article>
-      <article>
-        <div style="width: 100%; aspect-ratio: 1 / 1; background: #F3EAD0; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 28px; color: rgba(38,42,56,0.45);">TK</div>
-        <div style="padding: 16px 2px 0;"><h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 23px; line-height: 1.1; margin: 0 0 4px;">Taegun Kim</h3><div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.03em; color: rgba(38,42,56,0.65); margin-bottom: 10px;">Creative Officer</div><p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.45; margin: 0; color: rgba(38,42,56,0.75);">Art production manager, sculptor, and participatory public artist. <span style="color: #E6328C;">Photo pending.</span></p></div>
-      </article>
-    </div>
+  <!-- ===================== DEFINITION BLOCK ===================== -->
+  <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
+    <p style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 20px; max-width: 20ch; text-wrap: balance; color: #2E3B40;">A Collective doesn't join. A Collective begins.</p>
+    <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 20px; line-height: 1.5; max-width: 640px; margin: 0; color: rgba(46,59,64,0.8);">Every protagonist practices ME=WE. A few carry it into their own community, in their own way — without being asked. Those are IN-Collectives.</p>
   </section>
 
   <!-- ===================== IN-COLLECTIVES ROSTER ===================== -->
-  <section id="facilitators" style="max-width: 1320px; margin: 0 auto; padding: 56px 28px 24px;">
+  <section id="facilitators" style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px 24px;">
     <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #3C8246; margin-bottom: 40px;">IN-Collective Network</div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 26px;">
@@ -72,6 +75,7 @@
           <div style="padding: 16px 2px 0;">
             <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.03em; color: rgba(38,42,56,0.45); margin-bottom: 4px;">#{{ person.num }}</div>
             <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 23px; line-height: 1.1; margin-bottom: 6px;">{{ person.name }}</div>
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.03em; color: #3C8246; margin-bottom: 8px;">{{ person.role }}</div>
             <p style="font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.45; margin: 0 0 12px; color: rgba(38,42,56,0.75);">{{ person.oneLiner }}</p>
             <button class="tm-more" onClick="{{ person.toggle }}">{{ person.toggleLabel }}</button>
             <sc-if value="{{ person.expanded }}" hint-placeholder-val="{{ false }}">
@@ -83,26 +87,34 @@
     </div>
   </section>
 
+  <!-- ===================== FOUNDER'S NOTE ===================== -->
+  <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
+    <div style="border-top: 1px solid rgba(38,42,56,0.14); padding-top: 44px;">
+      <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; font-size: clamp(24px, 3vw, 40px); line-height: 1.3; width: 800px; max-width: 100%; margin: 0; color: #43326D;">"So, let's roll up our sleeves and co-design our future together, with the wisdom of experience and the curiosity of youth guiding our way. Welcome to INNOCO, where our collective story is just beginning."</p>
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; margin-top: 20px; color: rgba(38,42,56,0.6);">— Yunsun Chung, Founder</div>
+    </div>
+  </section>
+
   <!-- ===================== JOIN CTA (green) ===================== -->
-  <section id="join" style="background: #3C8246; color: #FAF4E2; margin-top: 36px;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px;">
+  <section id="join" style="background: #46325A; color: #FAF4E2; margin-top: 80px;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.78); margin-bottom: 18px;">The door is open</div>
-      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 60px); line-height: 1.04; margin: 0 0 18px; max-width: 18ch; letter-spacing: -0.01em; text-wrap: balance;">Carry ME=WE into your own community.</h2>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 60px); line-height: 1.04; margin: 0 auto 18px; max-width: 18ch; letter-spacing: -0.01em; text-wrap: balance;">Carry ME=WE into your own community.</h2>
       <sc-if value="{{ openToNew }}" hint-placeholder-val="{{ true }}">
-        <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; max-width: 620px; margin: 0 0 32px; color: rgba(250,244,226,0.9);">We're welcoming new facilitators and BridgeBuilders. If these questions resonate with your work, we'd be glad to begin a conversation.</p>
+        <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; max-width: 620px; margin: 0 auto 32px; color: rgba(250,244,226,0.9);">We're welcoming new facilitators and BridgeBuilders. If these questions resonate with your work, we'd be glad to begin a conversation.</p>
       </sc-if>
       <sc-if value="{{ closedToNew }}" hint-placeholder-val="{{ false }}">
-        <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; max-width: 620px; margin: 0 0 32px; color: rgba(250,244,226,0.9);">Facilitator intake is currently paused. Leave your details and we'll reach out when the next cohort opens.</p>
+        <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; max-width: 620px; margin: 0 auto 32px; color: rgba(250,244,226,0.9);">Facilitator intake is currently paused. Leave your details and we'll reach out when the next cohort opens.</p>
       </sc-if>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
-        <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #3C8246; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Facilitator interest form</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
+        <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #46325A; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Facilitator interest form</a>
         <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">BridgeBuilder interest form</a>
       </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+  <div id="connect"><dc-import name="Footer" cta="#46325A" loop="0.103" hint-size="100%,460px"></dc-import></div>
 
 </div>
 
@@ -136,8 +148,10 @@ class Component extends DCLogic {
 
     const roster = data.map(([num, name, photo, oneLiner, fullBio]) => {
       const expanded = !!this.state.expanded[num];
+      const roleMap = { '01': 'Founder, CEO & Facilitation Lead', '12': 'CTO / Technical Officer' };
       return {
         num, name, photo, oneLiner, fullBio, expanded,
+        role: roleMap[num] || '',
         toggleLabel: expanded ? 'Less −' : 'More +',
         toggle: () => this.toggle(num)
       };

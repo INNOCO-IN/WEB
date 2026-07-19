@@ -22,6 +22,27 @@
   .cm-card:hover .cm-arrow { transform: translateX(4px); }
 </style>
 <script src="./image-slot.js"></script>
+<style id="in-mobile">
+@media (max-width: 1000px){
+  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
+  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
+  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
+}
+@media (max-width: 600px){
+  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
+  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
+  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
+}
+</style>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -50,41 +71,44 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px;">
 
-      <a href="Story.EN.dc.html" class="cm-card" style="display: flex; flex-direction: column; background: #3C8246; color: #FAF4E2;">
+      <article class="cm-card" style="display: flex; flex-direction: column; background: #3C8246; color: #FAF4E2;">
         <image-slot id="cm-nepal" shape="rect" placeholder="Nepal youth cluster — a gathering" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-          <div>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #FAF4E2;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,244,226,0.8);">Community</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
             <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.82); margin-bottom: 10px;">Lalitpur, Nepal · Since 2016</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">Nepal Youth Cluster</h3>
-            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.9);">The youth network that grew out of Nepal Connect — relationships that outlasted the program and keep organizing on their own.</p>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">Nepal Youth Cluster</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(250,244,226,0.9);">The youth network that grew out of Nepal Connect — relationships that outlasted the program and keep organizing on their own.</p>
+            <a href="Community-Nepal-Youth-Cluster.EN.dc.html" aria-label="Open Nepal Youth Cluster" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
           </div>
-          <span style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">Their stories <span class="cm-arrow">→</span></span>
         </div>
-      </a>
+      </article>
 
-      <a href="Story.EN.dc.html" class="cm-card" style="display: flex; flex-direction: column; background: #F3EAD0; color: #2E3B40;">
+      <article class="cm-card" style="display: flex; flex-direction: column; background: #F3EAD0; color: #2E3B40;">
         <image-slot id="cm-bridgebuilder" shape="rect" placeholder="BridgeBuilders across five countries" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-          <div>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #D21E28;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">Community</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
             <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 10px;">China · Japan · Korea · Nepal · Taiwan</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">BridgeBuilder Network</h3>
-            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">Young people practicing coherent community life in their own neighborhoods, growing from the <a href="Project.EN.dc.html#bridgebuilder" style="color: #1E8A86;">Asia Exchange</a> program.</p>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">BridgeBuilder Network</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(46,59,64,0.78);">Young people practicing coherent community life in their own neighborhoods, growing from the <a href="Project.EN.dc.html#bridgebuilder" style="color: #1E8A86;">Asia Exchange</a> program.</p>
+            <a href="Community-BridgeBuilders.EN.dc.html" aria-label="Open BridgeBuilder Network" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
           </div>
-          <span style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">Their stories <span class="cm-arrow">→</span></span>
         </div>
-      </a>
+      </article>
 
-      <a href="Story.EN.dc.html" class="cm-card" style="display: flex; flex-direction: column; background: #FAB414; color: #2E3B40;">
+      <article class="cm-card" style="display: flex; flex-direction: column; background: #FAB414; color: #2E3B40;">
         <image-slot id="cm-kulna" shape="rect" placeholder="The KULNA garden community" style="display:block; width: 100%; aspect-ratio: 4 / 3;"></image-slot>
-        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-          <div>
+        <div style="display: flex; gap: 16px; padding: 22px 24px 24px; flex: 1;">
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #D21E28;"></span><span style="writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">Community</span></div>
+          <div style="display: flex; flex-direction: column; flex: 1;">
             <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 10px;">Zayed University, UAE · Since 2016</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 27px; line-height: 1.06; margin: 0 0 10px;">KULNA Community</h3>
-            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">The living ecosystem left by Food Revolution — students, growers, and neighbors who kept the garden and the practice going.</p>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">KULNA Community</h3>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 20px; color: rgba(46,59,64,0.78);">The living ecosystem left by Food Revolution — students, growers, and neighbors who kept the garden and the practice going.</p>
+            <a href="Story.EN.dc.html" aria-label="Open KULNA Community" style="margin-top: auto; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
           </div>
-          <span style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">Their stories <span class="cm-arrow">→</span></span>
         </div>
-      </a>
+      </article>
 
     </div>
   </section>
@@ -96,29 +120,29 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px;">
 
-      <a href="Story.EN.dc.html" class="cm-card" style="display: flex; flex-direction: column; justify-content: space-between; background: #D21E28; color: #FAF4E2; padding: 26px 26px 24px; min-height: 240px;">
+      <article class="cm-card" style="display: flex; flex-direction: column; justify-content: space-between; background: #D21E28; color: #FAF4E2; padding: 26px 26px 24px; min-height: 240px;">
         <div>
           <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.85); margin-bottom: 12px;">News · September 5, 2026</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 25px; line-height: 1.08; margin: 0 0 10px;">BridgeBuilder Virtual Pilot Lab</h3>
-          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.9);">A first online gathering for BridgeBuilders across five countries — one shared practice.</p>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">BridgeBuilder Virtual Pilot Lab</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0; color: rgba(250,244,226,0.9);">A first online gathering for BridgeBuilders across five countries — one shared practice.</p>
         </div>
-        <span style="display: flex; align-items: center; justify-content: space-between; margin-top: 22px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">Read more <span class="cm-arrow">→</span></span>
-      </a>
+        <a href="Story.EN.dc.html" aria-label="Read more" style="margin-top: 22px; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+      </article>
 
-      <a href="Story.EN.dc.html" class="cm-card" style="display: flex; flex-direction: column; justify-content: space-between; background: #F3EAD0; color: #2E3B40; padding: 26px 26px 24px; min-height: 240px;">
+      <article class="cm-card" style="display: flex; flex-direction: column; justify-content: space-between; background: #F3EAD0; color: #2E3B40; padding: 26px 26px 24px; min-height: 240px;">
         <div>
           <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 12px;">Story · from the network</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 25px; line-height: 1.08; margin: 0 0 10px;">A garden that outgrew its classroom</h3>
-          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0; color: rgba(46,59,64,0.78);">How the KULNA community keeps the practice alive, in their own words.</p>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.05; margin: 0 0 10px;">A garden that outgrew its classroom</h3>
+          <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0; color: rgba(46,59,64,0.78);">How the KULNA community keeps the practice alive, in their own words.</p>
         </div>
-        <span style="display: flex; align-items: center; justify-content: space-between; margin-top: 22px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">Read the story <span class="cm-arrow">→</span></span>
-      </a>
+        <a href="Story.EN.dc.html" aria-label="Read the story" style="margin-top: 22px; align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+      </article>
 
-      <a href="Story.EN.dc.html" class="cm-card" style="display: flex; flex-direction: column; justify-content: center; background: #FAF4E2; border: 1.5px solid #2E3B40; color: #2E3B40; padding: 26px 26px; min-height: 240px;">
-        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 25px; line-height: 1.1; margin: 0 0 10px;">More from the network</h3>
-        <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.42; margin: 0 0 16px; color: rgba(46,59,64,0.78);">Every cluster's news and stories gather in Story.</p>
-        <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 8px;">Go to Story <span class="cm-arrow">→</span></span>
-      </a>
+      <article class="cm-card" style="display: flex; flex-direction: column; justify-content: center; background: #FAF4E2; border: 1.5px solid #2E3B40; color: #2E3B40; padding: 26px 26px; min-height: 240px;">
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 30px; line-height: 1.08; margin: 0 0 10px;">More from the network</h3>
+        <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.3; margin: 0 0 16px; color: rgba(46,59,64,0.78);">Every cluster's news and stories gather in Story.</p>
+        <a href="Story.EN.dc.html" aria-label="Go to Story" style="align-self: flex-start; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; color: #FAF4E2; text-decoration: none;">→</a>
+      </article>
 
     </div>
   </section>
@@ -141,7 +165,7 @@
   </section>
 
   <!-- CTA BAND -->
-  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 44px;">
+  <section style="background: #D21E28; color: #FAF4E2; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Become a BridgeBuilder, or walk alongside as a collaborator.</h2>
@@ -152,7 +176,7 @@
     </div>
   </section>
 
-  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+  <div id="connect"><dc-import name="Footer" cta="#D21E28" loop="0.716" hint-size="100%,460px"></dc-import></div>
 
 </div>
 </x-dc>

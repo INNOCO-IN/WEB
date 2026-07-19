@@ -22,6 +22,27 @@
   .in-lbl { display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 8px; }
 </style>
 <script src="./image-slot.js"></script>
+<style id="in-mobile">
+@media (max-width: 1000px){
+  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
+  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
+  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
+  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
+}
+@media (max-width: 600px){
+  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
+  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
+  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
+  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
+  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
+}
+</style>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -33,27 +54,88 @@
     <div style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 56px;">
       <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; line-height: 1.1; text-transform: uppercase; color: rgba(46,59,64,0.7); margin-bottom: 24px;">Story Submission</div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(42px, 6vw, 80px); line-height: 1.0; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 18ch; text-wrap: balance;">Add your ME=WE story to the archive.</h1>
-      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.46; max-width: 720px; margin: 0; color: rgba(46,59,64,0.85);">A moment you lived, or one you noticed in someone else — in whatever form it takes. No length rules, no right answer. We read every one.</p>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.46; max-width: 760px; margin: 0; color: rgba(46,59,64,0.85);">Fifteen minutes. One honest moment. A story is a free gift — your experience, offered so others can see further. It doesn't need to be polished; it needs to be honest. Only steps 1 and 5 are required.</p>
     </div>
   </section>
 
   <!-- FORM -->
   <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
-    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; line-height: 1.1; text-transform: uppercase; color: #B87A00; margin-bottom: 24px;">Tell it your way</div>
-    <div style="max-width: 720px; display: flex; flex-direction: column; gap: 22px;">
-      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-        <div style="flex: 1 1 240px;"><label class="in-lbl">Your name</label><input class="in-field" type="text" placeholder="First name is fine"></div>
-        <div style="flex: 1 1 240px;"><label class="in-lbl">Email</label><input class="in-field" type="email" placeholder="So we can reply"></div>
-      </div>
+    <div style="max-width: 760px; display: flex; flex-direction: column; gap: 44px;">
+
+      <!-- STEP 1 (required) -->
       <div>
-        <label class="in-lbl">Is this something you…</label>
-        <div style="display: flex; flex-wrap: wrap; gap: 9px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">
-          <span style="background: #FAB414; color: #2E3B40; border-radius: 999px; padding: 10px 18px;">I lived it</span>
-          <span style="background: transparent; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 10px 18px;">I noticed it</span>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B87A00; margin-bottom: 8px;">Step 1 — Your story <span style="color: rgba(46,59,64,0.5);">· required</span></div>
+        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; margin: 0 0 18px; color: rgba(46,59,64,0.8);">Two doors, not two rigid boxes. Pick whichever pulls you; if a story sits on the line, it belongs to whichever the teller feels.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px;">
+          <div style="background: #FAB414; color: #2E3B40; padding: 22px 22px;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">I lived it</div>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.4; margin: 0;">A moment I was inside. I acted, I risked, I was changed. I'm the one who dared.</p>
+          </div>
+          <div style="background: #F3EAD0; color: #2E3B40; padding: 22px 22px;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">I noticed it</div>
+            <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.4; margin: 0;">ME=WE I saw in the world: a performance, nature, a proverb, a film, a street. My noticing is the story.</p>
+          </div>
+        </div>
+        <label class="in-lbl">Your story</label>
+        <textarea class="in-field" rows="7" placeholder="Start anywhere — the moment, the shift, what stayed with you."></textarea>
+        <div style="background: rgba(46,59,64,0.05); border-left: 3px solid #B87A00; padding: 14px 16px; margin-top: 12px;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #B87A00; margin-bottom: 6px;">Stuck?</div>
+          <p style="font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.8);">Think of one moment, one place. What was dared, or what you noticed. What moved — in you, or between people. Then: why this is ME=WE to you. Fifteen minutes is enough.</p>
         </div>
       </div>
-      <div><label class="in-lbl">Your story</label><textarea class="in-field" rows="7" placeholder="Start anywhere — the moment, the shift, what stayed with you."></textarea></div>
-      <div><label class="in-lbl">Add an image or voice note (optional)</label><image-slot id="story-sub-upload" shape="rect" placeholder="Drop a photo, drawing, or scan" style="display: block; width: 100%; aspect-ratio: 16 / 7; height: 200px;"></image-slot></div>
+
+      <!-- STEP 2 (optional) -->
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B87A00; margin-bottom: 12px;">Step 2 — Format <span style="color: rgba(46,59,64,0.5);">· optional</span></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 9px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13.5px;">
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Writing</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Drawing</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Photo</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Video</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Music</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Dance</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Craft</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Recipe</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Symbol</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">…Yours</span>
+        </div>
+        <div style="margin-top: 14px;"><label class="in-lbl">Attach your piece (optional)</label><image-slot id="story-sub-upload" shape="rect" placeholder="Drop a photo, drawing, scan, or file" style="display: block; width: 100%; aspect-ratio: 16 / 7; height: 200px;"></image-slot></div>
+      </div>
+
+      <!-- STEP 3 (optional) -->
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B87A00; margin-bottom: 12px;">Step 3 — Where on the ME=WE Arc <span style="color: rgba(46,59,64,0.5);">· optional, skippable</span></div>
+        <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.45; margin: 0 0 14px; color: rgba(46,59,64,0.8);">Place your story anywhere on the arc — including the stuck places. You don't need to name the stage; we'll help place it.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 9px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px;">
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">IGNITE</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">ME ≠ WE</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">ME + WE</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">(ME WE)</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">ME = WE</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">GLOW</span>
+          <span style="border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 9px 16px;">Let IN place it</span>
+        </div>
+      </div>
+
+      <!-- STEP 4 (optional) -->
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B87A00; margin-bottom: 12px;">Step 4 — Name or anonymous <span style="color: rgba(46,59,64,0.5);">· optional</span></div>
+        <label class="in-lbl">How should we credit you?</label>
+        <input class="in-field" type="text" placeholder="A name, initials, or leave blank to stay anonymous">
+      </div>
+
+      <!-- STEP 5 (required) -->
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B87A00; margin-bottom: 12px;">Step 5 — Email &amp; consent <span style="color: rgba(46,59,64,0.5);">· required</span></div>
+        <label class="in-lbl">Email</label>
+        <input class="in-field" type="email" placeholder="So we can reach you">
+        <label style="display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.4; color: rgba(46,59,64,0.8);"><input type="checkbox" style="margin-top: 5px;"> I'm offering this story for the IN archive, and I'm okay with it being shared with the community.</label>
+      </div>
+
+      <div style="background: rgba(46,59,64,0.05); padding: 16px 18px;">
+        <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.8);">We may gently edit for length — never for meaning.</p>
+      </div>
+
       <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
         <a href="Story.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">Send my story</a>
         <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; color: rgba(46,59,64,0.55);">You'll get a note back once we've read it.</span>
@@ -62,17 +144,17 @@
   </section>
 
   <!-- CTA (teal · constant) -->
-  <section style="background: #1E8A86; color: #FAF4E2; margin-top: 80px;">
+  <section style="background: #FAB414; color: #2E3B40; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
-      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.7); margin: 0 0 18px;">Are you IN?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Read what others have shared.</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
-        <a href="Story.EN.dc.html" style="text-decoration: none; color: #1E8A86; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Back to Story</a>
+        <a href="Story.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Back to Story</a>
       </div>
     </div>
   </section>
 
-  <div id="connect"><dc-import name="Footer" hint-size="100%,460px"></dc-import></div>
+  <div id="connect"><dc-import name="Footer" cta="#FAB414" loop="0.443" hint-size="100%,460px"></dc-import></div>
 
 </div>
 
