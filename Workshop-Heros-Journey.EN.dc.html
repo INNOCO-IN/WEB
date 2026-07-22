@@ -91,11 +91,11 @@
         <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; margin: 0 0 18px; color: rgba(46,59,64,0.82);">Within us, a similar network exists — like the neural pathways connecting thought, memory, sensation, and choice. When that connection is disrupted, the body sends signals immediately. Connection is not optional; it is the condition that lets us function as a healthy whole.</p>
         <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; margin: 0; color: rgba(46,59,64,0.82);">So why do we — already connected — so often push each other away and treat disconnection as normal? Perhaps connection isn't broken. Perhaps we simply haven't looked at it from another angle yet.</p>
       </div>
-      <sc-if value="{{ showImage }}" hint-placeholder-val="{{ true }}">
+      
         <div style="flex: 1 1 380px; min-width: 280px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ws-herosjourney-hero" shape="rect" placeholder="Drop workshop photo" style="display:block; width: 100%; aspect-ratio: 4 / 5;" hint-size="100%,460px"></x-import>
         </div>
-      </sc-if>
+      
     </div>
   </section>
 
@@ -176,7 +176,7 @@
   <!-- ===================== REGISTER CTA ===================== -->
   <section id="register" style="background: #E6328C; color: #FAF4E2; margin-top: 8px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
-      <sc-if value="{{ regOpen }}" hint-placeholder-val="{{ true }}">
+      
         <div>
           <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
           <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Step into the work.</h2>
@@ -185,17 +185,8 @@
             <a href="Home.EN.dc.html#connect" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Ask a question</a>
           </div>
         </div>
-      </sc-if>
-      <sc-if value="{{ regClosed }}" hint-placeholder-val="{{ false }}">
-        <div>
-          <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Currently full</p>
-          <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Join the waitlist for the next round.</h2>
-          <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
-            <a href="Home.EN.dc.html#connect" style="text-decoration: none; color: #E6328C; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Join the waitlist</a>
-          </div>
-        </div>
-      </sc-if>
-    </div>
+      
+      </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
@@ -203,18 +194,6 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 980}, &quot;showFeaturedImage&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Layout&quot;}, &quot;showRelated&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Layout&quot;}, &quot;registrationOpen&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Registration&quot;}}">
-class Component extends DCLogic {
-  renderVals() {
-    const regOpen = this.props.registrationOpen ?? true;
-    return {
-      showImage: this.props.showFeaturedImage ?? true,
-      showRelated: this.props.showRelated ?? true,
-      regOpen: regOpen,
-      regClosed: !regOpen,
-    };
-  }
-}
-</script>
+<script type="text/x-dc" data-dc-script></script>
 </body>
 </html>

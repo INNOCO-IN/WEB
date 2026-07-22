@@ -16,44 +16,21 @@
   html, body { margin: 0; padding: 0; }
   body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
   ::selection { background: #E6328C; color: #FAF4E2; }
-  a { color: #1E8A86; }
-  a:hover { color: #166b68; }
+  a { color: #C0431C; }
+  a:hover { color: #96331480; }
   .stage { transition: transform 0.18s ease, box-shadow 0.18s ease; }
   .stage:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(46,59,64,0.16); }
 </style>
 <style id="in-mobile">
 @media (max-width: 1000px){
-  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns: 96px 1fr auto"]{grid-template-columns:1fr !important; gap:18px !important;}
   [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: repeat(3, minmax(0"]{grid-template-columns:1fr !important;}
   img,svg,video{max-width:100% !important;}
-  [style*="font-size: 300px"]{display:none !important;}
-  [style*="font-size: 60px"][style*="height: 300px"]{height:auto !important;}
-  [style*="72px 120px"]{padding:56px 0 48px 0 !important;}
-  [style*="width: 700px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 900px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
-  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
 }
 @media (max-width: 600px){
   [style*="padding: 70px 28px"]{padding:44px 20px !important;}
-  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
-  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
-  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
-  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
-  [style*="padding: 56px 28px"]{padding:38px 20px !important;}
-  [style*="padding: 64px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 40px 80px"]{padding:30px 20px !important;}
-  [style*="padding: 40px 40px"]{padding:28px 20px !important;}
-  [style*="padding: 44px 44px"]{padding:28px 20px !important;}
+  [style*="padding: 34px 36px"]{padding:26px 22px !important;}
   [style*="font-size: 130px"]{font-size:64px !important;line-height:1 !important;}
-  [style*="font-size: 60px"]{font-size:34px !important;line-height:1.15 !important;}
 }
 </style>
 </helmet>
@@ -63,77 +40,122 @@
   <dc-import name="Nav" active-page="mewe" hint-size="100%,64px"></dc-import>
 
   <!-- ===================== HERO ===================== -->
-  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 20px;">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #F05A28; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #F05A28;">Protagonist</span></div>
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between;">
-      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.99; letter-spacing: -0.02em; margin: 0; max-width: 16ch; text-wrap: balance;">Everyone here is a protagonist.</h1>
-      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(19px, 2vw, 28px); line-height: 1.44; max-width: 460px; margin: 0; color: rgba(46,59,64,0.82);">Not a ladder of ranks — a continuing process. Everyone starts at the door, and moves as far inward as they choose: participant, bridge builder, facilitator, IN-Collective.</p>
+  <section style="background: #F05A28; color: #FAF4E2;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 52px 28px 60px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FAF4E2; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #FAF4E2;">Protagonist</span></div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6.4vw, 96px); line-height: 0.96; letter-spacing: -0.025em; margin: 0 0 22px; max-width: 14ch; text-wrap: balance;">No spectators here.</h1>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.3; max-width: 720px; margin: 0; color: rgba(250,244,226,0.94);">A studio for turning new capability into ordinary acts of connection — one conversation, one neighbor, one story at a time.</p>
     </div>
   </section>
 
-  <!-- ===================== STAGES ===================== -->
-  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 20px;">
+  <!-- ===================== OPENING FRAMING ===================== -->
+  <section style="max-width: 1320px; margin: 84px auto 0; padding: 0 28px;">
+    <div style="max-width: 940px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #C0431C; margin-bottom: 22px;">The moment</div>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.04; letter-spacing: -0.01em; margin: 0 0 22px; text-wrap: balance; color: #2E3B40;">Never before have so many people been able to do so much.</h2>
+      <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.55; margin: 0 0 34px; max-width: 720px; color: rgba(46,59,64,0.82);">Knowledge that once took a lifetime to reach now arrives in an afternoon. Tools that belonged to institutions now sit in our hands. A person in one country can learn alongside someone on the other side of the world, before lunch.</p>
+      <p style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(26px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.01em; margin: 0 0 24px; text-wrap: balance; color: #2E3B40;">And yet the question of our time isn&rsquo;t what we&rsquo;re now capable of. <span style="color: #C0431C;">It&rsquo;s what we&rsquo;ll do with it.</span></p>
+      <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.55; margin: 0; max-width: 720px; color: rgba(46,59,64,0.82);">This is the moment IN was built for. Not to admire the capacity, but to practice with it — to turn enhanced capability into ordinary, daily acts of connection. A conversation started. A neighbor noticed. A story told so someone else can see further.</p>
+    </div>
+  </section>
+
+  <!-- ===================== DEFINITION ===================== -->
+  <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
+    <div style="border-top: 1.5px solid rgba(46,59,64,0.16); padding-top: 42px; max-width: 940px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #C0431C; margin-bottom: 20px;">What we mean by protagonist</div>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.04; letter-spacing: -0.01em; margin: 0 0 20px; text-wrap: balance; color: #2E3B40;">Not a leader, not an expert — simply someone who has decided not to watch.</h2>
+      <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.55; margin: 0 0 32px; max-width: 720px; color: rgba(46,59,64,0.82);">Everyone who comes through IN walks their own path, at their own depth. Not ranks. Not requirements. Just how far you feel called to walk.</p>
+      <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.32; margin: 0; max-width: 760px; color: #2E3B40; text-wrap: pretty;">It starts with one free workshop. After that, four paths open — and each one leads back to the same place: a story, offered to the rest of us.</p>
+    </div>
+  </section>
+
+  <!-- ===================== THE FOUR PATHS ===================== -->
+  <section style="max-width: 1320px; margin: 46px auto 0; padding: 0 28px;">
     <div style="display: flex; flex-direction: column; gap: 20px;">
 
-      <!-- Stage 1 -->
-      <a href="Workshop.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; color: #FAF4E2; padding: 34px 36px; background-color: #F05A28">
-        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">1</div>
+      <!-- Path 1 -->
+      <a href="Workshop.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; color: #2E3B40; padding: 38px 40px; background-color: #FAF4E2; border: 1.5px solid rgba(46,59,64,0.16);">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(46,59,64,0.28);">1</div>
         <div>
-          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">Neighbor <span style="color: rgba(250,244,226,0.6);">/</span> Participant</h2>
-          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.92);">Anyone who has taken part in a workshop. The door in — no commitment beyond showing up and staying curious.</p>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C0431C; margin-bottom: 10px;">Explore ME=WE</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 12px; letter-spacing: -0.01em; text-wrap: balance;">Participant</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.46; margin: 0; max-width: 62ch; color: rgba(46,59,64,0.82);">You&rsquo;ve taken a workshop. Now you try it in the world: you initiate ME=WE conversations with family, friends, and neighbors, and return to Open Studio to practice alongside others. Slowly it stops being an exercise and starts being how you live. And when you&rsquo;re ready, you write your story and pass it on.</p>
         </div>
-        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Find a workshop
-          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #2E3B40;">Find a workshop
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #2E3B40; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 22px;">&rarr;</span>
         </span>
       </a>
 
-      <!-- Stage 2 -->
-      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; background: #F05A28; color: #FAF4E2; padding: 34px 36px;">
-        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">2</div>
+      <!-- Path 2 -->
+      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; color: #2E3B40; padding: 38px 40px; background-color: #FAF4E2; border: 1.5px solid rgba(46,59,64,0.16);">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(46,59,64,0.28);">2</div>
         <div>
-          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">Bridge Builder</h2>
-          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.92);">An apprentice track — learning to hold space, working closely alongside a mentor before facilitating on your own.</p>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C0431C; margin-bottom: 10px;">Learn by contributing</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 12px; letter-spacing: -0.01em; text-wrap: balance;">Bridge Builder</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.46; margin: 0; max-width: 62ch; color: rgba(46,59,64,0.82);">An apprentice path, open on request. You start by identifying your own interest and purpose, then shadow real IN activities — supporting design, tech, storytelling, or facilitation, close to a mentor. You contribute to the growing body of stories, and you leave with genuine experience, a certificate, and a reference letter for whatever comes next.</p>
         </div>
-        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Apply as a Bridge Builder
-          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #2E3B40;">Apply as a Bridge Builder
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #2E3B40; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 22px;">&rarr;</span>
         </span>
       </a>
 
-      <!-- Stage 3 -->
-      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; background: #F05A28; color: #FAF4E2; padding: 34px 36px;">
-        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">3</div>
+      <!-- Path 3 -->
+      <a href="Workshop-Pathfinder.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; color: #2E3B40; padding: 38px 40px; background-color: #FAF4E2; border: 1.5px solid rgba(46,59,64,0.16);">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(46,59,64,0.28);">3</div>
         <div>
-          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">Facilitator <span style="color: rgba(250,244,226,0.7);">(Pathfinder)</span></h2>
-          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.94);">Leads workshops independently and carries the practice forward — trusted to adapt ME=WE to the room in front of them.</p>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C0431C; margin-bottom: 10px;">A certified path</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 12px; letter-spacing: -0.01em; text-wrap: balance;">Facilitator <span style="color: rgba(46,59,64,0.5);">(Pathfinder)</span></h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.46; margin: 0; max-width: 62ch; color: rgba(46,59,64,0.82);">The one certified program at IN. Through the Pathfinder series you learn the workshop from the inside, practice with us, and keep returning to Open Studio as your own practice deepens. You earn the ME=WE Facilitator certificate, then hold the space yourself — facilitating workshops in your own context, and sometimes creating new ones.</p>
         </div>
-        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Start a conversation
-          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #2E3B40;">See the Pathfinder workshop
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #2E3B40; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 22px;">&rarr;</span>
         </span>
       </a>
 
-      <!-- Stage 4 -->
-      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; background: #F05A28; color: #FAF4E2; padding: 34px 36px;">
-        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(250,244,226,0.55);">4</div>
+      <!-- Path 4 -->
+      <a href="Are-you-IN.EN.dc.html" class="stage" style="text-decoration: none; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 28px; color: #2E3B40; padding: 38px 40px; background-color: #FAF4E2; border: 1.5px solid rgba(46,59,64,0.16);">
+        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; color: rgba(46,59,64,0.28);">4</div>
         <div>
-          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 10px; letter-spacing: -0.01em; text-wrap: balance;">IN-Collective</h2>
-          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.42; margin: 0; max-width: 60ch; color: rgba(250,244,226,0.92);">A full partner — hosting IN's work in their own community and context. Not a branch, but an independent collective carrying the practice.</p>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C0431C; margin-bottom: 10px;">A full partner</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; margin: 0 0 12px; letter-spacing: -0.01em; text-wrap: balance;">IN-Collective</h2>
+          <p style="font-family: 'Newsreader', serif; font-size: clamp(18px, 1.9vw, 21px); line-height: 1.46; margin: 0; max-width: 62ch; color: rgba(46,59,64,0.82);">This one begins with a conversation: an application, an interview, an agreement. From there you&rsquo;re part of the studio itself — developing workshops, co-facilitating, collaborating across the network, and hosting IN&rsquo;s work in your own community, language, and culture. Independent, not a branch. Still in Open Studio with the rest of us.</p>
         </div>
-        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #FAF4E2;">Start a conversation
-          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #FAF4E2; color: #F05A28; display: flex; align-items: center; justify-content: center; font-size: 22px;">→</span>
+        <span style="display: flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; color: #2E3B40;">Start a conversation
+          <span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #2E3B40; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-size: 22px;">&rarr;</span>
         </span>
       </a>
 
     </div>
-    <p style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; color: rgba(46,59,64,0.55); margin: 22px 0 0;">Stages 3 and 4 aren't self-serve sign-ups — they begin with a conversation. &nbsp;<a href="Project.EN.dc.html#bridgebuilder" style="color: #1E8A86; font-weight: 700; text-decoration: underline;">See the live BridgeBuilder program →</a></p>
+  </section>
+
+  <!-- ===================== OPEN STUDIO (thread) ===================== -->
+  <section style="max-width: 1320px; margin: 46px auto 0; padding: 0 28px;">
+    <div style="background: #F3EAD0; padding: 56px 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C0431C; margin-bottom: 16px;">Threaded through all four</div>
+        <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -0.01em; margin: 0; text-wrap: balance; color: #2E3B40;">Open Studio.</h2>
+      </div>
+      <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.55; margin: 0; color: rgba(46,59,64,0.85);">Whatever path you&rsquo;re on, Open Studio is where everyone returns — to reflect, practice, and consult one another. It&rsquo;s the one room all four paths share.</p>
+    </div>
+  </section>
+
+  <!-- ===================== STORY ENDING ===================== -->
+  <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
+    <div style="max-width: 940px;">
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #C0431C; margin-bottom: 20px;">Every path ends the same way</div>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(34px, 4.4vw, 58px); line-height: 1.0; letter-spacing: -0.015em; margin: 0 0 22px; text-wrap: balance; color: #2E3B40;">You tell the story.</h2>
+      <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.55; margin: 0 0 26px; max-width: 720px; color: rgba(46,59,64,0.82);">Whatever you try, wherever it happens, it comes back as a story — and those stories are how the rest of us learn what&rsquo;s possible. That&rsquo;s the co-creating part. It isn&rsquo;t organized from the center. It self-organizes, one contribution at a time.</p>
+      <a href="Story.EN.dc.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 14px 28px;">Read the stories &rarr;</a>
+    </div>
   </section>
 
   <!-- ===================== CTA BAND ===================== -->
-  <section style="background: #F05A28; color: #FAF4E2; margin-top: 80px;">
+  <section style="background: #F05A28; color: #FAF4E2; margin-top: 84px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Wherever you are on the path</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">The next step is always just one conversation away.</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
-        <a href="Workshop.EN.dc.html" style="text-decoration: none; color: #1E8A86; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Find a workshop</a>
+        <a href="Workshop.EN.dc.html" style="text-decoration: none; color: #F05A28; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Find a workshop</a>
         <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: transparent; border: 1.5px solid rgba(250,244,226,0.7); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Start a conversation</a>
       </div>
     </div>
