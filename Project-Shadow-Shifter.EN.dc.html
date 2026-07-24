@@ -86,8 +86,8 @@
       <!-- MIDDLE · the story -->
       <div class="pj-mid">
         <figure style="margin: 0 0 40px;">
-          <div style="width: 100%; overflow: hidden; background: #F3EAD0;">
-            <img src="project-img/shadow-shifter.jpg" alt="Three young people holding hand-written cards and a LEGO model in front of the hand-drawn Shadow Shifter wall" style="width: 100%; height: auto; display: block;">
+          <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #F3EAD0;">
+            <img src="project-img/shadow-shifter.jpg" alt="Three young people holding hand-written cards and a LEGO model in front of the hand-drawn Shadow Shifter wall" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <figcaption style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.6); margin-top: 12px;">“Shadow Shifter — how might we become protagonists?” Nanzhi Center, June 2023.</figcaption>
         </figure>
@@ -112,16 +112,23 @@
           </div>
         </div>
 
-        <!-- GALLERY -->
-        <div class="pj-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px;">
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/shadow-shifter2.jpg" alt="The group lying on the floor writing on colored strips laid out beneath a shared mural" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/shadow-shifter3.jpg" alt="A participant cutting a yellow paper band in front of the crayon mural" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/shadow-shifter4.jpg" alt="A participant holding a written card and a LEGO role model beside the Light/Shadow challenge wall" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/shadow-shifter5.jpg" alt="Participants on a mindful walk crossing a street in the morning" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/shadow-shifter6.jpg" alt="A participant adding to the large collective crayon mural on the wall" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/shadow-shifter7.jpg" alt="The whole group striking a playful balanced pose together in front of the mural" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
+        <!-- GALLERY · embedded viewer -->
+        <div style="margin-top: 44px;">
+          <div style="position: relative; aspect-ratio: 16/9; background: #16242E;">
+            <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ lbCap }}" style="{{ lbImgStyle }}"></div></sc-if>
+            <button onClick="{{ prevLb }}" aria-label="Previous photo" style="position: absolute; left: 12px; top: 50%; margin-top: -22px; width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(250,244,226,0.85); color: #16242E; font-family: 'Archivo', sans-serif; font-size: 24px; line-height: 1; cursor: pointer;">‹</button>
+            <button onClick="{{ nextLb }}" aria-label="Next photo" style="position: absolute; right: 12px; top: 50%; margin-top: -22px; width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(250,244,226,0.85); color: #16242E; font-family: 'Archivo', sans-serif; font-size: 24px; line-height: 1; cursor: pointer;">›</button>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-top: 10px;">
+            <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.6);">{{ lbCap }}</span>
+            <span style="flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; color: rgba(46,59,64,0.55);">{{ lbCount }}</span>
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; padding-bottom: 4px;">
+            <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="0">
+              <button onClick="{{ g.open }}" aria-label="{{ g.alt }}" style="{{ g.style }}"></button>
+            </sc-for>
+          </div>
         </div>
-
         <div style="max-width: 680px; border-top: 1.5px solid rgba(30,90,100,0.45); margin-top: 44px; padding-top: 30px;">
           <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(24px, 2.8vw, 30px); line-height: 1.3; margin: 0 0 26px; color: #2E3B40; text-wrap: pretty;">Shadow Shifter is Jungle Jam’s Taiwan chapter — <span style="color: #1E5A64;">the same pattern, re-made by a different team, in a different place.</span></p>
           <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 12px;">One pattern, many forms</div>
@@ -157,5 +164,39 @@
 
 </div>
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lb: 0 };
+  photos() {
+    return [
+      { src: 'project-img/shadow-shifter2.jpg', cap: "The group lying on the floor, writing on colored strips laid out beneath a shared mural." },
+      { src: 'project-img/shadow-shifter3.jpg', cap: "A participant cutting a yellow paper band in front of the crayon mural." },
+      { src: 'project-img/shadow-shifter4.jpg', cap: "A participant holding a written card and a LEGO role model beside the Light/Shadow challenge wall." },
+      { src: 'project-img/shadow-shifter5.jpg', cap: "Participants on a mindful walk, crossing a street in the morning." },
+      { src: 'project-img/shadow-shifter6.jpg', cap: "A participant adding to the large collective crayon mural on the wall." },
+      { src: 'project-img/shadow-shifter7.jpg', cap: "The whole group striking a playful balanced pose in front of the mural." }
+    ];
+  }
+  renderVals() {
+    const ps = this.photos();
+    const lb = this.state.lb;
+    const cur = ps[lb];
+    return {
+      ready: true,
+      gallery: ps.map((p, i) => ({
+        src: p.src, alt: p.cap,
+        open: () => this.setState({ lb: i }),
+        style: "flex: 0 0 auto; width: 96px; height: 54px; padding: 0; border: none; overflow: hidden; cursor: pointer; background-image: url('" + p.src + "'); background-size: cover; background-position: center; background-color: #F3EAD0; opacity: " + (i === lb ? '1' : '0.55') + '; outline: ' + (i === lb ? '2.5px solid #1E5A64' : 'none') + '; outline-offset: -2.5px;'
+      })),
+      lbSrc: cur.src,
+      lbCap: cur.cap,
+      lbImgStyle: "position: absolute; inset: 0; background-image: url('" + cur.src + "'); background-size: cover; background-position: " + (cur.pos || 'center') + ";",
+      lbCount: (lb + 1) + ' / ' + ps.length,
+      prevLb: () => this.setState({ lb: (lb + ps.length - 1) % ps.length }),
+      nextLb: () => this.setState({ lb: (lb + 1) % ps.length })
+    };
+  }
+}
+</script>
 </body>
 </html>

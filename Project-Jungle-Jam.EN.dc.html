@@ -86,8 +86,8 @@
       <!-- MIDDLE · the story -->
       <div class="pj-mid">
         <figure style="margin: 0 0 40px;">
-          <div style="width: 100%; overflow: hidden; background: #F3EAD0;">
-            <img src="project-img/jungle-jam.jpg" alt="Two young people adding notes to the hand-drawn 'Youth Jungle Jam — Cloud Cuckoo Land' wall" style="width: 100%; height: auto; display: block;">
+          <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #F3EAD0;">
+            <img src="project-img/jungle-jam.jpg" alt="Two young people adding notes to the hand-drawn 'Youth Jungle Jam — Cloud Cuckoo Land' wall" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <figcaption style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.6); margin-top: 12px;">The Cloud Cuckoo Land wall — Dubai, March 2022.</figcaption>
         </figure>
@@ -101,19 +101,23 @@
           </div>
         </div>
 
-        <!-- GALLERY -->
-        <div class="pj-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px;">
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/jungle-jam2.jpg" alt="Two participants holding hand-drawn paper-plate faces" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/jungle-jam3.jpg" alt="A group building a tableau together through movement and role-play" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/jungle-jam4.jpg" alt="Participants with drawings pinned to their backs, arms raised toward a projected 'Light' prompt" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/jungle-jam5.jpg" alt="The full circle seated on the floor around the Self / Light / Shadow / Shift prompt" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <figure style="margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #F3EAD0;"><img src="project-img/jungle-jam6.jpg" alt="Two participants drawing freely across a large wall in colored crayon" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></figure>
-          <div style="background: #1E5A64; color: #FAF4E2; padding: 22px 20px; display: flex; flex-direction: column; justify-content: center;">
-            <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,244,226,0.7); margin-bottom: 10px;">Two days</div>
-            <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; line-height: 1.32; margin: 0;">Self · Light · Shadow · Shift.</p>
+        <!-- GALLERY · embedded viewer -->
+        <div style="margin-top: 44px;">
+          <div style="position: relative; aspect-ratio: 16/9; background: #16242E;">
+            <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ lbCap }}" style="{{ lbImgStyle }}"></div></sc-if>
+            <button onClick="{{ prevLb }}" aria-label="Previous photo" style="position: absolute; left: 12px; top: 50%; margin-top: -22px; width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(250,244,226,0.85); color: #16242E; font-family: 'Archivo', sans-serif; font-size: 24px; line-height: 1; cursor: pointer;">‹</button>
+            <button onClick="{{ nextLb }}" aria-label="Next photo" style="position: absolute; right: 12px; top: 50%; margin-top: -22px; width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(250,244,226,0.85); color: #16242E; font-family: 'Archivo', sans-serif; font-size: 24px; line-height: 1; cursor: pointer;">›</button>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-top: 10px;">
+            <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.6);">{{ lbCap }}</span>
+            <span style="flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; color: rgba(46,59,64,0.55);">{{ lbCount }}</span>
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; padding-bottom: 4px;">
+            <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="0">
+              <button onClick="{{ g.open }}" aria-label="{{ g.alt }}" style="{{ g.style }}"></button>
+            </sc-for>
           </div>
         </div>
-
         <div style="max-width: 680px; border-top: 1.5px solid rgba(30,90,100,0.45); margin-top: 44px; padding-top: 30px;">
           <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E5A64; margin-bottom: 14px;">One pattern, many forms</div>
           <div style="display: flex; flex-wrap: wrap; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px;">
@@ -147,5 +151,38 @@
 
 </div>
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lb: 0 };
+  photos() {
+    return [
+      { src: 'project-img/jungle-jam2.jpg', cap: "Two participants holding hand-drawn paper-plate faces." },
+      { src: 'project-img/jungle-jam3.jpg', cap: "A group building a tableau together through movement and role-play." },
+      { src: 'project-img/jungle-jam4.jpg', cap: "Participants with drawings pinned to their backs, arms raised toward a projected Light prompt." },
+      { src: 'project-img/jungle-jam5.jpg', cap: "The full circle seated on the floor around the Self / Light / Shadow / Shift prompt." },
+      { src: 'project-img/jungle-jam6.jpg', cap: "Two participants drawing freely across a large wall in colored crayon." }
+    ];
+  }
+  renderVals() {
+    const ps = this.photos();
+    const lb = this.state.lb;
+    const cur = ps[lb];
+    return {
+      ready: true,
+      gallery: ps.map((p, i) => ({
+        src: p.src, alt: p.cap,
+        open: () => this.setState({ lb: i }),
+        style: "flex: 0 0 auto; width: 96px; height: 54px; padding: 0; border: none; overflow: hidden; cursor: pointer; background-image: url('" + p.src + "'); background-size: cover; background-position: center; background-color: #F3EAD0; opacity: " + (i === lb ? '1' : '0.55') + '; outline: ' + (i === lb ? '2.5px solid #1E5A64' : 'none') + '; outline-offset: -2.5px;'
+      })),
+      lbSrc: cur.src,
+      lbCap: cur.cap,
+      lbImgStyle: "position: absolute; inset: 0; background-image: url('" + cur.src + "'); background-size: cover; background-position: " + (cur.pos || 'center') + ";",
+      lbCount: (lb + 1) + ' / ' + ps.length,
+      prevLb: () => this.setState({ lb: (lb + ps.length - 1) % ps.length }),
+      nextLb: () => this.setState({ lb: (lb + 1) % ps.length })
+    };
+  }
+}
+</script>
 </body>
 </html>
