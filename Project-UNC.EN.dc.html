@@ -10,58 +10,37 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
-  ::selection { background: #F0961E; color: #FAF4E2; }
+  ::selection { background: #1E5A64; color: #FAF4E2; }
   a { color: #146560; }
-</style>
-<script src="./image-slot.js"></script>
-<style id="in-mobile">
-@media (max-width: 1000px){
-  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: repeat(3, minmax(0"]{grid-template-columns:1fr !important;}
-  img,svg,video{max-width:100% !important;}
-  [style*="font-size: 300px"]{display:none !important;}
-  [style*="font-size: 60px"][style*="height: 300px"]{height:auto !important;}
-  [style*="72px 120px"]{padding:56px 0 48px 0 !important;}
-  [style*="width: 700px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 900px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
-  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
-}
-@media (max-width: 600px){
-  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
-  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
-  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
-  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
-  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
-  [style*="padding: 56px 28px"]{padding:38px 20px !important;}
-  [style*="padding: 64px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 40px 80px"]{padding:30px 20px !important;}
-  [style*="padding: 40px 40px"]{padding:28px 20px !important;}
-  [style*="padding: 44px 44px"]{padding:28px 20px !important;}
-  [style*="font-size: 130px"]{font-size:64px !important;line-height:1 !important;}
-  [style*="font-size: 60px"]{font-size:34px !important;line-height:1.15 !important;}
-}
+  a:hover { color: #0f4a45; }
+  .col-scroll::-webkit-scrollbar { width: 6px; }
+  .col-scroll::-webkit-scrollbar-thumb { background: rgba(46,59,64,0.2); border-radius: 3px; }
+  .story-body p { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 21px; line-height: 1.62; margin: 0 0 26px; color: #322c22; text-wrap: pretty; }
+  .story-body p:last-child { margin-bottom: 0; }
+  @media (max-width: 1000px){
+    .pj-grid { grid-template-columns: 1fr !important; }
+    .pj-left, .pj-right { position: static !important; max-height: none !important; border: none !important; padding: 0 !important; }
+    .pj-mid { order: 1; } .pj-left { order: 2; } .pj-right { order: 3; }
+    .pj-left, .pj-right { border-top: 1.5px solid rgba(46,59,64,0.14) !important; padding-top: 26px !important; }
+    img, svg, video { max-width: 100% !important; }
+  }
+  @media (max-width: 600px){
+    [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+  }
 </style>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
-  <dc-import name="Nav" active-page="Project.EN.dc.html" hint-size="100%,64px"></dc-import>
+  <dc-import name="Nav" active-page="project" hint-size="100%,64px"></dc-import>
 
+  <!-- ===== HERO ===== -->
   <section style="background: #1E5A64; color: #FAF4E2;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 56px;">
-      <a href="Project.EN.dc.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,244,226,0.75); text-decoration: none; display: inline-block; margin-bottom: 28px;">← All Projects</a>
+    <div style="max-width: 1320px; margin: 0 auto; padding: 44px 28px 52px;">
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;">
         <span style="background: rgba(250,244,226,0.18); border-radius: 999px; padding: 8px 15px;">Action research</span>
         <span style="background: rgba(250,244,226,0.18); border-radius: 999px; padding: 8px 15px;">Kathmandu, Nepal</span>
@@ -72,72 +51,100 @@
     </div>
   </section>
 
-  <!-- ===== LEAD PHOTO (contained, shown whole) ===== -->
-  <section style="max-width: 1320px; margin: 44px auto 0; padding: 0 28px;">
-    <figure style="margin: 0;">
-      <div style="width: 100%; overflow: hidden; background: #F3EAD0;">
-        <img src="project-img/unc.jpg" alt="UAE and Nepal youth participants and facilitators together at the ICA Training Centre, Lalitpur" style="width: 100%; height: auto; display: block;">
-      </div>
-      <figcaption style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.6); margin-top: 12px;">UAE and Nepal youth together in Lalitpur — the Social Innovation Bootcamp, 2017.</figcaption>
-    </figure>
-  </section>
+  <!-- ===== 3-COLUMN BODY ===== -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 90px;">
+    <div class="pj-grid" style="display: grid; grid-template-columns: 226px 1fr 288px; gap: 40px; align-items: start;">
 
-  <!-- ===== READING BODY ===== -->
-  <section style="max-width: 1320px; margin: 58px auto 0; padding: 0 28px;">
-    <div style="max-width: 680px;">
-      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(26px, 3vw, 32px); line-height: 1.32; letter-spacing: -0.01em; margin: 0 0 34px; color: #2E3B40; text-wrap: pretty;">In 2016, two Dubai-based art and design educators went to Nepal &mdash; not with a program, but with a question.</p>
-      <p style="font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.62; margin: 0 0 26px; color: #322c22; text-wrap: pretty;">Joanne Renaux and Yunsun Chung travelled as action research, carrying a question about what young people there needed after the 2015 earthquake.</p>
-      <p style="font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.62; margin: 0 0 26px; color: #322c22; text-wrap: pretty;">What they built over the next three years, with an international team of volunteers, was &ldquo;ME=WE, Cultivating Change.&rdquo; It began with a four-day youth camp and the slower work of building relationships with people already doing this &mdash; many local NGOs, among them one led by Abdus Miya, and a youth enterprise. That groundwork led, in June 2017, to a nine-day Social Innovation Bootcamp at the ICA Training Centre in Lalitpur, and to the years of accompaniment around it. Youth from the UAE and Nepal worked side by side, and the bootcamp closed with social project pitches to a panel of community judges.</p>
-      <p style="font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.62; margin: 0 0 26px; color: #322c22; text-wrap: pretty;">Alongside it ran something quieter: seven mentors, recruited from Nepal and abroad, each matched with a young person. Not oversight &mdash; relationship. Guests came through too, from many fields &mdash; among them Mahabir Pun, the social entrepreneur who brought the internet to Nepal&rsquo;s mountain villages, whose visit left a particular mark on the young people in the room.</p>
-      <p style="font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.62; margin: 0 0 26px; color: #322c22; text-wrap: pretty;">The part that mattered most wasn&rsquo;t the pitches. Ideas became real work: a literacy and reading program in a rural community, a homestay for women facing domestic violence, new approaches to bee and fruit farming, a hydroponic farm, a waste management system, and youth empowerment in villages long treated as untouchable. Some launched. Some are still going. The Nepali participants reorganized themselves into an independent, youth-led NGO. Several became entrepreneurs &mdash; and several appear elsewhere on this site, as collaborators, not alumni.</p>
-      <blockquote style="margin: 40px 0; padding: 0 0 0 26px; border-left: 3px solid #F0961E;">
-        <p style="font-family: 'Newsreader', serif; font-weight: 500; font-style: italic; font-size: clamp(24px, 3vw, 30px); line-height: 1.32; margin: 0; color: #2E3B40; text-wrap: pretty;">&ldquo;What we learn in schools is not everything. I want kids and young adults to learn life skills that will bring out the best person that they can be.&rdquo;</p>
-        <cite style="display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-style: normal; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-top: 16px;">A participant</cite>
-      </blockquote>
-      <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(24px, 2.8vw, 30px); line-height: 1.3; margin: 0; color: #2E3B40; text-wrap: pretty;">Relationships were the actual output. <span style="color: #C0431C;">Everything else was the occasion for them.</span></p>
-    </div>
-  </section>
+      <!-- LEFT · about -->
+      <aside class="pj-left col-scroll" style="position: sticky; top: 78px; max-height: calc(100vh - 100px); overflow-y: auto; border-right: 1px solid rgba(46,59,64,0.14); padding-right: 22px;">
+        <a href="Project.EN.dc.html" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.13em; text-transform: uppercase; color: #1E5A64; margin-bottom: 26px;">&larr; All projects</a>
 
-  <!-- ===== WATCH ===== -->
-  <section style="max-width: 1320px; margin: 64px auto 0; padding: 0 28px;">
-    <div style="max-width: 680px; border-top: 1.5px solid rgba(240,150,30,0.55); padding-top: 34px;">
-      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C0431C; margin-bottom: 20px;">Watch</div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
-        <a href="https://youtu.be/d1J4AECO_9g" target="_blank" rel="noopener" style="text-decoration: none; color: #2E3B40; display: block;">
-          <div style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #1E5A64;">
-            <img src="https://img.youtube.com/vi/d1J4AECO_9g/hqdefault.jpg" alt="UNC documentary" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9;">
-            <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(250,244,226,0.94); display: flex; align-items: center; justify-content: center;"><span style="border-left: 16px solid #F0961E; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px;"></span></span></span>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 10px;">Audience</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px;">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 6px 12px;">Cross-country youth</span>
+        </div>
+
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 10px;">Topic</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px;">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 6px 12px;">Social innovation</span>
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 6px 12px;">Exchange</span>
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; color: #2E3B40; border: 1.5px solid rgba(46,59,64,0.3); border-radius: 999px; padding: 6px 12px;">Resilience</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1.5px solid rgba(46,59,64,0.16); padding-top: 18px;">
+          <div><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1E5A64; margin-bottom: 3px;">Place</div><div style="font-family: 'Newsreader', serif; font-size: 15px; color: rgba(46,59,64,0.85);">Lalitpur / Kathmandu, Nepal</div></div>
+          <div><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1E5A64; margin-bottom: 3px;">Years</div><div style="font-family: 'Newsreader', serif; font-size: 15px; color: rgba(46,59,64,0.85);">2016–2018</div></div>
+          <div><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1E5A64; margin-bottom: 3px;">Led by</div><div style="font-family: 'Newsreader', serif; font-size: 15px; color: rgba(46,59,64,0.85);">Joanne Renaux &amp; Yunsun Chung</div></div>
+          <div><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1E5A64; margin-bottom: 3px;">Became</div><div style="font-family: 'Newsreader', serif; font-size: 15px; color: rgba(46,59,64,0.85);">An independent, youth-led NGO</div></div>
+        </div>
+      </aside>
+
+      <!-- MIDDLE · the story -->
+      <div class="pj-mid">
+        <figure style="margin: 0 0 40px;">
+          <div style="width: 100%; overflow: hidden; background: #F3EAD0;">
+            <img src="project-img/unc.jpg" alt="UAE and Nepal youth participants and facilitators together at the ICA Training Centre, Lalitpur" style="width: 100%; height: auto; display: block;">
           </div>
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; margin-top: 12px; line-height: 1.3;">Documentary</div>
-        </a>
-        <a href="https://youtu.be/3mDaD4I7w-E" target="_blank" rel="noopener" style="text-decoration: none; color: #2E3B40; display: block;">
-          <div style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #1E5A64;">
-            <img src="https://img.youtube.com/vi/3mDaD4I7w-E/hqdefault.jpg" alt="UNC 2017" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9;">
-            <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(250,244,226,0.94); display: flex; align-items: center; justify-content: center;"><span style="border-left: 16px solid #F0961E; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px;"></span></span></span>
+          <figcaption style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.6); margin-top: 12px;">UAE and Nepal youth together in Lalitpur &mdash; the Social Innovation Bootcamp, 2017.</figcaption>
+        </figure>
+
+        <div style="max-width: 680px;">
+          <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(26px, 3vw, 32px); line-height: 1.32; letter-spacing: -0.01em; margin: 0 0 34px; color: #2E3B40; text-wrap: pretty;">In 2016, two Dubai-based art and design educators went to Nepal &mdash; not with a program, but with a question.</p>
+          <div class="story-body">
+            <p>Joanne Renaux and Yunsun Chung travelled as action research, carrying a question about what young people there needed after the 2015 earthquake.</p>
+            <p>What they built over the next three years, with an international team of volunteers, was &ldquo;ME=WE, Cultivating Change.&rdquo; It began with a four-day youth camp and the slower work of building relationships with people already doing this &mdash; many local NGOs, among them one led by Abdus Miya, and a youth enterprise. That groundwork led, in June 2017, to a nine-day Social Innovation Bootcamp at the ICA Training Centre in Lalitpur, and to the years of accompaniment around it. Youth from the UAE and Nepal worked side by side, and the bootcamp closed with social project pitches to a panel of community judges.</p>
+            <p>Alongside it ran something quieter: seven mentors, recruited from Nepal and abroad, each matched with a young person. Not oversight &mdash; relationship. Guests came through too, from many fields &mdash; among them Mahabir Pun, the social entrepreneur who brought the internet to Nepal&rsquo;s mountain villages, whose visit left a particular mark on the young people in the room.</p>
+            <p>The part that mattered most wasn&rsquo;t the pitches. Ideas became real work: a literacy and reading program in a rural community, a homestay for women facing domestic violence, new approaches to bee and fruit farming, a hydroponic farm, a waste management system, and youth empowerment in villages long treated as untouchable. Some launched. Some are still going. The Nepali participants reorganized themselves into an independent, youth-led NGO. Several became entrepreneurs &mdash; and several appear elsewhere on this site, as collaborators, not alumni.</p>
           </div>
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; margin-top: 12px; line-height: 1.3;">UNC 2017</div>
-        </a>
+
+          <blockquote style="margin: 40px 0; padding: 0 0 0 26px; border-left: 3px solid #1E5A64;">
+            <p style="font-family: 'Newsreader', serif; font-weight: 500; font-style: italic; font-size: clamp(24px, 3vw, 30px); line-height: 1.32; margin: 0; color: #2E3B40; text-wrap: pretty;">&ldquo;What we learn in schools is not everything. I want kids and young adults to learn life skills that will bring out the best person that they can be.&rdquo;</p>
+            <cite style="display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-style: normal; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-top: 16px;">A participant</cite>
+          </blockquote>
+
+          <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(24px, 2.8vw, 30px); line-height: 1.3; margin: 0; color: #2E3B40; text-wrap: pretty;">Relationships were the actual output. <span style="color: #1E5A64;">Everything else was the occasion for them.</span></p>
+
+          <div style="border-top: 1.5px solid rgba(30,90,100,0.45); margin-top: 44px; padding-top: 30px;">
+            <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E5A64; margin-bottom: 20px;">Watch</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+              <a href="https://youtu.be/d1J4AECO_9g" target="_blank" rel="noopener" style="text-decoration: none; color: #2E3B40; display: block;">
+                <div style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #1E5A64;">
+                  <img src="https://img.youtube.com/vi/d1J4AECO_9g/hqdefault.jpg" alt="UNC documentary" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9;">
+                  <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;"><span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(250,244,226,0.94); display: flex; align-items: center; justify-content: center;"><span style="border-left: 15px solid #1E5A64; border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 4px;"></span></span></span>
+                </div>
+                <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; margin-top: 12px; line-height: 1.3;">Documentary</div>
+              </a>
+              <a href="https://youtu.be/3mDaD4I7w-E" target="_blank" rel="noopener" style="text-decoration: none; color: #2E3B40; display: block;">
+                <div style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #1E5A64;">
+                  <img src="https://img.youtube.com/vi/3mDaD4I7w-E/hqdefault.jpg" alt="UNC 2017" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9;">
+                  <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;"><span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(250,244,226,0.94); display: flex; align-items: center; justify-content: center;"><span style="border-left: 15px solid #1E5A64; border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 4px;"></span></span></span>
+                </div>
+                <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; margin-top: 12px; line-height: 1.3;">UNC 2017</div>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px;">
+            <a href="Community-Nepal-Youth-Cluster.EN.dc.html" style="text-decoration: none; display: inline-flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; justify-content: center; line-height: 1.2; min-height: 24px;">See the Nepal Youth Cluster &rarr;</a>
+          </div>
+        </div>
       </div>
+
+      <!-- RIGHT · index -->
+      <aside class="pj-right col-scroll" style="position: sticky; top: 78px; max-height: calc(100vh - 100px); overflow-y: auto; border-left: 1px solid rgba(46,59,64,0.14); padding-left: 22px;">
+        <dc-import name="ProjectIndexRail" current="unc" hint-size="100%,520px"></dc-import>
+      </aside>
+
     </div>
   </section>
 
-  <section style="max-width: 1320px; margin: 72px auto 0; padding: 0 28px;">
-    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; line-height: 1.1; text-transform: uppercase; color: #F0961E; margin-bottom: 24px;">The brief</div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; max-width: 1000px;">
-      <div style="border-top: 1.5px solid rgba(46,59,64,0.2); padding-top: 16px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #F0961E; margin-bottom: 12px;">9-day bootcamp</div><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; margin: 0; color: rgba(46,59,64,0.82);">Lalitpur, June 2017 — closing with pitches to community judges.</p></div>
-      <div style="border-top: 1.5px solid rgba(46,59,64,0.2); padding-top: 16px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #F0961E; margin-bottom: 12px;">Seven mentors</div><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; margin: 0; color: rgba(46,59,64,0.82);">Each matched with a young person — relationship, not oversight.</p></div>
-      <div style="border-top: 1.5px solid rgba(46,59,64,0.2); padding-top: 16px;"><div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #F0961E; margin-bottom: 12px;">A youth-led NGO</div><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.5; margin: 0; color: rgba(46,59,64,0.82);">Nepali participants reorganized into an independent organization.</p></div>
-    </div>
-  </section>
-  <section style="max-width: 1320px; margin: 80px auto 0; padding: 0 28px;">
-    <a href="Community-Nepal-Youth-Cluster.EN.dc.html" style="text-decoration: none; display: inline-flex; align-items: center; gap: 12px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">See the Nepal Youth Cluster →</a>
-  </section>
-  <section style="background: #1E5A64; color: #FAF4E2; margin-top: 80px;">
+  <!-- ===== CTA ===== -->
+  <section style="background: #1E5A64; color: #FAF4E2;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75); margin: 0 0 18px;">Are you IN?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Every practice began as one conversation.</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
-        <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #1E8A86; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Get involved</a>
+        <a href="Are-you-IN.EN.dc.html" style="text-decoration: none; color: #1E5A64; background: #FAF4E2; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Get involved</a>
       </div>
     </div>
   </section>
@@ -146,6 +153,5 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script></script>
 </body>
 </html>

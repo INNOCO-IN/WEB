@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#1E8A86">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect x="30" y="26" width="40" height="30" rx="2" fill="#FAF4E2"/>
+    <rect x="30" y="60" width="40" height="6" rx="3" fill="#FAF4E2"/>
+    <rect x="30" y="70" width="26" height="6" rx="3" fill="#FAF4E2"/>
+  </svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
+  /* ---- LOCKED CARD MODULE ---- */
+  .in-card { position: relative; display: flex; flex-direction: column; width: 340px; background: #F3EAD0; overflow: hidden; }
+  .in-card .imgwrap { position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden; }
+  .in-card .imgwrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .in-card .fmt { position: absolute; top: 12px; right: 12px; width: 38px; height: 38px; border-radius: 50%; background: rgba(46,59,64,0.9); display: flex; align-items: center; justify-content: center; }
+  .in-card .fmt svg { width: 20px; height: 20px; stroke: #FAF4E2; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .in-card .inner { position: relative; display: flex; flex: 1; padding: 20px 22px 20px 44px; }
+  .in-card .rail { position: absolute; left: 16px; top: 20px; display: flex; flex-direction: column; align-items: center; gap: 9px; }
+  .in-card .rail .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .in-card .rail .lbl { writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+  .in-card .col { display: flex; flex-direction: column; flex: 1; }
+  .in-card .eyebrow { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; color: #2E3B40; margin: 0 0 18px; }
+  .in-card h3 { font-family: 'Newsreader', serif; font-weight: 700; font-size: 30px; line-height: 1.0; margin: 0 0 16px; }
+  .in-card p { font-family: 'Newsreader', serif; font-weight: 400; font-size: 17px; line-height: 1.3; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .in-card .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 20px; }
+  .in-card .foot .meta { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .in-card .arrow { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; background: #2E3B40; color: #FAF4E2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 20px; text-decoration: none; }
+</style>
+</helmet>
+
+<div style="font-family: 'Newsreader', Georgia, serif; padding: 60px 40px; min-height: 100vh;">
+
+  <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.55); margin-bottom: 8px;">Card reference · locked module</div>
+  <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 44px; line-height: 1.0; margin: 0 0 46px;">Two card types</h1>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
+
+    <!-- ============ TYPE 1 · STANDARD CONTENT CARD ============ -->
+    <div>
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 16px;">Type 1 · Content card (one tag)</div>
+      <div class="in-card">
+        <div class="imgwrap">
+          <img src="community-img/asia-exchange.jpg" alt="Asia Exchange">
+        </div>
+        <div class="inner">
+          <div class="rail" style="color: #D21E28;">
+            <span class="dot" style="background: #D21E28;"></span>
+            <span class="lbl">Community</span>
+          </div>
+          <div class="col">
+            <div class="eyebrow">Five countries</div>
+            <h3>Asia Exchange Community</h3>
+            <p>The group living the one-year ME=WE Asia Exchange — five countries, one shared practice.</p>
+            <div class="foot">
+              <a class="arrow" href="Project-Asia-Exchange.EN.dc.html" aria-label="Open">→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ TYPE 2 · STORY CARD (two tags: Topic rail + Format icon) ============ -->
+    <div>
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 16px;">Type 2 · Story card (Topic rail + Format icon)</div>
+      <div class="in-card">
+        <div class="imgwrap">
+          <img src="community-img/nepal-storytelling.jpg" alt="Sindhuli storytelling">
+          <div class="fmt" title="Format: Video" style="display:none;">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></svg>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="rail" style="color: #FAB414;">
+            <span class="dot" style="background: #FAB414;"></span>
+            <span class="lbl">Story · Nature</span>
+          </div>
+          <div class="col">
+            <div class="eyebrow">Sindhuli, Nepal</div>
+            <h3>Sindhuli Storytelling Festival</h3>
+            <p>Elders and youth gather to celebrate the folk stories of Sindhuli village — a living archive of voices.</p>
+            <div class="foot">
+              <span class="fmticon" title="Format: Video" style="flex:0 0 auto; width:44px; height:44px; border-radius:50%; border:1.5px solid #2E3B40; display:flex; align-items:center; justify-content:center;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2E3B40" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></svg></span>
+              <a class="arrow" href="Story-Submission.EN.dc.html" aria-label="Open">→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ CARD STATES · ACTIVE / INACTIVE ============ -->
+  <div style="margin-top: 64px;">
+    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 20px;">Card states · active vs. inactive</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
+
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 12px;">Active — full color, arrow enabled</div>
+        <div class="in-card">
+          <div class="imgwrap"><img src="community-img/mewe-hub.jpg" alt="ME=WE Hub"></div>
+          <div class="inner">
+            <div class="rail" style="color: #1E8A86;"><span class="dot" style="background: #1E8A86;"></span><span class="lbl">Community</span></div>
+            <div class="col">
+              <div class="eyebrow">Online</div>
+              <h3>ME=WE Hub</h3>
+              <p>Anyone who completes Möbius Making joins the Hub to keep practicing together.</p>
+              <div class="foot"><span class="meta" style="color: rgba(46,59,64,0.6);">Active</span><a class="arrow" href="Community-Open-Studio.EN.dc.html" aria-label="Open">→</a></div>            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 12px;">Inactive — desaturated, muted, no arrow</div>
+        <div class="in-card" style="opacity: 0.6; filter: grayscale(0.85);">
+          <div class="imgwrap"><img src="community-img/uae-cluster.jpg" alt="UAE Youth Cluster"></div>
+          <div class="inner">
+            <div class="rail" style="color: rgba(46,59,64,0.6);"><span class="dot" style="background: rgba(46,59,64,0.6);"></span><span class="lbl">Community</span></div>
+            <div class="col">
+              <div class="eyebrow" style="color: rgba(46,59,64,0.6);">UAE · Archived</div>
+              <h3>UAE Youth Cluster</h3>
+              <p>An earlier community of youth across Nepal and the UAE. No longer active.</p>
+              <div class="foot"><span class="meta" style="color: rgba(46,59,64,0.5);">Archived</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ THE RULES (reference, on-page) ============ -->
+  <div style="margin-top: 64px; max-width: 760px; background: #F3EAD0; padding: 34px 36px;">
+    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 18px;">The rules on this page</div>
+    <ul style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.5; color: rgba(46,59,64,0.85); margin: 0; padding-left: 20px;">
+      <li><b>Tag rail</b> — rotates 90° <b>clockwise</b> (reads downward), dot at the <b>top</b>. Dot color = tag text color (one color, never contrasting).</li>
+      <li><b>Type locked</b> — tag Archivo 700/12px · eyebrow Archivo 700/13px (same color as tag) · title Newsreader 700/30px, line-height 1.0 · body Newsreader 400/17px, line-height 1.3.</li>
+      <li><b>Image</b> — 4:3 frame, any photo auto cover-crops to fill. Identical shape on every card.</li>
+      <li><b>Spacing</b> — fixed eyebrow → title → body gaps, same on every card. Equal card height; body clamped to <b>2 lines</b> for a clean bottom edge.</li>
+      <li><b>Arrow</b> — filled ink #2E3B40 circle, paper glyph, no border, bottom-right. <b>Link sits on the arrow only</b> so all text stays editable.</li>
+      <li><b>Corners</b> square. Background = warm supporting tint of the page color; no two adjacent cards share a color.</li>
+      <li><b>Two types</b> — (1) Content card: one Topic tag. (2) Story card: Topic on the rail + <b>Format pictogram</b> top-right of the image (Writing · Drawing · Photo · Video · Music · Dance).</li>
+      <li><b>States</b> — Active: full color, arrow enabled. Inactive/Archived: desaturated + muted, no arrow.</li>
+    </ul>
+  </div>
+
+  <!-- ============ FORMAT PICTOGRAM SET ============ -->
+  <div style="margin-top: 64px;">
+    <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.5); margin-bottom: 20px;">Format pictograms (b/w, line)</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px;">
+
+      <div style="text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FAF4E2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l3-1 11-11a2 2 0 0 0-3-3L4 16z"/><path d="M14 5l3 3"/></svg></div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.7);">Writing</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FAF4E2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-1.2-1-1.5-1-2.5s.8-1.5 2-1.5h1a3 3 0 0 0 3-3c0-3.9-3.1-6.5-8-6.5z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="12" cy="8" r="1"/><circle cx="16.5" cy="11.5" r="1"/></svg></div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.7);">Drawing</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FAF4E2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6l1.5-2h5L16 6"/><circle cx="12" cy="13" r="3.2"/></svg></div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.7);">Photo</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FAF4E2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></svg></div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.7);">Video</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FAF4E2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.7);">Music</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #2E3B40; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FAF4E2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5v6M12 9l-5 3M12 9l5 3M9 20l3-7 3 7"/></svg></div>
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(46,59,64,0.7);">Dance</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script></script>
+</body>
+</html>
