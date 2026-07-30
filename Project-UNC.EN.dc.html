@@ -33,6 +33,20 @@
     [style*="padding: 70px 28px"]{padding:44px 20px !important;}
   }
 </style>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target && e.target.closest ? e.target.closest('a[target="_blank"]') : null;
+  if (!a) return;
+  var m = a.href.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([\w-]{6,})/);
+  if (m) {
+    e.preventDefault(); e.stopPropagation();
+    var box = a.querySelector('div');
+    if (box && !box.querySelector('iframe')) {
+      box.innerHTML = '<iframe src="https://www.youtube.com/embed/' + m[1] + '?autoplay=1&rel=0&playsinline=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>';
+    }
+  }
+}, true);
+</script>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -92,7 +106,7 @@
           <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(26px, 3vw, 32px); line-height: 1.32; letter-spacing: -0.01em; margin: 0 0 34px; color: #2E3B40; text-wrap: pretty;">In 2016, two Dubai-based art and design educators went to Nepal &mdash; not with a program, but with a question.</p>
           <div class="story-body">
             <p>Joanne Renaux and Yunsun Chung travelled as action research, carrying a question about what young people there needed after the 2015 earthquake.</p>
-            <p>What they built over the next three years, with an international team of volunteers, was &ldquo;ME=WE, Cultivating Change.&rdquo; It began with a four-day youth camp and the slower work of building relationships with people already doing this &mdash; many local NGOs, among them one led by Abdus Miya, and a youth enterprise. That groundwork led, in June 2017, to a nine-day Social Innovation Bootcamp at the ICA Training Centre in Lalitpur, and to the years of accompaniment around it. Youth from the UAE and Nepal worked side by side, and the bootcamp closed with social project pitches to a panel of community judges.</p>
+            <p>What they built over the next three years, with an international team of volunteers, was &ldquo;MEWE, Cultivating Change.&rdquo; It began with a four-day youth camp and the slower work of building relationships with people already doing this &mdash; many local NGOs, among them one led by Abdus Miya, and a youth enterprise. That groundwork led, in June 2017, to a nine-day Social Innovation Bootcamp at the ICA Training Centre in Lalitpur, and to the years of accompaniment around it. Youth from the UAE and Nepal worked side by side, and the bootcamp closed with social project pitches to a panel of community judges.</p>
             <p>Alongside it ran something quieter: seven mentors, recruited from Nepal and abroad, each matched with a young person. Not oversight &mdash; relationship. Guests came through too, from many fields &mdash; among them Mahabir Pun, the social entrepreneur who brought the internet to Nepal&rsquo;s mountain villages, whose visit left a particular mark on the young people in the room.</p>
             <p>The part that mattered most wasn&rsquo;t the pitches. Ideas became real work: a literacy and reading program in a rural community, a homestay for women facing domestic violence, new approaches to bee and fruit farming, a hydroponic farm, a waste management system, and youth empowerment in villages long treated as untouchable. Some launched. Some are still going. The Nepali participants reorganized themselves into an independent, youth-led NGO. Several became entrepreneurs &mdash; and several appear elsewhere on this site, as collaborators, not alumni.</p>
           </div>

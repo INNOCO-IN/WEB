@@ -1,19 +1,16 @@
 # IN Website — Vercel deploy
 
-Static site. No build step.
-
-## Deploy
-- **Dashboard:** drag this folder into vercel.com/new, or import and set framework = "Other", build command = none, output dir = `.`
-- **CLI:** run `vercel` (preview) or `vercel --prod` from inside this folder.
+Static site. No build step. Framework preset "Other", build command none, output directory `.`.
 
 ## Contents
-- `index.html` — Home (so `/` resolves)
-- `*.EN.dc.html` — site pages
-- `Nav.dc.html`, `Footer.dc.html` — shared components
-- `_ds/` — design-system tokens, fonts, bundle
+- `index.html` — entry, redirects to `Home.EN.dc.html` (so `/` resolves and never goes stale)
+- `*.EN.dc.html` / `*.KO.dc.html` — site pages (English + Korean)
+- `Nav.dc.html`, `Nav-KO.dc.html`, `Footer.dc.html`, `Footer-KO.dc.html` — shared components
+- `_ds/` — design-system tokens and bundle
 - `support.js`, `image-slot.js` — runtime
-- images (png/jpeg)
+- `story-img/`, `workshop-img/`, `community-img/`, `project-img/`, `story-photos/`, `team/` — imagery
 
 ## Notes
 - Everything runs client-side; any static host works.
-- `<image-slot>` placeholders start empty on a fresh host — add real images to those spots.
+- `<image-slot>` placeholders start empty on a fresh host — real images must be committed.
+- `ME=WE.EN.dc.html` is retired; the page is now `MEWE.EN.dc.html`.

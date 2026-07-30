@@ -80,35 +80,36 @@
           <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 28px; border-bottom: 1.5px solid rgba(26,22,19,0.16);">
             <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #1A1613;">{{ current.eyebrow }}</span>
             <span style="width: 4px; height: 4px; border-radius: 50%; background: rgba(26,22,19,0.4);"></span>
+            <span style="font-family: 'Newsreader', serif; font-size: 17px; color: rgba(26,22,19,0.55);">{{ current.credit }}</span>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: rgba(26,22,19,0.4);"></span>
             <span style="font-family: 'Newsreader', serif; font-size: 17px; color: rgba(26,22,19,0.55);">{{ current.dateLabel }}</span>
           </div>
 
-          <sc-if value="{{ isThisIsUs }}" hint-placeholder-val="{{ true }}">
-            <div class="story-body" style="padding-top: 40px;">
-              <p style="font-size: 26px !important; line-height: 1.5 !important; color: #1A1613 !important;">Twenty minutes into the lesson on constellations, no one had looked up.</p>
-              <p>I could hear how flat my own voice was. The words were on the board &mdash; definitions, distances, names &mdash; and none of it was landing. I remember thinking: <em>why can&rsquo;t I reach them?</em> I had planned this well. I was doing everything I was supposed to do.</p>
-              <p>What I didn&rsquo;t see then was how hard I was working to hold the room together by myself. That was the job, as I understood it. Thirty students, one of me, and a wall between us that it was my responsibility to get across.</p>
-              <p>So when I stopped, it wasn&rsquo;t wisdom. It was exhaustion.</p>
-              <p>I put down the lesson plan and asked them something I genuinely didn&rsquo;t have the answer to. <em>Why do you think stars connect?</em></p>
-              <p>&ldquo;Stars, I guess,&rdquo; someone said. Then someone else, quieter: &ldquo;Connected stars?&rdquo;</p>
-              <p>I sat down among them &mdash; not at the front &mdash; and asked what kind of star each of them would be. A bright one. Part of a cluster. A lonely one, one boy said, and didn&rsquo;t look up.</p>
-              <p>Then something happened that I didn&rsquo;t do.</p>
-              <p>They stopped answering me and started answering each other. <em>What if we combined these two shapes? Add a star here.</em> They were up, moving, drawing. My part had shrunk to almost nothing, and the lesson was working better than it ever had when I was carrying it.</p>
-              <p>I felt the old panic first &mdash; if I&rsquo;m not holding this, it falls apart. It didn&rsquo;t fall apart. It got better. That was the hardest and best thing I learned that day: the room was never mine to hold. I was one of them, not above them, and the moment I sat down, they could feel it.</p>
-              <p>By the end they&rsquo;d made a map, every star one of them. A boy pointed at it and said, &ldquo;This is us.&rdquo;</p>
-            </div>
-            <div style="border-top: 1.5px solid rgba(201,150,43,0.5); margin-top: 48px; padding-top: 34px;">
-              <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.24; letter-spacing: -0.015em; margin: 0; color: #1A1613; text-wrap: balance;">I thought ME=WE was the thing I&rsquo;d write on the board.<br><span style="color: #B87A00;">It was the thing that happened when I sat down.</span></p>
-            </div>
-            <a href="Story-This-Is-Us.EN.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 40px; text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 14px 28px;">Open on its own page &rarr;</a>
+          <sc-if value="{{ current.hasImage }}" hint-placeholder-val="{{ false }}">
+            <div role="img" aria-label="{{ current.title }}" style="{{ current.imgStyle }}"></div>
           </sc-if>
 
-          <sc-if value="{{ notThisIsUs }}" hint-placeholder-val="{{ false }}">
-            <div style="padding-top: 36px;">
-              <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.6; margin: 0 0 22px; color: rgba(26,22,19,0.6); max-width: 56ch;">This story is part of the constellation, but its full telling hasn&rsquo;t been added yet. &ldquo;This is us&rdquo; is the first full example &mdash; select it in the index to read one end to end.</p>
-              <a href="Story-Submission.EN.dc.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; color: #1A1613; background: transparent; border: 1.5px solid rgba(26,22,19,0.4); border-radius: 999px; padding: 13px 26px;">Share your story</a>
+          <div class="story-body" style="padding-top: 40px;">
+            <sc-for list="{{ current.paras }}" as="p" hint-placeholder-count="6">
+              <p style="{{ p.style }}">{{ p.t }}</p>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ current.hasKicker }}" hint-placeholder-val="{{ false }}">
+            <div style="border-top: 1.5px solid rgba(201,150,43,0.5); margin-top: 48px; padding-top: 34px;">
+              <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.24; letter-spacing: -0.015em; margin: 0 0 10px; color: #1A1613; text-wrap: balance;">{{ current.kicker1 }}</p>
+              <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.24; letter-spacing: -0.015em; margin: 0; color: #B87A00; text-wrap: balance;">{{ current.kicker2 }}</p>
             </div>
           </sc-if>
+
+          <sc-if value="{{ current.isDraft }}" hint-placeholder-val="{{ false }}">
+            <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; line-height: 1.5; margin: 30px 0 0; padding: 16px 20px; background: #F3EAD0; color: rgba(26,22,19,0.7);">A fuller telling of this story is still being written — this is what we can share so far.</p>
+          </sc-if>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; border-top: 1.5px solid rgba(26,22,19,0.16); margin-top: 52px; padding-top: 26px;">
+            <button type="button" onClick="{{ toTop }}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #FAF4E2; background: #1A1613; border: none; border-radius: 999px; padding: 14px 26px;">&uarr; Choose another story</button>
+            <span style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; color: rgba(26,22,19,0.6);">Back to the top of the index.</span>
+          </div>
 
         </article>
       </div>
@@ -153,7 +154,7 @@
   <section style="background: #FAB414; color: #2E3B40; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.7); margin: 0 0 18px;">Share</p>
-      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 16px; letter-spacing: -0.01em; text-wrap: balance;">Fifteen minutes. One honest moment.</h2>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 16px; letter-spacing: -0.01em; text-wrap: balance;">Three honest sentences is a story.</h2>
       <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.5; max-width: 640px; margin: 0 auto 28px; color: rgba(46,59,64,0.82);">A story is a free gift — your experience, offered so others can see further. It doesn't need to be polished; it needs to be honest.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
         <a href="Story-Submission.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Share your story</a>
@@ -185,61 +186,320 @@ class Component extends DCLogic {
     } catch (e) {}
   }
 
-  // ── ONE array = the future Excel sheet. Each row is a story.
-  //    Columns: date · eyebrow · title · body · format · topic · color · href
+  // ── ONE array = the CD build file. Each row is a story.
+  //    Columns: id · date · eyebrow · title · body · format · topic · color · href · credit · paras · kicker
+  //    NOTE: confirm spellings "Rajaa Bokhari" (vs Bohkari) and "Fr. Akhil Abrahim" (vs Abraham) before publish.
   data() {
-    const real = [
-      { id: 'this-is-us', date: '2026-07-16', eyebrow: 'A teacher', title: '“This is us”', body: 'I stopped teaching and asked one real question. By the end, a boy pointed at what they’d made and said: this is us.', format: 'Writing', topic: 'Transformation', color: '#1E8A86', href: 'Story-This-Is-Us.EN.dc.html' },
-      { id: 'connected', date: '2026-07-09', eyebrow: 'A participant reflection', title: '“Perhaps we were already connected.”', body: 'A song carried out of a ME=WE Core session, recorded later by a participant who could not stop humming it.', format: 'Music', topic: 'Signature', color: '#46325A', href: '#' },
-      { id: 'two-hands', date: '2026-06-28', eyebrow: 'Möbius Making', title: 'Two hands, one line', body: 'A drawing made during Möbius Making — where the ME and WE surfaces became one continuous edge.', format: 'Drawing', topic: 'Art', color: '#BDDAE7', href: '#' },
-      { id: 'song-whole', date: '2026-06-14', eyebrow: 'Recorded by a collective', title: 'A song for the whole', body: 'Voices that learned to listen before they sang — recorded after a retreat.', format: 'Music', topic: 'Collective', color: '#3C8246', href: '#' },
-      { id: 'week-after', date: '2026-06-03', eyebrow: 'A participant', title: 'The week after the workshop', body: 'A participant writes about the small action they chose — and what it changed at home.', format: 'Writing', topic: 'Transformation', color: '#F0961E', href: '#' },
-      { id: 'the-table', date: '2026-05-22', eyebrow: 'Community workshop', title: 'The table we built together', body: 'Documented after a community workshop — a shared object that outlasted the session.', format: 'Photo', topic: 'Community', color: '#1E648C', href: '#' },
-      { id: 'letters', date: '2026-05-08', eyebrow: 'Across two cities', title: 'Letters between two cities', body: 'Participants from two countries kept writing after the exchange ended — a correspondence that became its own practice.', format: 'Writing', topic: 'Family', color: '#D21E28', href: '#' },
-    ];
-
-    // ── Placeholder volume, so the index shows how it scales to hundreds.
-    //    (Unlinked — the design pattern only; real rows arrive from the sheet.)
-    const formats = ['Writing', 'Music', 'Drawing', 'Photo', 'Dance', 'Video', 'Recipe', 'Poem'];
-    const colors  = { Writing:'#1E8A86', Music:'#46325A', Drawing:'#BDDAE7', Photo:'#1E648C', Dance:'#E5188C', Video:'#F0961E', Recipe:'#3C8246', Poem:'#C9962B' };
-    const topics  = ['Signature','Transformation','Community','Workshop','Art','Family','Collective','Nature','Ancestor','Noticed in the world'];
-    const eyebrows= ['A participant','A facilitator','A neighbor','A collective','A family','Noticed in the world'];
-    const titles  = [
-      'The bench that started talking','We cooked for the whole floor','What the choir heard','The map we drew on the wall',
-      'A recipe from two grandmothers','The video we never planned','Dancing in the parking lot','The letter I finally sent',
-      'When the meeting sang','Our street’s first supper','The mural nobody signed','Three minutes of silence',
-      'The stew that fed forty','A duet with a stranger','The photo we all stood in','What the river taught us',
-      'The step we learned together','A poem passed hand to hand','The garden on the rooftop','We answered each other',
-      'The chair left empty','A meal without a host','The line we couldn’t break','Two verses, one voice',
-      'The workshop that kept going','A film shot on one phone','The dance that had no lead','Bread for the whole block',
-      'The notebook we shared','A song for leaving','The wall of small thanks','What the children built',
-      'The recipe with no author','A photo taken by everyone','The circle that widened','We drew until midnight',
-      'The verse we finished later','A dance in the stairwell','The soup kitchen’s tune','The story told in turns',
-    ];
-    const bodies = [
-      'A moment someone lived, offered so the rest of us can see a little further.',
-      'Fifteen honest minutes — a small thing that turned out to hold a whole idea.',
-      'Not polished, just true. One ray of light, passed on to the next person.',
-      'What happened when ME and WE stopped being two words and became one.',
-    ];
-
-    const gen = [];
-    let d = new Date('2026-04-24');
-    for (let i = 0; i < 41; i++) {
-      const fmt = formats[i % formats.length];
-      d = new Date(d.getTime() - (2 + (i % 4)) * 86400000);
-      gen.push({
-        date: d.toISOString().slice(0, 10),
-        eyebrow: eyebrows[i % eyebrows.length],
-        title: titles[i % titles.length],
-        body: bodies[i % bodies.length],
-        format: fmt,
-        topic: topics[i % topics.length],
-        color: colors[fmt],
-        href: '#'
-      });
-    }
-    return real.concat(gen).sort((a, b) => b.date.localeCompare(a.date));
+    return [
+        {
+            "id": "this-is-us",
+            "date": "2026-07-16",
+            "eyebrow": "I lived it · A classroom",
+            "title": "“This is us”",
+            "body": "I stopped teaching and asked one real question. By the end, a boy pointed at what they’d made and said: this is us.",
+            "format": "Writing",
+            "topic": "Signature",
+            "color": "#F3EAD0",
+            "href": "#",
+            "credit": "A teacher",
+            "paras": [
+                  "Twenty minutes into the lesson on constellations, no one had looked up.",
+                  "I could hear how flat my own voice was. The words were on the board — definitions, distances, names — and none of it was landing. I remember thinking: why can’t I reach them? I had planned this well. I was doing everything I was supposed to do.",
+                  "What I didn’t see then was how hard I was working to hold the room together by myself. That was the job, as I understood it. Thirty students, one of me, and a wall between us that it was my responsibility to get across.",
+                  "So when I stopped, it wasn’t wisdom. It was exhaustion.",
+                  "I put down the lesson plan and asked them something I genuinely didn’t have the answer to. Why do you think stars connect?",
+                  "“Stars, I guess,” someone said. Then someone else, quieter: “Connected stars?”",
+                  "I sat down among them — not at the front — and asked what kind of star each of them would be. A bright one. Part of a cluster. A lonely one, one boy said, and didn’t look up.",
+                  "Then something happened that I didn’t do.",
+                  "They stopped answering me and started answering each other. What if we combined these two shapes? Add a star here. They were up, moving, drawing. My part had shrunk to almost nothing, and the lesson was working better than it ever had when I was carrying it.",
+                  "I felt the old panic first — if I’m not holding this, it falls apart. It didn’t fall apart. It got better. That was the hardest and best thing I learned that day: the room was never mine to hold. I was one of them, not above them, and the moment I sat down, they could feel it.",
+                  "By the end they’d made a map, every star one of them. A boy pointed at it and said, “This is us.”"
+        ],
+            "kicker": [
+                "I thought MEWE was the thing I’d write on the board.",
+                "It was the thing that happened when I sat down."
+            ]
+        },
+        {
+            "id": "grandma-it-worked",
+            "date": "2026-07-10",
+            "eyebrow": "A grandmother’s tale",
+            "title": "“Grandma, it worked!”",
+            "body": "A grandson comes home breathless — he tried MEWE on his friends, and for the first time, watched it actually work.",
+            "format": "Writing",
+            "topic": "Family",
+            "color": "#F3EAD0",
+            "href": "#",
+            "credit": "A grandmother",
+            "paras": [
+                  "I was in my armchair with my afternoon tea when I heard footsteps running toward me.",
+                  "My grandson burst in, too excited to sit down. “Grandma! You won’t believe what happened today!”",
+                  "“Tell me,” I said.",
+                  "“You know those Möbius-strip workshops you keep telling me about? I didn’t really get it. I mean — how could something so simple change anything?”",
+                  "I nodded. I remembered that doubt well.",
+                  "“But today I tried it. At home. The MEWE thing, where everyone gets a say and nobody judges anyone else’s idea. I used it for the summer camp decision. And Grandma — it worked. We all listened. We actually made a better decision together.”",
+                  "His eyes were lit up in a way I hadn’t seen before. “I made one rule: everyone gets to contribute, nobody judges, nobody pushes their own idea through. At first everyone was just curious. Then we actually enjoyed it — building on each other’s ideas, saying thank you for them.”",
+                  "“But that’s not even the best part,” he went on. “One of my basketball friends was stressed about his chores, so I said I’d help him after practice. Then I thought — why stop there? So it turned into a whole cleaning party. We did our homework together after.”",
+                  "“That sounds wonderful,” I said.",
+                  "“It was! It’s like I found this whole new way to connect with people. I want to do a neighborhood clean-up with my friends — a potluck, the whole thing. Bring everyone closer.”",
+                  "I watched a boy who’d been doubtful an hour ago talk like someone who believed completely.",
+                  "Then he looked at me, serious now. “I want to keep learning, Grandma. I want to hear how other kids are doing this in their own neighborhoods. Will you help me find out?”",
+                  "“Of course,” I said.",
+                  "We got out a big sheet of paper and started sketching out ideas together."
+        ]
+        },
+        {
+                  "id": "pathfinder-journey",
+                  "date": "2023-07-08",
+                  "eyebrow": "I lived it · Pathfinder",
+                  "title": "I had done it everywhere but home",
+                  "body": "She had run social impact programs for years. It never occurred to her to point one at her own brothers.",
+                  "format": "Writing",
+                  "topic": "I lived it",
+                  "color": "#2E2018",
+                  "href": "#",
+                  "credit": "Alia Ahmed",
+            "image": "story-img/brothers.jpg",
+                  "paras": [
+                  "Pathfinder program was an eye-opening platform on MEWE equilibrium. This is deep-rooted in our faith to work for a bigger purpose in life to benefit the community. Being part of this journey led me to think deeply of making an impact constructively to my family first before venturing out on other passion projects.",
+                  "Initially when I joined, my goal was to research on building a faith-centered fun, i.e. interactive school. The mission was to share the principles and knowledge of faith, which is the guiding compass of our lives, from a young age. With Pathfinder, I observed this mission needed a grass-root level reach.",
+                  "This led me to facilitating my Pathfinder project in understanding my younger brothers’ journey in learning about faith and its impact in their lives.",
+                  "They are aged 16 and 18 years old, one studying high school with interests in biology and fitness, and the elder one is in his first year of university whilst playing cricket for the state team. Now, how might we enhance the faith which is already part of their lives in the form of prayer, so that it can be a meaningful connection with The Creator, was the learning objective.",
+                  "I absolutely loved the meditation sessions by Tanya to start off with; it brought all the virtual participants together in a common space with our mindset. This also showed how fascinating the human mind and experience is, as when at one point I was deeply impacted, a fellow participant felt or thought differently and vice-versa.",
+                  "The detailed content and use of the tool Miro was brilliant in penning and mapping our dynamic ideas.",
+                  "What I enjoyed learning the most was the link between nature and facilitation — like the fungi, which have created an ecosystem, we too must create a change in contributing to the community. My feedback would be to extend the course to dive deep into the main topics and emphasize on practical practice, e.g. participants hosting frequent facilitations with a mentor, can make us improve and better reach our goal of graduating out of the course with a tool we can implement.",
+                  "With the facilitation questions, guidance on how to convert the tone and text for our context would have been useful.",
+                  "My takeaways from the program are many! The main ones being a deeper understanding of my brothers and the challenges youth face in imbibing the faith in today’s world, and at the same time the immense benefits they gain from following the faith and relying on The Creator as the guiding compass of their life.",
+                  "I learnt how asking questions and waiting to hear their interest in the topic makes for a more useful conversation, than a one-sided one if I were to approach directly.",
+                  "This was the first time I used a formal structured approach to a challenge I could see within my immediate family, even though I have done countless social impact programs externally — for e.g. when building my financial literacy app for Gen Z, the thought never came across to do the same at home, until this program.",
+                  "By the end of it, both my brothers and I had a deeper understanding of each other’s goals in life and aligned it with the love of faith.",
+                  "Also, I had designed and published an engaging children’s prayer book with the help of my family and Qur’an class volunteers, with prayers of Prophets like Abraham, Noah and about parents, knowledge and nature, with activities for each. This was gifted as my wedding favor in December, which was beneficial for my family at a larger scale, and I hope to publish it to help many more!",
+                  "I see the Pathfinder program being a tool for youth to guide their mission in life beyond themselves, people who are changemakers in the community to find a network, designers and educators who have a role of facilitation as part of their work. This is ideal for an individual with a social project and is looking for a direction in refining their idea to implementation."
+        ]
+        },
+                {
+            "id": "mewe-reflection",
+            "date": "2022-09-30",
+            "eyebrow": "Pathfinder · 2022",
+            "title": "Reflections of a Pathfinder",
+            "body": "Two sessions of one Pathfinder cohort: five time zones discovering how closely their hopes aligned, then practising letting go of ego — the flip, from independence to interdependence.",
+            "format": "Writing",
+            "topic": "Blog reflection",
+            "color": "#1E8A86",
+            "href": "#",
+            "credit": "Rajaa Bokhari",
+            "paras": [
+                  "## IGNITE · September 5, 2022",
+                  "September 5, 2022 saw the 1st session of the MEWE Pathfinder program by INNOCO, aptly titled “IGNITE” to indicate the start of our journey as facilitators building community in our home country or our homes by choice. And there were plenty of regions in which we can affect change, since the participating members came from 5 different time zones!",
+                  "But defying expectations, the distance actually emphasized the cohort’s closeness, because we discovered, through an invigorating and introspective exercise in exploring identity, that we all have very similar alignment on our goals and can develop our skills through guidance by the INNOCO team and each other’s experiences.",
+                  "To understand our identity on multiple facets, we selected “worlds” for ourselves on a shared Miro board where we can record our journey through Pathfinder as we complete each exercise in the program. We were also introduced to the idea of how visualizing our journey as a “pathfinder” for our community can also understand the aspects of this journey that we value the most, which helped “IGNITE” the program!",
+                  "## (ME WE) · September 30, 2022",
+                  "As we continue our journey as Pathfinders, we began by engaging with each other over our recent musings by the “Fireside”. We discussed what we would like to offer in this new session, and what was rooted behind our intention for the day. It was a great self-reflective as well as community-affirming exercise that was perfectly in line with the theme of the session [ME WE] on recognizing and acknowledging our interdependence with our community.",
+                  "We are able to contrast this interdependence from the much more individual-centric “independence”, from where we needed to transition on the Pathfinder journey by letting go of our ego. On the Möbius strip, this is signified by the FLIP as we shift our paradigm to interconnectedness.",
+                  "Some of us explored our challenges using the Pathfinder compass, which we discussed with the facilitators and addressed the strengths and weaknesses of the various tools that we used, which enable us to see through some perspectives, but it is important for us to see that any tool has its limitations and should not be used to fix us within one viewpoint.",
+                  "As the Pathfinder journey continues, we can see us shift between the different compass paradigms, which is also a significant part of our story. Our session concluded with a meditation on letting go so we could experience the sensation of “oneness” with our community."
+        ]
+        },
+        {
+            "id": "importance-of-connection",
+            "date": "2022-09-29",
+            "eyebrow": "Pathfinder · 2022",
+            "title": "“Now I can see the importance of connection”",
+            "body": "A participant describes a meditation on letting go — and the moment ME+WE stopped being an idea.",
+            "format": "Writing",
+            "topic": "Blog reflection",
+            "color": "#F0961E",
+            "href": "#",
+            "credit": "Fr. Akhil Abrahim",
+            "paras": [
+                  "The session today has really evoked a lot of deep thought. To begin with was the whole concept — or you can say the confusion that I had — of connection with the other. But to my surprise, the meditation about dying to self, letting go, fear of failure and the willingness to let go put things in perspective and brought about an understanding of the whole ‘me + we’ idea, and I can now see the importance of connection."
+        ]
+        },
+        {
+                  "id": "shy-to-leading",
+                  "date": "2018-09-03",
+                  "eyebrow": "I lived it · Sarlahi, Nepal",
+                  "title": "My father spent it on the village",
+                  "body": "He was a driver with savings meant for his daughters. He built a youth club instead — and took her with him.",
+                  "format": "Writing",
+                  "topic": "I lived it",
+                  "color": "#1A2230",
+                  "href": "#",
+                  "credit": "Pabitra Majhi",
+                  "image": "story-img/driver.jpg",
+                  "paras": [
+                  "My name is Pabitra Majhi. I am a very simple, kind and funny girl whose happiness is found in small things like dancing, taking photographs and travelling, but in the past few years I have also become an enthusiastic and energetic youth activist. I am pursuing a master’s degree in Economics at Patan Multiple Campus, Kathmandu and am very passionate in activating positive social change and youth empowerment in my country.",
+                  "Working as a Programme Officer of a youth-led NGO, Girls Empowered by Travel – Nepal, I am developing my pathway to become a changemaker.",
+                  "In my society, educating a daughter was not considered important. Many people believed a girl was the property of her in-laws. My father never thought that way. He is a driver, and he gave me as much education as he could afford. He also gave away what he had: the money he saved for our future, he spent instead on the education and development of the Majhi community, and he established our Majhi Community Youth Club in Sarlahi.",
+                  "He took me there many times so I could learn on site. I am the first girl from my village to receive higher education.",
+                  "I am driven to be an effective social entrepreneur and contribute to the economic development of the nation. Looking for good opportunities or a platform where I could enhance my knowledge, skills and explore my potentialities led me to UAE/NEPAL/CONNECT (UNC) 2016. This became one of my major turning points, where I got the opportunity to transform myself from something to many things.",
+                  "Through the five days of the SE training program with INNOCO and Leadership Corner, I was able to explore my inner hero self and understand better the changemaker I wanted to be for my own community, and how to begin contributing to society in different ways. This event built up my confidence and motivated me to seek more people with like-minded qualities.",
+                  "I began working with an NGO, Helvetas Swiss Intercooperation Nepal, that helped me gain further knowledge on setting up a social entrepreneurship and understanding deeper the problems the people are facing. I began to see that girl and women empowerment was an area I was passionate about and began to take steps to work with this cause.",
+                  "In Feb 2017, the Nepal Youth Cluster (NYC) that was initiated at the UNC2016 program was working towards the UNC2017 bootcamp, and I was selected as the Assistant Program Coordinator to organize this 9-day entrepreneurship boot camp where 18 Nepalese youth from diverse backgrounds participated to transform themselves as social innovators.",
+                  "Through my hard work and commitment, the INNOCO team, based at Zayed University, Dubai, gave me a great opportunity to work as a Research Assistant for the SE research paper and documentary feature that they were producing in light of the UNC programs.",
+                  "A few years ago, I was a very shy person and could not express my views and thoughts in front of other people, but with the guidance and encouragement from Joanne and Yunsun, I am growing up as a social changemaker. Later in 2017, I became one of the winners of EmpowHER 2017 organized by Ujyalo Foundation, where I won half seed fund to accelerate my dream SE project Saahasi – The Brave Women in my hometown Sarlahi.",
+                  "Based on empathy-driven motives, this helped 10 women get basic education, and I am currently doing research and seeking possible collaborations for these women to establish small micro enterprises based on local resources and be the example for other women.",
+                  "In addition, I am also a U.S. Embassy Youth Council Member for 2018, which is enabling my network growth and fostering engagement with 50 youth members from diverse backgrounds to share our skills and knowledge. Recently, I along with my team successfully conducted training programmes for elected women of local government of Bhaktapur and Lalitpur to enhance and ensure the establishment of their meaningful participation in local development.",
+                  "Since the UNC programs, NYC has reformed and registered as the Nepal Youth Innovators (NGO), of which I was selected as a Vice President of the board members.",
+                  "My mission is to ensure girls and women education in Nepal so that women are empowered to create opportunities for good leadership and equity in our nation. I don’t have a big dream. I believe a small change makes a huge difference if we work collectively."
+        ]
+        },
+        {
+                  "id": "homestay",
+                  "date": "2017-08-21",
+                  "eyebrow": "I lived it · Changunarayan, Nepal",
+                  "title": "The work that isn't counted",
+                  "body": "Her village is a World Heritage Site. The women who hold it together don’t appear in any figure.",
+                  "format": "Writing",
+                  "topic": "I lived it",
+                  "color": "#2E2018",
+                  "href": "#",
+                  "credit": "Sajana Bhadel",
+            "image": "story-img/village.jpg",
+            "imgFit": "contain",
+                  "paras": [
+                  "I am Sajana Bhadel, born and brought up in a small village, Changunarayan. I always felt blessed to live here. Changunarayan is a small village where the majority of people are categorized in a marginalized group. I am the Chairperson of Girls Empowered by Travel.",
+                  "My village is truly beautiful. Changunarayan has also been a home of Lord Bishnu since ancient times. It is listed in the world heritage site because of its pristine beauty and traditional pagoda style. The greenery, pine forest, wide range of mountains and a perfect view of the valley from the top of the hill — where diverse cultural and traditional festivals and traditional lifestyle are well-integrated, and hospitable and lovely people — are the major attractions of this village.",
+                  "However, one-third of the people of the village are still living below the poverty line in spite of the potential to be otherwise. Agriculture is the main source of income, which is practiced in the traditional style. So people are living in subsistence farming, which isn’t of high-value crops.",
+                  "In addition, our social structure is male-dominated, where women are undoubtedly the backbone of the society but unfortunately their services and activities aren’t counted in GDP.",
+                  "More than half of the women are engaged in agriculture. Women and girls have been suffering from different health and psychological issues. Early marriage, prolapsed uterus, miscarriage, and economic dependency are major causes for a girl to be prone to be easily victimized.",
+                  "The role of women in society has slowly revolutionized; women/girls are sent to school and they even get higher education. But when they are ready to land the perfect job, their parents force them to get married. In the case of a daughter-in-law, they are given the role to take care of household chores, bear the child and take care of the babies.",
+                  "They never get time to leave the house and contribute in the economic sector though they are capable. However, some of these are preventable problems in our society.",
+                  "I somehow got the opportunity to attend the 9-day boot camp, which was organized by INNOCO/UAE-Youth Cluster in the ICA training center. I thought myself lucky to be part of the program. The program was all about social innovation, win-win ideas. During the workshop, I felt every day was full of surprises; every moment energized us and brought us near to our own true potential.",
+                  "“MEWE” was the most interesting and important lesson we learned. The field visit at Patale Gaun Organic Farm, in order to know the food system and the importance of organic food, was an unforgettable heartfelt moment.",
+                  "Every participant had to pitch the project on the last day; we were asked to choose the topic three days earlier. I couldn’t sleep the whole night for three days. There were so many ideas which were bursting out, but finally I had this homestay idea. Our program director Yunsun, program facilitator Joanne and Sarah polished my ideas.",
+                  "These lovely people assisted me to think about the critical ingredients of making a social enterprise attractive and feasible.",
+                  "Being a student of Economics, uplifting the economic status of my village is always a high priority of my life. So I am trying my best to bring my dream project into reality.",
+                  "‘Champak Namuna Home’ is a homestay social enterprise. What is a homestay? A ‘homestay’ is simply where guests stay in a local villager’s home, where they get to partake in the activities of the house and village, instead of being put up in a lodge or hotel. Guests are invited to the house as family members by the host family and get a chance to spend time with them, participating in any home activities and observing their customs, values, and culture.",
+                  "Homestay can be an excellent tool for the reduction of rural poverty and empowerment of the local community, for those who are marginalized and vulnerable — especially brilliant women with full potential. It integrates all activities of tourism like trekking, cultural and eco-tourism. In this project, we will provide these activities, as well as focus on all aspects of women’s issues.",
+                  "I am grateful to all the INNOCO team and all the facilitators — they were always our guardians, and I hope to meet them again to learn and share."
+        ]
+        },
+        {
+                  "id": "beehive",
+                  "date": "2017-08-28",
+                  "eyebrow": "I lived it · Dharan, Nepal",
+                  "title": "Taller than the Eiffel Tower",
+                  "body": "His first poem, written at eight. His first prototype, abandoned at twenty-one. Both taught the same thing.",
+                  "format": "Writing",
+                  "topic": "I lived it",
+                  "color": "#1C2A21",
+                  "href": "#",
+                  "credit": "Shashank Pokharel",
+            "image": "story-img/prototype.jpg",
+            "imgFit": "contain",
+                  "paras": [
+                  "Hi! My name is Shashank Pokharel. I am an engineering student pursuing my B.E. in Agricultural Engineering at the Institute of Engineering, Purwanchal Campus. I was born 20 years ago in the city of Dharan, some 380 km south-east of Kathmandu, and have been living here ever since.",
+                  "I had a really good upbringing in the peaceful vicinity of Vijayapur, a small hill-top in the eastern part of Dharan decorated with greenery and forests and blessed with some famous temples. I used to read a lot of quiz books, and the morning news bulletin of Radio Kantipur used to be my morning alarm.",
+                  "It is those two things of my childhood — quiz and news — which shaped my path by providing me with almost a googol of information.",
+                  "Having tons of information also meant being somewhat different from my friends, and I could also cash-in on that information for prizes in weekly phone-in quiz shows in local stations or different competitions in my school. Information is a key to being an entrepreneur, and for me it started at an early age.",
+                  "The serene nature I grew up in also inspired me to be creative. It started in grade 3 when, with the help of a cousin, I wrote my first poem. He taught me a simple technique — rhyme the last words. “Knowledge is power; it is taller than the Eiffel Tower” is what I wrote in the first stanza.",
+                  "That was a rather humble beginning which would achieve new heights when, in grade 8, some of my poems started getting published in the weekly ‘Classroom’ section of The Kathmandu Post, Nepal’s best-selling English daily.",
+                  "Poetry was my way of letting emotions ooze out and showing my creativity. Creativity and being different is a must for any successful entrepreneur, and for beginners like me, rhyming is a way of playing safe until you start thinking like Bob Dylan.",
+                  "So why do I want to be an entrepreneur? I do not have any concrete answer. I love innovating, researching and thinking out of the box, and even a moment’s thought of a job bores me. Or maybe that comes down in the genes, as my dad is a successful businessman in his own right. Or maybe even a quick thought about some of the successful entrepreneurs like Bill Gates, Elon Musk or Steve Wozniak excites me.",
+                  "But it is definite that I want to solve existing problems in society in the most innovative way possible and build an enterprise around that solution. Whatever may be the reason, an entrepreneur is what I want to be!",
+                  "I was more focused on doing engineering projects, and entrepreneurship was just a path I wanted to pursue in the future. But that changed when I participated in the UAE-Nepal Connect 2017 bootcamp, where I gained some valuable insights on social entrepreneurship. With great help from wonderful mentors like Rob, Yunsun, Joanne and Amin, I have devised my own entrepreneurial plans around honey production and beekeeping.",
+                  "Our project is like an unsolved equation of entrepreneurship and innovation, where both values are unknown but are required to solve the equation or successfully conclude the project. I am working with my team of college friends to create what we call a ChannelHive — an ultra-modern beehive which seemingly is easy to look after and requires much less time to harvest honey from the hive, saving valuable time for farmers.",
+                  "By adjusting the internal frames, a channel is created inside each cell of the hive when the honey has to be harvested, and honey in each cell of the frames flows below to a pipe, and through the pipe it flows outside the hive.",
+                  "Apart from an easy way of harvesting, we are also integrating a bit of electronics to constantly regulate the internal temperature of the hive to create a uniform internal temperature suitable for the bees. Since honey production is optimum when the internal temperature is maintained at 32°C to 35°C, heating and cooling elements will be used and operated by a micro-controller, which will be updated about temperature by a temperature sensor present inside the hive.",
+                  "Since bees only live in natural conditions and leave the hive if they detect anything unnatural, it is a great risk to artificially regulate temperature. But innovators take risks, don’t they?",
+                  "Our target with this project is to develop an ultra-modern ChannelHive, manufacture it and provide it to farmers at a low price (around or a little more than the widely-used Langstroth Hive). As of now, we are at a very early stage of the project. We have designed a 3-D model of our proposed ChannelHive and have pitched it to an INGO, Helvetas Swiss Intercooperation, for technical and financial support to build a prototype.",
+                  "Moreover, INNOCO and Helvetas are also helping me and my friend from NYC, Pabitra Majhi, to get certified as Biz Development Service Providers, and post-certification our team API Solutions gets to be implemented as a social enterprise.",
+                  "This project, although sounding more like an engineering project, has its own socio-economic importance too. At present, Nepal is producing six times less honey than its production capacity, and we are still importing in significant amounts. Since harvesting honey is a very tedious task, commercial beekeeping has not been widely practiced.",
+                  "Also, difficulty in maintaining a healthy colony during extreme weather and climatic conditions is a big problem.",
+                  "We are working to simplify beekeeping and save valuable resources and time for farmers. The ultimate aim is to see every farmer using our ChannelHive, inspire youths to consider beekeeping as an economically beneficial enterprise, and make Nepal at least self-reliant on honey.",
+                  "Moreover, growth in beekeeping is also a positive sign of a good and pollution-free environment — not to mention the fact that bees exist only in a pollution- and chemical-free environment and help in better pollination of crops. The global scope of this project is all about creating simple and easy-to-harvest hives to motivate people to be a ‘backyard beekeeper’ — someone who keeps a hive or two to produce honey for one’s own use.",
+                  "This will not only be beneficial to the beekeeper but also will help repopulate bees for a cleaner, greener and sustainable environment.",
+                  "A later note: the materials turned out to be expensive and not environmentally sound, so the hive waits, and I am working on Sisnoo instead, with Nepal’s indigenous crops. One more thing changed. I used to be uncomfortable speaking English. You are reading this."
+        ]
+        },
+        {
+                  "id": "kulna-garden",
+                  "date": "2021-11-23",
+                  "eyebrow": "I lived it · Zayed University, UAE",
+                  "title": "Trying to find my place",
+                  "body": "A visual art student walked into a garden project to see what it was. She stayed three years and built a food forest.",
+                  "format": "Writing",
+                  "topic": "I lived it",
+                  "color": "#1A2230",
+                  "href": "#",
+                  "credit": "Almanar Al Bastaki",
+                  "image": "story-img/garden-lead.jpg",
+            "imgRatio": "4/3",
+            "imgPos": "center top",
+                  "paras": [
+                  "I am just trying to find my place in the world.",
+                  "That is what Almanar said about herself, a final-year visual arts student in the College of Art and Creative Enterprises at Zayed University, who had been invited to help with a garden on campus and wasn’t sure yet what she was doing there.",
+                  "She worked with the KULNA community garden project at ZU as a research assistant, and assisted in teaching, building the food forest, community outreach, youth recruitment, and social media planning from 2017–2020. She was able to co-design various activities and campaigns to raise awareness of sustainability through nature-based engagement in the garden.",
+                  "She designed the campaigns that brought others in, which is a different skill from being brought in yourself.",
+                  "She engaged in INNOCO in the 2018 Reunion to learn and exchange her experience with Nepali youth, wanting, as she put it, to learn how things run there — the people, the culture, the business, the stories.",
+                  "Her commitment and leadership inspired so many students and wider community members to envision the future KULNA impact for the UAE and the planet. The sentence she started with was true, and she never withdrew it. She was looking for her place. It turned out that looking for it and making it for other people were the same activity."
+        ]
+        },
+        {
+                  "id": "shopkeeper",
+                  "date": "2016-08-01",
+                  "eyebrow": "I noticed it · Parphing, Nepal",
+                  "title": "If someone can teach us",
+                  "body": "The power cuts out most afternoons in Parphing. A shopkeeper decided what to do with the hours it left him.",
+                  "format": "Writing",
+                  "topic": "I noticed it",
+                  "color": "#241C15",
+                  "href": "#",
+                  "credit": "Shahadev Balami",
+            "image": "story-img/shopkeeper-2.jpg",
+            "imgRatio": "1/1",
+            "imgFit": "contain",
+                  "paras": [
+                  "The power goes out in Parphing most afternoons. Shahadev Balami keeps the stationery shop there, and the children who come in call him uncle. When the electricity stops the shop stops with it, and what’s left is hours.",
+                  "He could spend them the way most men in the village do. Instead he goes out with the local yogis and builds houses for the old people who have no one to build for them.",
+                  "We stood in his shop and talked about that — about all the do-nothing time a village accumulates, and what it might become. Edible gardens. Community compost. Solar, so the afternoons stop emptying out in the first place.",
+                  "He didn’t say it was a good idea. He said: if someone can teach us, we are willing to learn.",
+                  "He was not waiting to be inspired. He was waiting to be shown. The willingness was already sitting there, in a shop with the lights off."
+        ]
+        },
+        {
+                  "id": "birthday",
+                  "date": "2016-07-31",
+                  "eyebrow": "I noticed it · Pasa Yard, Nepal",
+                  "title": "The night the camp became a family",
+                  "body": "Eighteen strangers, three days in. One of them had a birthday. Nobody organised what happened next.",
+                  "format": "Writing",
+                  "topic": "I noticed it",
+                  "color": "#1C2A21",
+                  "href": "#",
+                  "credit": "UNC2016",
+                  "image": "story-img/birthday.jpg",
+                  "paras": [
+                  "At Pasa Yard we introduced a jar. Before every meal, each person wrote on a slip of paper one thing they were grateful for, and only then could they eat. By the third day nobody was writing quickly anymore.",
+                  "That same week they wrote their own rules for the camp and named the place Land of Pariwartan — Land of Transformation. They built their inner hero out of Lego. They drew their lives on paper plates and stood in a circle and introduced themselves.",
+                  "Then the evening came, and someone let slip that it was a participant’s birthday.",
+                  "Nobody on the team suggested anything. Eighteen young people who had been strangers seventy-two hours earlier pooled what little they had and produced a cake, decorations, gifts, music, and dancing — full Nepali style, well past a reasonable hour.",
+                  "We had been teaching MEWE all week with strips of paper and diagrams. That night they stopped needing the diagram."
+        ]
+        },
+        {
+                  "id": "encouragement",
+                  "date": "2017-09-01",
+                  "eyebrow": "I noticed it · Nepal",
+                  "title": "More than her words",
+                  "body": "She was unemployed and poor, and thought encouragement was the only thing she had to give.",
+                  "format": "Writing",
+                  "topic": "I noticed it",
+                  "color": "#241C15",
+                  "href": "#",
+                  "credit": "Jyoti",
+            "image": "story-img/encouragement.jpg",
+            "imgFit": "contain",
+                  "draft": true,
+                  "paras": [
+                  "Jyoti came to the bootcamp already helping people. That was never the problem. She was unemployed and very poor, and what she felt able to offer was encouragement — showing up, saying the right thing.",
+                  "What she learned over nine days was almost embarrassingly practical: an enterprise can be started with very little money. A business model is something an ordinary person can draw.",
+                  "She went home and planted kiwi with her family. Seventy thousand rupees, which for her is everything. She is not trying to get rich from it. She is trying to prove that kiwi will grow here, so that the next family in her village doesn’t have to gamble to find out.",
+                  "The change in her was not a business plan. It was the discovery that she had more than her words to offer."
+        ]
+        }
+    ].slice().sort((a, b) => b.date.localeCompare(a.date));
   }
 
   dateLabel(iso) {
@@ -255,19 +515,27 @@ class Component extends DCLogic {
 
     const counts = {};
     all.forEach(s => { counts[s[key]] = (counts[s[key]] || 0) + 1; });
-    const opts = ['All', ...Array.from(new Set(all.map(s => s[key])))];
+    // Every format the submission form offers is always listed — even at zero.
+    const ALL_FORMATS = ['Writing', 'Drawing', 'Photo', 'Video', 'Music', 'Dance', 'Craft', 'Recipe', 'Symbol'];
+    const opts = mode === 'format'
+      ? ['All', ...ALL_FORMATS, ...Array.from(new Set(all.map(s => s.format))).filter(f => ALL_FORMATS.indexOf(f) < 0)]
+      : ['All', ...Array.from(new Set(all.map(s => s[key])))];
 
     const pill = (on) => 'display:flex; align-items:center; justify-content:space-between; gap:8px; text-align:left; cursor:pointer; font-family:\'Archivo\',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.02em; padding:9px 14px; border-radius:999px; border:1.5px solid ' + (on ? '#1A1613' : 'rgba(26,22,19,0.2)') + '; background:' + (on ? '#1A1613' : 'transparent') + '; color:' + (on ? '#FAF4E2' : '#1A1613') + ';';
     const countStyle = (on) => 'font-size:11px; font-weight:700; color:' + (on ? 'rgba(250,244,226,0.7)' : 'rgba(26,22,19,0.4)') + ';';
     const toggle = (on) => 'cursor:pointer; font-family:\'Archivo\',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; padding:8px 16px; border-radius:999px; border:1.5px solid #1A1613; background:' + (on ? '#1A1613' : 'transparent') + '; color:' + (on ? '#FAF4E2' : '#1A1613') + ';';
 
-    const filters = opts.map(o => ({
-      label: o,
-      count: o === 'All' ? all.length : (counts[o] || 0),
-      countStyle: countStyle(o === active),
-      style: pill(o === active),
-      pick: () => this.setState({ filter: o, limit: 14 })
-    }));
+    const filters = opts.map(o => {
+      const n = o === 'All' ? all.length : (counts[o] || 0);
+      const on = o === active;
+      return {
+        label: o,
+        count: n === 0 ? '—' : n,
+        countStyle: countStyle(on),
+        style: pill(on) + (n === 0 && !on ? ' opacity:0.45;' : ''),
+        pick: () => this.setState({ filter: o, limit: 14 })
+      };
+    });
 
     // filtered set (group filter + search)
     let shown = active === 'All' ? all.slice() : all.filter(s => s[key] === active);
@@ -275,8 +543,19 @@ class Component extends DCLogic {
 
     // featured story
     const cur = all[this.state.current] || all[0];
-    const current = Object.assign({}, cur, { dateLabel: this.dateLabel(cur.date) });
-    const isThisIsUs = cur.id === 'this-is-us';
+    const current = Object.assign({}, cur, {
+      dateLabel: this.dateLabel(cur.date),
+      paras: (cur.paras || []).map((t, i) => t.startsWith('## ')
+        ? { t: t.slice(3), style: "font-family:'Archivo',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#1E8A86; margin:44px 0 18px; padding-top:22px; border-top:1.5px solid rgba(30,138,134,0.35);" }
+        : { t, style: i === 0 ? 'font-size:26px; line-height:1.5; color:#1A1613; margin:0 0 24px;' : '' }),
+      hasImage: !!cur.image,
+      imgStyle: cur.image ? 'width:100%; aspect-ratio:' + (cur.imgRatio || '16/10') + '; margin-top:34px; background-image:url(\'' + cur.image + '\'); background-size:' + (cur.imgFit || 'cover') + '; background-repeat:no-repeat; background-position:' + (cur.imgPos || 'center') + '; background-color:#F3EAD0;' : '',
+      hasKicker: !!cur.kicker,
+      kicker1: cur.kicker ? cur.kicker[0] : '',
+      kicker2: cur.kicker ? cur.kicker[1] : '',
+      isDraft: !!cur.draft,
+      hasPage: cur.href && cur.href !== '#'
+    });
 
     // paginate, then group by month
     const limited = shown.slice(0, this.state.limit);
@@ -299,7 +578,8 @@ class Component extends DCLogic {
 
     return {
       filters, groups, current,
-      isThisIsUs, notThisIsUs: !isThisIsUs,
+      toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+
       totalLine: all.length + ' stories and counting — the Constellation grows as neighbors add their own.',
       filterHeading: mode === 'format' ? 'Filter by format' : 'Filter by topic',
       indexHeading: (active === 'All' ? 'All stories' : active) + ' · newest first',

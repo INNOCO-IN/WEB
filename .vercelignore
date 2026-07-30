@@ -1,0 +1,13 @@
+screenshots/
+uploads/
+deploy/
+deploy-en/
+vercel-deploy/
+in-website/
+design_handoff_in_website/
+IN Website (English)/
+_ARCHIVE-*
+*.md
+!README.md
+.image-slots.state.json
+.thumbnail
