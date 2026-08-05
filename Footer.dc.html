@@ -12,9 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-  .in-foot-arc .ribbon-stroke { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: inFootArc 2.4s ease forwards; }
+  .in-foot-loop .ribbon-stroke { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: inFootArc 2.4s ease forwards; }
   @keyframes inFootArc { to { stroke-dashoffset: 0; } }
-  @media (prefers-reduced-motion: reduce) { .in-foot-arc .ribbon-stroke { animation: none; stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .in-foot-loop .ribbon-stroke { animation: none; stroke-dashoffset: 0; } }
   .in-fcol a:hover { color: #E6328C; }
   .in-social a:hover { color: #E6328C; }
 </style>
@@ -55,7 +55,7 @@
 </style>
 </helmet>
 <footer style="background: #FAF4E2; color: #2E3B40;">
-  <div class="in-foot-arc" style="width: 100%; line-height: 0; position: relative; top: -1.5vw; margin-bottom: -1.5vw; z-index: 2;">
+  <div class="in-foot-loop" style="width: 100%; line-height: 0; position: relative; top: -1.5vw; margin-bottom: -1.5vw; z-index: 2;">
     <svg viewBox="0 0 1500 120" width="100%" height="auto" preserveAspectRatio="none" style="display: block;" aria-hidden="true">
       <rect x="0" y="0" width="1500" height="60" fill="{{ bandFill }}"></rect>
       <rect x="0" y="60" width="1500" height="60" fill="#FAF4E2"></rect>

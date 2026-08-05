@@ -20,9 +20,9 @@
     body { margin: 0; background: var(--color-paper); color: var(--color-ink); font: var(--text-body); -webkit-font-smoothing: antialiased; word-break: keep-all; }
     a { color: var(--color-teal); text-decoration: none; }
     a:hover { color: var(--color-magenta); }
-    .arcline path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: arcdraw 2.4s ease forwards; }
-    @keyframes arcdraw { to { stroke-dashoffset: 0; } }
-    @media (prefers-reduced-motion: reduce) { .arcline path { animation: none; stroke-dashoffset: 0; } }
+    .loopline path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: loopdraw 2.4s ease forwards; }
+    @keyframes loopdraw { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .loopline path { animation: none; stroke-dashoffset: 0; } }
   </style>
 <style id="in-mobile">
 @media (max-width: 1000px){
@@ -170,7 +170,7 @@
           <div style="display: flex; flex-direction: column; flex: 1;">
             <div style="font: var(--text-eyebrow); font-family: var(--font-sans); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--color-tan); margin-bottom: 12px;">카드 시리즈</div>
             <div style="font-family: var(--font-serif); font-weight: 700; font-size: 27px; line-height: 1.14; margin-bottom: 12px;">자꾸 돌아오게 되는 한 문장</div>
-            <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .9;">ME=WE 네트워크에서 건네지는 카드 — 예술, 과학, 사회적 실천, 영성이 하나의 대화가 됩니다.</p>
+            <p style="margin: 0 56px 0 0; font: var(--text-body); font-family: var(--font-serif); opacity: .9;">MEWE 네트워크에서 건네지는 카드 — 예술, 과학, 사회적 실천, 영성이 하나의 대화가 됩니다.</p>
             <span style="position: absolute; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%; background: var(--color-ink); color: var(--color-paper); display: flex; align-items: center; justify-content: center; font-size: 20px;">→</span>
           </div>
         </div>
@@ -208,68 +208,7 @@
   <a href="Are-you-IN.KO.dc.html" style="display: inline-flex; align-items: center; line-height: 1.2; text-decoration: none; font-family: var(--font-sans); font-weight: 700; font-size: 15px; color: var(--color-ink); background: transparent; border: 1.5px solid rgba(26,22,19,0.35); border-radius: 999px; padding: 15px 32px;">연결하기</a>
 </section>
 
-<footer style="background: var(--color-paper);">
-  
-    <div style="width: 100%; line-height: 0; padding-top: 28px;">
-      <svg class="arcline" viewBox="0 0 1500 80" width="100%" height="auto" style="display: block;" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51" fill="none" stroke="var(--color-ink)" stroke-width="6" stroke-linecap="round"></path></svg>
-    </div>
-  
-  <div style="max-width: 1320px; margin: 0 auto; padding: 40px 80px;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 0.7fr 0.5fr; gap: 28px; align-items: start;">
-
-      <!-- START WITHIN -->
-      <div>
-        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">안에서 시작하기</div>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <a href="Manifesto.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">IN-매니페스토</a>
-          <a href="MEWE.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">MEWE</a>
-          <a href="Collectives.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">IN-콜렉티브</a>
-        </div>
-      </div>
-
-      <!-- SHARE THE SPACE -->
-      <div>
-        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">공간을 나누기</div>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <a href="Workshop.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">워크숍</a>
-          <a href="Story.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">스토리</a>
-          <a href="Protagonist.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">주역</a>
-        </div>
-      </div>
-
-      <!-- SERVE THE WHOLE -->
-      <div>
-        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">더 큰 우리에게</div>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <a href="Community.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">프로젝트</a>
-          <a href="Community.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">커뮤니티</a>
-          <span style="color: var(--color-ink-40); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">별자리</span>
-        </div>
-      </div>
-
-      <!-- FLIP CONNECT -->
-      <div>
-        <div style="font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; color: var(--color-teal); margin-bottom: 20px; white-space: nowrap;">뒤집어 연결하기</div>
-        <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
-          <a href="Are-you-IN.KO.dc.html" style="color: var(--color-teal-dark); font-family: var(--font-sans); font-weight: 600; font-size: 13px; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase;">Are you IN?</a>
-        </div>
-      </div>
-
-      <!-- 5 · spacer -->
-      <div></div>
-
-      <!-- 6 · social -->
-      <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
-        <a href="mailto:in.innoco@gmail.com" aria-label="Email" style="color: var(--color-ink); display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg></a>
-        <a href="#" aria-label="Twitter / X" style="color: var(--color-ink); display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"></path></svg></a>
-        <a href="#" aria-label="YouTube" style="color: var(--color-ink); display: inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg></a>
-      </div>
-
-    </div>
-    <div style="height: 1px; background: var(--color-ink-12); margin: 44px 0 20px;"></div>
-    <div style="font: var(--text-caption); font-family: var(--font-sans); color: var(--color-ink-40);">© 2016–2026 IN (INNOCO) · 서울 · MEWE는 CC BY-NC-SA 4.0으로 공유됩니다</div>
-  </div>
-</footer>
+<dc-import name="Footer-KO" loop="0.14" hint-size="100%,460px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script></script>
 </body>

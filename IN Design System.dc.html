@@ -183,7 +183,7 @@ code{font-family:ui-monospace,Menlo,monospace; font-size:13px; background:rgba(4
 .wire .imgstrip{background:var(--color-slate-tint); border-bottom:1px dashed var(--color-ink); padding:12px 6px; text-align:center; color:#4a5a5e;}
 .wire .legend{display:flex; gap:14px; align-items:center; padding:10px 12px; flex-wrap:wrap;}
 .wire .legend .box{padding:5px 14px;}
-.wire .ribbon{display:none;} /* gradient ribbon retired — footer opens with the ME=WE Arc line */
+.wire .ribbon{display:none;} /* gradient ribbon retired — footer opens with the MEWE Loop line */
 
 /* ---- sitemap tree ---- */
 .tree{font-family:var(--font-utility); font-size:14px; line-height:2;}
@@ -199,10 +199,10 @@ table.paths th,table.paths td{text-align:left; padding:9px 12px; border-bottom:1
 table.paths th{font-family:var(--font-utility); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#8a9a8f;}
 table.paths td.k{font-weight:600;}
 
-.arcline{display:block; width:100%; height:auto; margin:var(--sp-7) 0;}
-.arcline path{fill:none; stroke:var(--color-ink); stroke-width:6; stroke-linecap:round; stroke-dasharray:2000; stroke-dashoffset:2000; animation:arcdraw 2.4s ease forwards;}
-@keyframes arcdraw{to{stroke-dashoffset:0;}}
-@media(prefers-reduced-motion:reduce){.arcline path{animation:none; stroke-dashoffset:0;}}
+.loopline{display:block; width:100%; height:auto; margin:var(--sp-7) 0;}
+.loopline path{fill:none; stroke:var(--color-ink); stroke-width:6; stroke-linecap:round; stroke-dasharray:2000; stroke-dashoffset:2000; animation:loopdraw 2.4s ease forwards;}
+@keyframes loopdraw{to{stroke-dashoffset:0;}}
+@media(prefers-reduced-motion:reduce){.loopline path{animation:none; stroke-dashoffset:0;}}
 hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0;}
 
 @media(max-width:640px){
@@ -259,7 +259,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
             <li>Workshop <span class="note-inline">(Magenta) — index + 10 detail pages (Möbius Making, Pathfinder, Jungle Jam, Metanoia, Two Wings, Second Life, Bucket List, Hero's Journey, Light-Shadow-Shift, Shadow Shifter)</span></li>
             <li>Story <span class="note-inline">(Amber) — wall + Submission page (5-step)</span></li>
             <li>News <span class="note-inline">(Tan) — network news index, newest first</span></li>
-            <li>Protagonist <span class="note-inline">(Orange) — four depths: Participant → Bridge Builder → Facilitator → IN-Collective</span></li>
+            <li>Protagonist <span class="note-inline">(Orange) — four depths: Participant → BridgeBuilder → Facilitator → IN-Collective</span></li>
           </ul>
         </li>
         <li><span class="lbl">Serve the Whole</span>
@@ -277,7 +277,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     Top nav = logo (→ home) + three category keywords with three color dots each; “Are you IN?” is an outline pill far right. Full nav lives in the footer index. “Are you IN?” appears on the Home hero and the Are-you-IN page. CTA model: <code>REGISTER</code> for open-enrollment workshops, <code>INQUIRE</code> for organization-based. No pricing anywhere on the public site.</div>
   </section>
 
-  <svg class="arcline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
+  <svg class="loopline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
 
   <section class="sec" id="a2">
     <div class="sec-num">A2</div>
@@ -299,7 +299,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band">FEATURED WORKSHOP (2× weight)<div class="cols2"><div class="box img">IMAGE</div><div class="box" style="text-align:left; padding:14px 10px;">TEXT — title · one-line · REGISTER</div></div></div>
       <div class="band">STORY / NEWS TEASER ROW<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">News</div></div><div class="box">CTA<br>(text)</div></div></div>
       <div class="band">COMMUNITY STRIP<div class="cols3"><div class="box img">IMAGE</div><div class="box img">IMAGE</div><div class="box img">IMAGE</div></div></div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -308,7 +308,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band">NAV</div>
       <div class="band hero">HERO<div class="cols2"><div class="box" style="text-align:left; padding:14px 10px;">TEXT — section headline + one-line intro</div><div class="box img">IMAGE (optional)</div></div></div>
       <div class="band">CARD GRID — 4 col desktop / 2 tablet / 1 mobile<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div></div><div class="cols" style="margin-top:6px;"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Card</div></div></div></div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -321,7 +321,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band">FORMATS / DETAILS — TEXT <span style="opacity:.6">(no pricing)</span></div>
       <div class="band">CTA BAND — REGISTER or INQUIRE</div>
       <div class="band">RELATED STORIES<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box">—</div></div></div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -331,7 +331,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band hero">HERO<div class="cols2"><div class="box" style="text-align:left; padding:14px 10px;">TEXT — “Stories told by everyone. Owned by no one.”</div><div class="box">FILTER (text tabs) — I LIVED IT / I NOTICED IT</div></div></div>
       <div class="band">STORY WALL — mixed-media cards (masonry)<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story · wide</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div></div><div class="cols" style="margin-top:6px;"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box">More →</div></div></div>
       <div class="band" style="text-align:center; padding:20px 12px; letter-spacing:.06em;">BIG “ADD YOURS” BAND (CTA, text) — “Fifteen minutes is enough. Add yours →” → Submission (4c)</div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -342,7 +342,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band">THE FOUR BEATS (TEXT)<div class="cols"><div class="box">1 · one moment</div><div class="box">2 · the dare / noticed</div><div class="box">3 · what moved</div><div class="box">4 · named as MEWE</div></div></div>
       <div class="band" style="text-align:center;">“pass it on →” (ripple CTA, text)</div>
       <div class="band">MORE STORIES<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip">IMAGE</div><div style="padding:8px 10px;">Story</div></div><div class="box">More →</div></div></div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -352,11 +352,11 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band hero"><div class="box" style="text-align:left; padding:14px 10px;">TEXT — “Fifteen minutes. One honest moment.” intro + reassurance</div></div>
       <div class="band">STEP 1 · YOUR STORY <span style="color:var(--color-magenta)">(required)</span><div class="cols2"><div class="box" style="text-align:left; padding:14px 10px;">TEXT AREA — the story · two doors (I LIVED IT / I NOTICED IT) · “stuck?” helper</div><div class="box">GUIDE (text)</div></div></div>
       <div class="band">STEP 2 · FORMAT (optional)<div class="cols2"><div class="box">writing · drawing · photo · audio · video (text tags)</div><div class="box img">UPLOAD → IMAGE / media slot</div></div></div>
-      <div class="band">STEP 3 · ARC PLACEMENT (optional) — six stage markers (text)</div>
+      <div class="band">STEP 3 · LOOP PLACEMENT (optional) — six stage markers (text)</div>
       <div class="band">STEP 4 · NAME OR ANONYMOUS (optional) — text field</div>
       <div class="band">STEP 5 · EMAIL + CONSENT <span style="color:var(--color-magenta)">(required)</span> — fields</div>
       <div class="band" style="text-align:center;">SUBMIT → · “We may gently edit for length — never for meaning.”</div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -366,7 +366,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <div class="band hero"><div class="box" style="text-align:left; padding:14px 10px;">TEXT — “A small studio with a long question.”</div></div>
       <div class="band">CORE TEAM — portrait People Cards (image over name)<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div></div></div>
       <div class="band">IN-COLLECTIVES WORLDWIDE — grouped sub-section<div class="cols"><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div><div class="box" style="padding:0; text-align:left;"><div class="imgstrip" style="padding:24px 6px;">IMAGE</div><div style="padding:8px 10px;">Name · role</div></div></div></div>
-      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 ME=WE ARC LINE — FOOTER OPENER 〜</div>
+      <div class="band" style="text-align:center; color:#8a9a8f; font-size:9px; letter-spacing:.12em;">〜 MEWE LOOP LINE — FOOTER OPENER 〜</div>
       <div class="band dark">FOOTER NAV — 6 columns (4 categories · empty · social)<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px;"><div class="box">Start Within</div><div class="box">Share the Space</div><div class="box">Serve the Whole</div><div class="box">Flip Connect</div><div class="box" style="opacity:.45;">empty</div><div class="box">email · X · YouTube</div></div><div style="margin-top:8px; font-size:9px; letter-spacing:.08em; opacity:.75;">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div></div>
     </div>
 
@@ -374,7 +374,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     Connect is a form + thank-you screen ("You're IN."). Treat as a 6th template, or as a variant of Template 3? Decide in build.</div>
   </section>
 
-  <svg class="arcline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
+  <svg class="loopline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
 
   <section class="sec" id="a3">
     <div class="sec-num">A3</div>
@@ -510,18 +510,18 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
 
     <hr class="div">
     <div class="sec-num">B1d</div>
-    <h2 class="sec-h">Signature motif — the ME=WE Arc line</h2>
-    <p class="sec-p">A single, organic, hand-drawn line — one continuous surface with one gentle flip (the loop). It carries the ME=WE Arc in 2D: SHIFT, kept practicing and moving — each person's shift landing in a different place along the line. It opens the footer and marks major section breaks, and on the live site it draws itself in as you move between pages.</p>
-    <svg class="arcline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
+    <h2 class="sec-h">Signature motif — the MEWE Loop line</h2>
+    <p class="sec-p">A single, organic, hand-drawn line — one continuous surface with one gentle flip (the loop). It carries the MEWE Loop in 2D: SHIFT, kept practicing and moving — each person's shift landing in a different place along the line. It opens the footer and marks major section breaks, and on the live site it draws itself in as you move between pages.</p>
+    <svg class="loopline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
     <h3 style="font-family:var(--font-utility);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a9a8f;margin:30px 0 8px;">Footer opener — how it sits (seamless)</h3>
     <div style="border:1px solid var(--color-line);">
       <div style="background:var(--color-paper); padding:22px 22px 8px;">
         <div style="font-family:var(--font-utility); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#8a9a8f;">… upper page content (paper) …</div>
-        <svg class="arcline" style="margin:20px 0 0;" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
+        <svg class="loopline" style="margin:20px 0 0;" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
       </div>
       <div style="background:var(--color-paper-dim); padding:36px 22px 30px;">
         <div style="font-family:var(--font-utility); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--color-teal); font-weight:600;">Start Within · Share the Space · Serve the Whole</div>
-        <div style="font-size:12px; color:#8a9a8f; margin-top:8px;">The Arc line floats on the page ground, with paper continuing beneath it; the footer fill begins lower as a soft tone shift — the line is the only visible division, never a hard straight edge beside it.</div>
+        <div style="font-size:12px; color:#8a9a8f; margin-top:8px;">The Loop line floats on the page ground, with paper continuing beneath it; the footer fill begins lower as a soft tone shift — the line is the only visible division, never a hard straight edge beside it.</div>
       </div>
     </div>
 
@@ -532,10 +532,10 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     </div>
 
     <div class="note"><b>Rules</b>
-    The Arc line is the one “loose” gesture against the disciplined grid. It opens the footer and appears at major section breaks — one per break, never inside a card, never decorating text. It <b>replaces the old gradient ribbon entirely</b> — no colored gradient strip anywhere. On the live footer the ribbon inherits the CTA band color and its loop sweeps position per page (see B5).</div>
+    The Loop line is the one “loose” gesture against the disciplined grid. It opens the footer and appears at major section breaks — one per break, never inside a card, never decorating text. It <b>replaces the old gradient ribbon entirely</b> — no colored gradient strip anywhere. On the live footer the ribbon inherits the CTA band color and its loop sweeps position per page (see B5).</div>
   </section>
 
-  <svg class="arcline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
+  <svg class="loopline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
 
   <section class="sec" id="b2">
     <div class="sec-num">B2</div>
@@ -637,8 +637,8 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     </div>
 
     <h3 style="font-family:var(--font-display);font-weight:500;font-size:22px;margin:34px 0 6px;">ME=WE Arc — the six stages (ME=WE page)</h3>
-    <p class="sec-p">The full workshop journey (not the Pathway, not a single card). Two circles overlap more with each stage — ME and WE moving from apart to one surface, with the flip at (ME WE). Shown in-page, non-clickable.</p>
-    <div style="border:1px solid var(--color-line); background:#fff; padding:10px 8px; margin:var(--sp-4) 0 0;"><img src="team/mewe-arc-strip.png" alt="ME=WE Arc — six hand-drawn Möbius stages: IGNITE, ME≠WE, ME+WE, (ME WE), ME=WE, GLOW" style="width:100%; height:auto; display:block;"></div>
+    <p class="sec-p">The full workshop journey (not Protagonist, not a single card). Two circles overlap more with each stage — ME and WE moving from apart to one surface, with the flip at (ME WE). Shown in-page, non-clickable.</p>
+    <div style="border:1px solid var(--color-line); background:#fff; padding:10px 8px; margin:var(--sp-4) 0 0;"><img src="team/mewe-arc-strip.png" alt="MEWE Loop — six hand-drawn Möbius stages: IGNITE, ME≠WE, ME+WE, (ME WE), ME=WE, GLOW" style="width:100%; height:auto; display:block;"></div>
     <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin:14px 0 0; text-align:center;">
       <div><div style="font-family:var(--font-utility); font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; margin-bottom:6px;">Ignite</div><p style="margin:0; font-family:var(--font-display); font-size:13px; line-height:1.4; color:var(--color-ink);">Willing to turn toward my higher self, willing to look.</p></div>
       <div><div style="font-family:var(--font-utility); font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; margin-bottom:6px;">ME &ne; WE</div><p style="margin:0; font-family:var(--font-display); font-size:13px; line-height:1.4; color:var(--color-ink);">Still inside my own story.</p></div>
@@ -651,11 +651,11 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     <div class="note"><b>Card requests — shorthand</b>
     <i>"[Type] card, [color], medium/role: [ ], title: [ ], description: [ ], size: 1×1 / wide / tall."</i> People cards are portrait (1×1.5) and grouped in their own sub-section. If a request fits no type here, say so — that's the signal to add a catalog entry, not bend one.</div>
 
-    <div class="open"><b>Open — Pathway vs Experience vs Arc</b>
-    Three distinct systems must never be conflated: <b>ME=WE Arc</b> (six-stage workshop journey) · <b>ME=WE Pathway</b> (four commitment tiers) · <b>Experience</b> (single-session felt pattern, above). Pathway Card content is still placeholder — swap when the fuller Pathway document surfaces.</div>
+    <div class="open"><b>Open — Protagonist vs Experience vs Loop</b>
+    Three distinct systems must never be conflated: <b>MEWE Loop</b> (six stages of the workshop journey) · <b>Protagonist</b> (four communities, not tiers) · <b>Experience</b> (single-session felt pattern, above). Protagonist card content is still placeholder — swap when the fuller Protagonist copy surfaces.</div>
   </section>
 
-  <svg class="arcline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
+  <svg class="loopline" viewBox="0 0 1500 80" aria-hidden="true"><path d="M0 52 C130 52 190 52 214 45 C244 36 250 14 233 13 C216 12 214 33 236 42 C262 53 300 54 372 52 C640 49 1000 55 1500 51"></path></svg>
 
   <section class="sec" id="b4">
     <div class="sec-num">B4</div>
@@ -717,7 +717,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     <p class="sec-p">The "don't-make-me-repeat-this" rules. Written once here so no prompt has to restate them.</p>
 
     <div class="note"><b>Footer opening — the rule</b>
-    The footer <b>opens with the ME=WE Arc line</b> (B1d) across the full width. The <b>page (paper) ground continues beneath the line</b>; the footer fill (paper-dim) begins <b>below</b> it as a soft tone shift, so the line floats on one continuous ground. No gradient, no colored ribbon, and <b>no hard straight edge beside the line</b> — the Arc line is the only visible division.</div>
+    The footer <b>opens with the MEWE Loop line</b> (B1d) across the full width. The <b>page (paper) ground continues beneath the line</b>; the footer fill (paper-dim) begins <b>below</b> it as a soft tone shift, so the line floats on one continuous ground. No gradient, no colored ribbon, and <b>no hard straight edge beside the line</b> — the Arc line is the only visible division.</div>
 
     <div class="note"><b>Top navigation — compressed mirror of the footer</b>
     Every page carries a sticky top nav that mirrors the footer in order and destinations (<b>change one, change both</b>). Three category keywords — <b>Start Within · Share the Space · Serve the Whole</b> — each with three dots beneath; <b>Flip Connect is footer-only</b>. IN mark (left) links home; <b>Are you IN?</b> sits apart on the far right as an outline <b>pill</b> (no fill).
@@ -761,7 +761,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
     One wide or tall card per row of four, to break monotony — never two oversized cards in the same row. CTA cards never go wide or tall (read at a glance). People cards are portrait and grouped in their own sub-section ("Meet the Crew"), never mixed into a general content grid.</div>
 
     <div class="note"><b>Dividers</b>
-    One ME=WE Arc line between major groupings (Stories → Workshops). Never stack dividers back to back. The divider is the only decorative line permitted; grid hairlines are structural, not decorative.</div>
+    One MEWE Loop line between major groupings (Stories → Workshops). Never stack dividers back to back. The divider is the only decorative line permitted; grid hairlines are structural, not decorative.</div>
 
     <div class="note"><b>Footer IP split</b>
     Site content = All Rights Reserved. MEWE framework materials = Creative Commons BY-NC-SA 4.0. Both lines live in the footer.</div>
@@ -789,6 +789,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
 
     <table class="paths">
       <tr><td class="k">Date</td><td>Change</td></tr>
+      <tr><td class="k">2026-07-30</td><td>v2.5 — <b>Terminology base locked.</b> The six-stage framework is the <b>MEWE Loop</b> (“Arc” retired). Renamed the signature motif to the <b>MEWE Loop line</b>, including CSS identifiers (<code>loopline</code> / <code>loopdraw</code>; footer <code>in-foot-loop</code>). <b>BridgeBuilder</b> is one word everywhere. ME=WE / MEWE spelling now follows the teaching-vs-operating test rather than a named section. Open: the four Protagonist entries are parallel communities, not a numbered ladder — de-linearization pending.</td></tr>
       <tr><td class="k">2026-07-20</td><td>v2.4 — Locked the <b>hero banner spec</b> (uniform 62px band, eyebrow 17px, heading 80px, description 28px, ink text on amber/yellow) across all 9 pages. Corrected the <b>page-color taxonomy</b> to the confirmed authoritative map (Collectives = Plum #46325A, Project = Slate #1E5A64). Added the <b>ribbon-inherits-CTA-color</b> rule + per-page loop sweep. Documented the built <b>content-card module</b> (heading 30/700, body 17, right-aligned filled arrow, arrow-only link, 4:3 image frames, warm non-adjacent tints). Split Jungle Jam &amp; Shadow Shifter into distinct Workshop + Project (youth 2-day residential) entries.</td></tr>
       <tr><td class="k">2026-07-15</td><td>v2.3 — Added the compressed <b>top navigation</b> (mirrors the footer; keyword + 3 colored dots per category, hover fade + keyword tint, touch reveal, Flip Connect footer-only, “Are you IN?” outline pill). Locked the <b>page-color taxonomy</b> (one color per page). Renamed Pathway → <b>Protagonist</b>; merged <b>About IN</b> and <b>History of IN</b> into IN-Manifesto; added new <b>Project</b> and <b>Constellation</b> pages and restructured Community into living clusters. Shared chrome split into <code>Nav.dc.html</code> + <code>Footer.dc.html</code>.</td></tr>
       <tr><td class="k">2026-07-14</td><td>v2.2 — Retired the gradient ribbon everywhere. Created the ME=WE Arc line (organic continuous line with one flip-loop) as the footer opener + section divider, with a gentle draw-in animation. Reserved the horizontal geometric banner for feature headers elsewhere.</td></tr>
@@ -804,7 +805,7 @@ hr.div{border:none; border-top:1px solid var(--color-line); margin:var(--sp-6) 0
       <tr><td class="k">3</td><td>Which workshops get dedicated pages vs cards</td><td>A1</td></tr>
       <tr><td class="k">4</td><td>Place the final vector IN logo (raster brand art now supplied)</td><td>B1d</td></tr>
       <tr><td class="k">5</td><td>Verify “650+ / 5 countries” stat; confirm/remove any statement-block quote</td><td>B4</td></tr>
-      <tr><td class="k">6</td><td>Pathway Card content — swap placeholder when fuller Pathway doc surfaces</td><td>B3</td></tr>
+      <tr><td class="k">6</td><td>Protagonist card content — swap placeholder when fuller Protagonist copy surfaces</td><td>B3</td></tr>
     </table>
 
     <div class="note" style="margin-top:26px;"><b>Maintenance</b>
