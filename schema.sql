@@ -61,3 +61,22 @@ create policy "anon uploads story media" on storage.objects
 drop policy if exists "public reads story media" on storage.objects;
 create policy "public reads story media" on storage.objects
   for select to public using (bucket_id = 'story-media');
+
+-- ========== 5. Realtime: let the Constellation's live "Just shared" feed
+--    push new/updated stories to visitors without a page reload. ==========
+-- REPLICA IDENTITY FULL sends the whole row (not just the primary key) with
+-- each change event — the feed needs status/body/format on the payload it
+-- receives, not just the id.
+alter table public.stories replica identity full;
+
+-- Add the table to the realtime publication (idempotent — errors if run
+-- twice otherwise, since Postgres has no "add table if not attached").
+do $$
+begin
+  if not exists (
+    select 1 from pg_publication_tables
+    where pubname = 'supabase_realtime' and schemaname = 'public' and tablename = 'stories'
+  ) then
+    alter publication supabase_realtime add table public.stories;
+  end if;
+end $$;

@@ -23,12 +23,17 @@
   .ct-dot span { animation: ct-twinkle 3.2s ease-in-out infinite; }
   .ct-dot:hover span, .ct-dot:focus span { animation-play-state: paused; opacity: 1 !important; transform: scale(1.35) !important; }
   .ct-label { transition: left 1s cubic-bezier(0.22,1,0.36,1), top 1s cubic-bezier(0.22,1,0.36,1), opacity 0.6s ease; }
+  @keyframes in-fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  #in-just-shared-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
   @media (max-width: 600px){
     [style*="padding: 70px 28px"]{padding:44px 20px !important;}
     [style*="padding: 52px 28px"]{padding:40px 20px !important;}
   }
 </style>
 <script src="./image-slot.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./supabase-config.js"></script>
+<script src="./in-stories-feed.js"></script>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -47,6 +52,19 @@
   
 
   
+
+  <!-- JUST SHARED — live feed straight from Supabase, updates in real time -->
+  <section data-screen-label="Just shared" style="background: #16242E; color: #FAF4E2; border-top: 1px solid rgba(250,244,226,0.1);">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 40px 28px 8px;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #6FCB7C; box-shadow: 0 0 8px 2px rgba(111,203,124,0.6); animation: ct-twinkle 2s ease-in-out infinite;"></span>
+        <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.75);">Just shared — live</span>
+      </div>
+      <div id="in-just-shared-grid" data-in-feed="stories" data-in-feed-limit="9">
+        <p style="font-family: 'Newsreader', serif; font-size: 16px; color: rgba(250,244,226,0.55); padding: 20px 2px;">Loading…</p>
+      </div>
+    </div>
+  </section>
 
   <!-- THE SKY -->
   <section data-screen-label="The Sky" style="background: #16242E; color: #FAF4E2;">
