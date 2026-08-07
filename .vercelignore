@@ -11,3 +11,4 @@ _ARCHIVE-*
 !README.md
 .image-slots.state.json
 .thumbnail
+app/

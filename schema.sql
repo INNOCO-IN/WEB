@@ -80,3 +80,111 @@ begin
     alter publication supabase_realtime add table public.stories;
   end if;
 end $$;
+
+-- ========== 6. Workshop catalog (lightweight; static Workshop-*.dc.html
+--    pages stay authoritative for copy — this just drives the intake form's
+--    dropdown and lets staff toggle which workshops currently accept
+--    interest). ==========
+create table if not exists public.workshops (
+  id          uuid primary key default gen_random_uuid(),
+  created_at  timestamptz not null default now(),
+  slug        text not null unique,     -- e.g. 'mobius-making' — matches Workshop-Mobius-Making page
+  title       text not null,
+  active      boolean not null default true,
+  sort_order  int not null default 0
+);
+
+-- ========== 7. Workshop interest / registration ==========
+create table if not exists public.workshop_registrations (
+  id             uuid primary key default gen_random_uuid(),
+  created_at     timestamptz not null default now(),
+  workshop_id    uuid references public.workshops(id),
+  workshop_slug  text,                  -- denormalized fallback ("something else" / free text)
+  name           text not null,
+  email          text not null,
+  org            text,
+  message        text,
+  source_page    text,
+  status         text not null default 'new'   -- new | contacted | archived
+);
+
+alter table public.workshops enable row level security;
+alter table public.workshop_registrations enable row level security;
+
+drop policy if exists "anon reads active workshops" on public.workshops;
+create policy "anon reads active workshops" on public.workshops
+  for select to anon using (active = true);
+
+drop policy if exists "anon can register interest" on public.workshop_registrations;
+create policy "anon can register interest" on public.workshop_registrations
+  for insert to anon with check (true);
+
+-- ========== 8. Staff allowlist + review policies ==========
+-- Onboard staff by hand: they sign in once via magic link, then you add
+-- their email here via Supabase Table Editor. No invite UI at this scale.
+create table if not exists public.staff_emails (
+  email text primary key
+);
+
+alter table public.staff_emails enable row level security;
+
+-- Scoped to the caller's own email only, so the app can check "am I staff?"
+-- without ever exposing the full staff list to a logged-in-but-non-staff user.
+drop policy if exists "authenticated can check own staff status" on public.staff_emails;
+create policy "authenticated can check own staff status" on public.staff_emails
+  for select to authenticated using (email = auth.jwt() ->> 'email');
+
+drop policy if exists "staff can read submissions" on public.submissions;
+create policy "staff can read submissions" on public.submissions
+  for select to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can update submission status" on public.submissions;
+create policy "staff can update submission status" on public.submissions
+  for update to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can read stories" on public.stories;
+create policy "staff can read stories" on public.stories
+  for select to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can update story status" on public.stories;
+create policy "staff can update story status" on public.stories
+  for update to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can read workshop registrations" on public.workshop_registrations;
+create policy "staff can read workshop registrations" on public.workshop_registrations
+  for select to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can update workshop registrations" on public.workshop_registrations;
+create policy "staff can update workshop registrations" on public.workshop_registrations
+  for update to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can read all workshops" on public.workshops;
+create policy "staff can read all workshops" on public.workshops
+  for select to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+drop policy if exists "staff can manage workshops" on public.workshops;
+create policy "staff can manage workshops" on public.workshops
+  for all to authenticated
+  using (auth.jwt() ->> 'email' in (select email from public.staff_emails))
+  with check (auth.jwt() ->> 'email' in (select email from public.staff_emails));
+
+-- ========== 9. Seed the workshop catalog from the existing Workshop-*.dc.html pages ==========
+insert into public.workshops (slug, title, sort_order) values
+  ('mobius-making',       'Möbius Making',            1),
+  ('pathfinder',          'Pathfinder',                2),
+  ('jungle-jam',          'Jungle Jam',                3),
+  ('metanoia',            'Metanoia',                  4),
+  ('bucket-list',         'Bucket List',                5),
+  ('heros-journey',       'Hero''s Journey',           6),
+  ('light-shadow-shift',  'Light/Shadow Shift',        7),
+  ('second-life',         'Second Life',               8),
+  ('shadow-shifter',      'Shadow Shifter',            9),
+  ('two-wings',           'Two Wings',                10)
+on conflict (slug) do nothing;

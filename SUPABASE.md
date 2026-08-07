@@ -39,3 +39,14 @@ Two forms write to your Supabase project, and one page reads a live feed back ou
 - The live feed (`in-stories-feed.js`) loads `@supabase/supabase-js` from a CDN — that's the only page pulling in a third-party script; the form-submission bridge (`in-supabase.js`) stays dependency-free.
 - Same submission pattern extends to any new form: add `data-in-form="table"`, name the fields after the columns, done — `in-supabase.js` picks it up automatically.
 - Separately from all of this: `Story-Index.EN.dc.html` expects a `data/stories.js` file that doesn't exist in this repo, so that page's curated story index currently renders empty. Unrelated to the Supabase work above — flagging it so it isn't mistaken for something this change broke.
+
+## The `app/` React project — workshop intake + staff admin
+
+A separate Vite/React/TypeScript app in `app/` (its own Vercel project, not part of this static site's deploy) covers the two things that didn't exist yet on the static site:
+
+- **Workshop interest form** — reads `workshops` (active only) for its dropdown, writes to `workshop_registrations`.
+- **Staff admin** — magic-link sign-in, gated by the `staff_emails` table + RLS (see `schema.sql` §8). Lets staff review `submissions`/`stories`/`workshop_registrations` and flip a story's status to `published`/`declined` without touching Supabase Table Editor directly.
+
+Run `schema.sql` in full (§6–9 add `workshops`, `workshop_registrations`, `staff_emails`, and the staff RLS policies, plus seed the workshop catalog from the existing `Workshop-*.dc.html` slugs) before using the admin app. Onboard a staff member by having them sign in once via magic link, then adding their email to `staff_emails` in Table Editor.
+
+See `app/README.md` for local dev setup.
