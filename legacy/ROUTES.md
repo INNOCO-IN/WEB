@@ -1,6 +1,6 @@
 # IN Website — Route Map
 
-Static site (Vercel, no rewrites). Routes = file paths. `⚠ orphan` = no page links to it (unreachable by clicking).
+Static site (Vercel). Routes = file paths within this `legacy/` folder — `vercel.json` rewrites `/*` into it, so the public URLs below are unchanged. `⚠ orphan` = no page links to it (unreachable by clicking).
 
 ```
 /                                          → index.html (Home)

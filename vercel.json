@@ -2,6 +2,7 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/", "destination": "/legacy/index.html" },
+    { "source": "/:path*", "destination": "/legacy/:path*" }
   ]
 }
