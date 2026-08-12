@@ -12,9 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-  .in-foot-arc .ribbon-stroke { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: inFootArc 2.4s ease forwards; }
+  .in-foot-loop .ribbon-stroke { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: inFootArc 2.4s ease forwards; }
   @keyframes inFootArc { to { stroke-dashoffset: 0; } }
-  @media (prefers-reduced-motion: reduce) { .in-foot-arc .ribbon-stroke { animation: none; stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .in-foot-loop .ribbon-stroke { animation: none; stroke-dashoffset: 0; } }
   .in-fcol a:hover { color: #E6328C; }
   .in-social a:hover { color: #E6328C; }
 </style>
@@ -55,7 +55,7 @@
 </style>
 </helmet>
 <footer style="background: #FAF4E2; color: #2E3B40;">
-  <div class="in-foot-arc" style="width: 100%; line-height: 0; position: relative; top: -1.5vw; margin-bottom: -1.5vw; z-index: 2;">
+  <div class="in-foot-loop" style="width: 100%; line-height: 0; position: relative; top: -1.5vw; margin-bottom: -1.5vw; z-index: 2;">
     <svg viewBox="0 0 1500 120" width="100%" height="auto" preserveAspectRatio="none" style="display: block;" aria-hidden="true">
       <rect x="0" y="0" width="1500" height="60" fill="{{ bandFill }}"></rect>
       <rect x="0" y="60" width="1500" height="60" fill="#FAF4E2"></rect>
@@ -69,7 +69,7 @@
         <div style="display: flex; flex-direction: column; gap: 12px;">
           <a href="Manifesto.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Manifesto</a>
           <a href="Collectives.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Collectives</a>
-          <a href="ME=WE.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">ME=WE</a>
+          <a href="MEWE.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">MEWE</a>
         </div>
       </div>
 
@@ -86,6 +86,7 @@
           <a href="Project.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Project</a>
           <a href="Community.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Community</a>
           <a href="Constellation.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">Constellation</a>
+          <a href="News.EN.dc.html" style="color: #146560; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.13em; line-height: 1.3; text-transform: uppercase; text-decoration: none;">News</a>
         </div>
       </div>
 
@@ -106,12 +107,24 @@
 
     </div>
     <div style="height: 1px; background: rgba(46,59,64,0.12); margin: 44px 0 20px;"></div>
-    <div style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; color: rgba(46,59,64,0.68);">© 2016–2026 IN (INNOCO) · Seoul, Korea · ME=WE shared under CC BY-NC-SA 4.0</div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+  <div style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; color: rgba(46,59,64,0.68);">© 2016–2026 IN (INNOCO) · Seoul, Korea · MEWE shared under CC BY-NC-SA 4.0</div>
+      <div style="display: flex; align-items: center; gap: 8px; flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; line-height: 1;">
+      <span style="color: #2E3B40;">EN</span>
+      <span style="color: rgba(46,59,64,0.3);">/</span>
+      <a href="{{ altHref }}" style="color: rgba(46,59,64,0.5); text-decoration: none;">KR</a>
+    </div>
+    </div>
   </div>
 </footer>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 460}}">class Component extends DCLogic {
+
   renderVals() {
+    let __f = '';
+    try { __f = decodeURIComponent(location.pathname.split('/').pop() || ''); } catch (e) {}
+    let altHref = __f.replace('.EN.', '.KO.');
+    if (altHref === __f || !__f) altHref = 'Home.KO.dc.html';
     const c = this.props.cta;
     const hasCta = c && c !== 'false' && c !== false;
     let loop = parseFloat(this.props.loop);
@@ -121,6 +134,7 @@
     const ribbonPath = 'M0 60 L' + (L-70) + ' 60 C' + (L-34) + ' 60 ' + (L-24) + ' 53 ' + (L-19) + ' 53 C' + (L+11) + ' 44 ' + (L+17) + ' 22 ' + L + ' 21 C' + (L-17) + ' 20 ' + (L-19) + ' 41 ' + (L+3) + ' 50 C' + (L+10) + ' 55 ' + (L+34) + ' 60 ' + (L+70) + ' 60 L1500 60';
     const bandFill = hasCta ? String(c) : '#FAF4E2';
     let strokeColor = '#2E3B40';
+    if (this.props.stroke) { return { altHref, bandFill, ribbonPath, strokeColor: String(this.props.stroke) }; }
     if (hasCta) {
       const hex = String(c).replace('#','');
       if (hex.length === 6) {
@@ -129,7 +143,7 @@
         strokeColor = lum < 150 ? '#FAF4E2' : '#2E3B40';
       }
     }
-    return { bandFill, ribbonPath, strokeColor };
+    return { altHref, bandFill, ribbonPath, strokeColor };
   }
 }</script>
 </body>

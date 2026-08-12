@@ -28,6 +28,7 @@
     [style*="padding: 52px 28px"]{padding:40px 20px !important;}
   }
 </style>
+<script src="./image-slot.js"></script>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -39,9 +40,13 @@
     <div style="max-width: 1320px; margin: 0 auto; padding: 52px 28px 60px;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #1A1A1A;">Constellation</span></div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 16ch; text-wrap: balance;">Separate points of light. One shape.</h1>
-      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.2; max-width: 720px; margin: 0; color: rgba(26,26,26,0.82);">The living collection of neighbor expressions — every ME=WE story, act, and creation. Alone, a single point. Together, a shape none of us makes on our own.</p>
+      <p style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.2; max-width: 720px; margin: 0; color: rgba(26,26,26,0.82);">The living collection of neighbor expressions — every MEWE story, act, and creation. Alone, a single point. Together, a shape none of us makes on our own.</p>
     </div>
   </section>
+
+  
+
+  
 
   <!-- THE SKY -->
   <section data-screen-label="The Sky" style="background: #16242E; color: #FAF4E2;">
@@ -70,7 +75,7 @@
             <button onClick="{{ closeSel }}" aria-label="Close" style="position: absolute; right: 6px; top: 6px; width: 44px; height: 44px; border: none; background: transparent; color: rgba(46,59,64,0.6); font-family: 'Archivo', sans-serif; font-size: 22px; line-height: 1; cursor: pointer;">×</button>
             <div style="position: relative; display: flex; flex-direction: column; padding: 22px 24px 22px 50px;">
               <span style="{{ selDot }}"></span>
-              <span style="position: absolute; left: 15px; top: 40px; writing-mode: vertical-rl; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">{{ selFormat }}</span>
+              <span style="position: absolute; left: 15px; top: 40px; writing-mode: vertical-rl; white-space: nowrap; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">{{ selFormat }}</span>
               <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #2E3B40; margin: 0 30px 8px 0;">{{ selMeta }}</div>
               <h3 style="font-family: 'Newsreader', serif; font-weight: 700; font-size: 30px; line-height: 1.05; margin: 0 0 10px; text-wrap: balance;">{{ selTitle }}</h3>
               <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.4; margin: 0; color: rgba(46,59,64,0.82);">{{ selCaption }}</p>
@@ -102,12 +107,36 @@
   <!-- HOW IT WORKS -->
   <section data-screen-label="How it works" style="max-width: 1320px; margin: 0 auto; padding: 44px 28px 20px;">
     <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; letter-spacing: -0.01em; margin: 0 0 26px;">How a light gets here</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; max-width: 1100px;">
-      <div style="display: flex; gap: 14px; align-items: baseline;"><span style="flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">1</span><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Make something, or notice something. A few honest sentences, a drawing, a photo, a film, a song.</p></div>
-      <div style="display: flex; gap: 14px; align-items: baseline;"><span style="flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">2</span><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Share it through the Story form. One thing, one caption. Fifteen minutes is enough.</p></div>
-      <div style="display: flex; gap: 14px; align-items: baseline;"><span style="flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">3</span><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">It appears here as a new light. Everything you add appears in the Constellation we are creating together. Some stories are also chosen for the Story page.</p></div>
-      <div style="display: flex; gap: 14px; align-items: baseline;"><span style="flex: 0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">4</span><p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Add as many as you like. Each one joins your name's own small constellation.</p></div>
-    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; align-items: stretch; max-width: 1100px;">
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(50% 14%, 76% 100%, 24% 100%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(76% 100%, 82% 100%, 54% 14%, 50% 14%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">1</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Make something, or notice something. A few honest sentences, a drawing, a photo, a film, a song.</p>
+        </div>
+      </div>
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(4% 0, 26% 0, 60% 100%, 38% 100%);"></div><div style="position: absolute; inset: 0; background: #FAB414; clip-path: polygon(24% 0, 34% 0, 68% 100%, 56% 100%);"></div><div style="position: absolute; inset: 0; background: #35C0B4; clip-path: polygon(74% 0, 96% 0, 62% 100%, 40% 100%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(66% 0, 76% 0, 44% 100%, 30% 100%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">2</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Share it through the Story form. One thing, one caption. Fifteen minutes is enough.</p>
+        </div>
+      </div>
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(38% 8%, 72% 46%, 38% 84%, 4% 46%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(72% 46%, 76% 46%, 42% 8%, 38% 8%);"></div><div style="position: absolute; inset: 0; background: #35C0B4; clip-path: polygon(66% 44%, 96% 78%, 66% 112%, 36% 78%);"></div><div style="position: absolute; inset: 0; background: #CDE3CF; clip-path: polygon(96% 78%, 100% 78%, 70% 44%, 66% 44%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">3</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">It appears here as a new light. Everything you add appears in the Constellation we are creating together. Some stories are also chosen for the Story page.</p>
+        </div>
+      </div>
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(22% 28%, 38% 46%, 22% 64%, 6% 46%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(38% 46%, 41% 46%, 25% 28%, 22% 28%);"></div><div style="position: absolute; inset: 0; background: #35C0B4; clip-path: polygon(56% 8%, 72% 26%, 56% 44%, 40% 26%);"></div><div style="position: absolute; inset: 0; background: #CDE3CF; clip-path: polygon(72% 26%, 75% 26%, 59% 8%, 56% 8%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(76% 50%, 94% 70%, 76% 90%, 58% 70%);"></div><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(94% 70%, 97% 70%, 79% 50%, 76% 50%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">4</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Add as many as you like. Each one joins your name's own small constellation.</p>
+        </div>
+      </div>
+      </div>
     <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; line-height: 1.5; margin: 30px 0 0; color: rgba(46,59,64,0.72); max-width: 62ch;">Anyone can add — no workshop needed. And IN keeps adding too: every workshop ends with participants placing their pieces here. Many pieces begin in the Möbius Making workshop.</p>
     <div style="margin-top: 26px;">
       <a href="Story-Submission.EN.dc.html" style="text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">ADD YOURS</a>
@@ -121,7 +150,7 @@
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Add your light to the collection.</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
         <a href="Story-Submission.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Share your story</a>
-        <a href="ME=WE.EN.dc.html" style="text-decoration: none; color: #2E3B40; background: transparent; border: 1.5px solid rgba(46,59,64,0.5); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">What is ME=WE?</a>
+        <a href="MEWE.EN.dc.html" style="text-decoration: none; color: #2E3B40; background: transparent; border: 1.5px solid rgba(46,59,64,0.5); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">What is MEWE?</a>
       </div>
     </div>
   </section>
@@ -144,13 +173,13 @@ class Component extends DCLogic {
   data() {
     return [
       { id:'this-is-us',  title:'“This is us”',                              by:'A teacher',            format:'writing', topic:'Classroom',            arc:'ME = WE', date:'2026-03', caption:'I stopped teaching and asked one real question. By the end, a boy pointed at what they’d made and said: this is us.', read:'Story-Index.EN.dc.html?story=this-is-us' },
-      { id:'connected',   title:'“Perhaps we were already connected.”',      by:'Anonymous',            format:'music',   topic:'Collective',           date:'2026-02', caption:'A participant reflection, carried out of a ME=WE Core session.', read:'Story-Index.EN.dc.html?story=connected' },
+      { id:'connected',   title:'“Perhaps we were already connected.”',      by:'Anonymous',            format:'music',   topic:'Collective',           date:'2026-02', caption:'A participant reflection, carried out of a MEWE Core session.', read:'Story-Index.EN.dc.html?story=connected' },
       { id:'two-hands',   title:'Two hands, one line',                       by:'A participant',        format:'drawing', topic:'Collective',           date:'2026-02', caption:'A drawing made during Möbius Making — where the ME and WE surfaces became one.', read:'Story-Index.EN.dc.html?story=two-hands' },
       { id:'song-whole',  title:'A song for the whole',                      by:'A collective',         format:'music',   topic:'Collective',           date:'2026-01', caption:'Recorded after a retreat — voices that learned to listen before they sang.' },
       { id:'week-after',  title:'The week after the workshop',               by:'A participant',        format:'writing', topic:'Family',               date:'2026-01', caption:'A participant writes about the small action they chose — and what it changed at home.' },
-      { id:'street-exp',  title:'A neighbor’s small experiment',             by:'A neighbor',           format:'writing', topic:'Neighbors',            date:'2025-12', caption:'One person tried a single ME=WE action for a week — and wrote down what changed on their street.' },
+      { id:'street-exp',  title:'A neighbor’s small experiment',             by:'A neighbor',           format:'writing', topic:'Neighbors',            date:'2025-12', caption:'One person tried a single MEWE action for a week — and wrote down what changed on their street.' },
       { id:'harmony',     title:'“The harmony was already in them.”',        by:'A facilitator',        format:'music',   topic:'Collective',           date:'2025-12', caption:'Overheard after a singing circle — the group found the chord before anyone taught it.' },
-      { id:'noticed',     title:'A moment someone noticed ME=WE',            by:'Anonymous',            format:'photo',   topic:'Noticed in the world', date:'2025-11', caption:'A photo of strangers becoming, briefly, one thing.', view:'project-img/light-shadow-shift-women3.jpg' },
+      { id:'noticed',     title:'A moment someone noticed MEWE',            by:'Anonymous',            format:'photo',   topic:'Noticed in the world', date:'2025-11', caption:'A photo of strangers becoming, briefly, one thing.', view:'project-img/light-shadow-shift-women3.jpg' },
       { id:'hasaad',      title:'Hasaad — food grown for neighbors',         by:'A UAE youth venture',  format:'video',   topic:'Nature',               date:'2025-11', caption:'A participant venture in organic food and farming, Dubai.', media:'https://youtu.be/Pl1IBR7fnTU' },
       { id:'what-held',   title:'What held after the bootcamp',              by:'The UNC film team',    format:'video',   topic:'Collective',           date:'2025-10', caption:'A camera followed Nepali youth for two years — to see what lasted.', media:'https://youtu.be/d1J4AECO_9g' },
       { id:'circle-dance',title:'A circle dance at closing',                 by:'Anonymous',            format:'dance',   topic:'Collective',           date:'2025-10', caption:'Nobody planned it. The last session ended and the chairs moved themselves.' },
@@ -172,7 +201,7 @@ class Component extends DCLogic {
       { id:'format', label:'Format', key: d => d.format },
       { id:'topic',  label:'Topic',  key: d => d.topic }
       // v2: { id:'time', label:'Time', key: d => d.date.slice(0,4) },
-      // v2: { id:'arc',  label:'ME=WE Arc', key: d => d.arc || 'Unplaced' }
+      // v2: { id:'arc',  label:'MEWE Loop', key: d => d.arc || 'Unplaced' }
     ];
   }
 

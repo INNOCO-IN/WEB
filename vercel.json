@@ -1,11 +1,7 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
   "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)\\.(png|jpe?g|webp|gif|svg|woff2?)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
   ]
 }
