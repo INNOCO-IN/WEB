@@ -1,6 +1,5 @@
 # IN Website — Vercel deploy
 
-<<<<<<< HEAD
 Static site, no build step. Contents copied from the project root unchanged
 (2026-08-12) — no content, colour or layout edits.
 
@@ -31,19 +30,3 @@ Static site, no build step. Contents copied from the project root unchanged
 ## Known state (unchanged, reported only)
 - No KO version exists for `Community-*`, `Project-*` detail pages, `Story-Submission`, `Action-Research`; KO nav links to the EN pages.
 - Colour drift across pages: magenta appears as `#E5188C` and `#E6328C`, teal as `#1E8A86` and `#146560`, plus several near-ink greys (`#2E3B40`, `#262A38`).
-=======
-Static site. No build step. Framework preset "Other", build command none, output directory `.`.
-
-## Contents
-- `index.html` — entry, redirects to `Home.EN.dc.html` (so `/` resolves and never goes stale)
-- `*.EN.dc.html` / `*.KO.dc.html` — site pages (English + Korean)
-- `Nav.dc.html`, `Nav-KO.dc.html`, `Footer.dc.html`, `Footer-KO.dc.html` — shared components
-- `_ds/` — design-system tokens and bundle
-- `support.js`, `image-slot.js` — runtime
-- `story-img/`, `workshop-img/`, `community-img/`, `project-img/`, `story-photos/`, `team/` — imagery
-
-## Notes
-- Everything runs client-side; any static host works.
-- `<image-slot>` placeholders start empty on a fresh host — real images must be committed.
-- `ME=WE.EN.dc.html` is retired; the page is now `MEWE.EN.dc.html`.
->>>>>>> 638462755147c04386ba4b9ea2673e0d754fd92a
