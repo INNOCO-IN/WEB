@@ -1,32 +1,35 @@
-# IN Website — Vercel deploy
+# IN Website — Vercel deploy bundle
 
-Static site, no build step. Contents copied from the project root unchanged
-(2026-08-12) — no content, colour or layout edits.
+Static, client-rendered build of the IN site (English). Pages are self-contained
+Design Component HTML files; the shared runtime (`support.js`) renders them in the
+browser, so **no build step is required** — this is a plain static site.
 
-## Deploy
+## Deploy to Vercel
 
-**New Vercel project**
-1. Framework preset: **Other**
-2. Build command: none · Output directory: `./` (repo root)
-3. Deploy.
+1. Install the CLI: `npm i -g vercel`
+2. From this folder: `vercel` (follow prompts), then `vercel --prod`
 
-**Existing repo (`INNOCO-IN/WEB`, branch `main`)**
-1. Copy the contents of this folder into the repo root, overwriting.
-2. Delete `ME=WE.EN.dc.html` if still present (superseded by `MEWE.EN.dc.html`).
-3. Commit and push — Vercel redeploys automatically.
+Or drag this folder into the Vercel dashboard (New Project → deploy static),
+or connect a Git repo containing these files. Framework preset: **Other**,
+no build command, output directory = this folder.
 
-## What's in here
-- 76 pages: `*.EN.dc.html` / `*.KO.dc.html` plus shared `Nav`, `Nav-KO`, `Footer`, `Footer-KO`, `Cards.EN`, `ProjectIndexRail`
-- `IN Design System.dc.html` and `_ds/` (tokens + bundle)
-- Runtime: `support.js`, `image-slot.js`
-- Entry: `index.html` (redirects to `Home.EN.dc.html`), `vercel.json`, `.vercelignore`
-- Imagery: `community-img/`, `project-img/`, `story-img/`, `story-photos/`, `workshop-img/`, `team/`, root logo PNGs
-- `data/`
+## Structure
 
-## Not included (internal, by prior decision)
-`IN Brief.*`, `IN-Workshop Brief.*`, `IN Brand Guideline.*`, `Content Register`,
-`IN Promotion Strategy`, `Promo`, option/study files, `_ARCHIVE-*`.
+- `index.html` — redirects to `Home.EN.dc.html` (site entry).
+- `*.EN.dc.html` — the 44 pages.
+- `Nav.dc.html`, `Footer.dc.html` — shared header/footer, loaded by each page.
+- `support.js`, `image-slot.js` — runtime + image-drop helper.
+- `_ds/` — IN design-system bundle (fonts, colors, components).
+- `team/`, `community-img/`, `project-img/` — photography.
+- `IN_Logo.png`, `IN_HorizontalStrip.png` — brand marks.
+- `vercel.json` — keeps file extensions; serves `index.html` at `/`.
 
-## Known state (unchanged, reported only)
-- No KO version exists for `Community-*`, `Project-*` detail pages, `Story-Submission`, `Action-Research`; KO nav links to the EN pages.
-- Colour drift across pages: magenta appears as `#E5188C` and `#E6328C`, teal as `#1E8A86` and `#146560`, plus several near-ink greys (`#2E3B40`, `#262A38`).
+All inter-page links are relative and keep the `.dc.html` extension, so the folder
+works as-is on any static host.
+
+## Note on drag-and-drop photo slots
+
+A few hero/tile photos use in-browser image slots whose drops are stored in the
+editor's local storage, not as committed files. Those specific slots show a
+placeholder on a fresh deploy; all other imagery (team, community, project) is
+baked in. Replace the slots with committed `<img>` tags if you need them live.
