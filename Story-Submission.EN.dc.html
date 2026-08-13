@@ -241,7 +241,7 @@ class Component extends DCLogic {
         this.setState({ sending: true, error: "" });
         try {
           let attachment_url = null;
-          if (this.state.file) attachment_url = await window.INUpload("story-uploads", this.state.file);
+          if (this.state.file) attachment_url = await window.INUpload("story-media", this.state.file);
           await window.INSubmit("stories", {
             body, email,
             credit_name: val('[name="credit_name"]') || null,
