@@ -124,7 +124,13 @@
           <span onClick="{{ fmt8 }}" style="{{ fmtS8 }}">Symbol</span>
           <span onClick="{{ fmt9 }}" style="{{ fmtS9 }}">…Yours</span>
         </div>
-        <div style="margin-top: 14px;"><label class="in-lbl">Attach your piece (optional)</label><image-slot id="story-sub-upload" shape="rect" placeholder="Drop a photo, drawing, scan, or file" style="display: block; width: 100%; aspect-ratio: 16 / 7; height: 200px;"></image-slot></div>
+        <div style="margin-top: 14px;"><label class="in-lbl">Attach your piece (optional)</label>
+          <label style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 160px; padding: 24px; border: 1.5px dashed rgba(46,59,64,0.35); background: rgba(46,59,64,0.03); cursor: pointer; text-align: center;">
+            <input type="file" name="attachment" onChange="{{ onFile }}" accept="image/*,audio/*,video/*,.pdf" style="display: none;">
+            <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #B87A00;">{{ fileLabel }}</span>
+            <span style="font-family: 'Newsreader', serif; font-size: 17px; color: rgba(46,59,64,0.7);">{{ fileNote }}</span>
+          </label>
+        </div>
       </div>
 
       <!-- STEP 3 (optional) -->
@@ -190,7 +196,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { typed: false, kind: 0, formats: [], arc: -1, sending: false, sent: false, error: "" };
+  state = { typed: false, kind: 0, formats: [], arc: -1, file: null, sending: false, sent: false, error: "" };
   formRef = React.createRef();
   FORMATS = ["Writing","Drawing","Photo","Video","Music","Dance","Craft","Recipe","Symbol","…Yours"];
   ARCS = ["IGNITE","ME ≠ WE","ME + WE","(ME WE)","ME = WE","GLOW","Let IN place it"];
@@ -218,7 +224,10 @@ class Component extends DCLogic {
     return Object.assign(out, {
       typed: this.state.typed,
       formRef: this.formRef,
-      buttonLabel: this.state.sending ? "Sending…" : this.state.sent ? "Sent" : "Send my story",
+      fileLabel: this.state.file ? "Attached — click to replace" : "Choose a file",
+      fileNote: this.state.file ? this.state.file.name : "A photo, drawing, scan, recording or PDF",
+      onFile: (e) => this.setState({ file: e.target.files && e.target.files[0] ? e.target.files[0] : null }),
+        buttonLabel: this.state.sending ? "Sending…" : this.state.sent ? "Sent" : "Send my story",
       statusNote: this.state.error ? this.state.error
         : this.state.sent ? "Thank you — we've received it. You'll get a note back once we've read it."
         : "You'll get a note back once we've read it. Your piece will appear in the Constellation once published.",
@@ -231,6 +240,8 @@ class Component extends DCLogic {
         if (box && !box.checked) return this.setState({ error: "Step 5 — please confirm the consent checkbox." });
         this.setState({ sending: true, error: "" });
         try {
+          let attachment_url = null;
+          if (this.state.file) attachment_url = await window.INUpload("story-uploads", this.state.file);
           await window.INSubmit("stories", {
             body, email,
             credit_name: val('[name="credit_name"]') || null,
@@ -238,6 +249,7 @@ class Component extends DCLogic {
             format: this.state.formats.length ? this.state.formats : null,
             arc_stage: this.state.arc > -1 ? this.ARCS[this.state.arc] : null,
             consent: !!(box && box.checked),
+            attachment_url,
             source_page: "Story-Submission.EN"
           });
           this.setState({ sending: false, sent: true });

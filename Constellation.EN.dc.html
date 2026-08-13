@@ -15,56 +15,28 @@
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body { background: #FAF4E2; color: #2E3B40; -webkit-font-smoothing: antialiased; }
-  ::selection { background: #3C8246; color: #FAF4E2; }
+  ::selection { background: #F0D23C; color: #1A1613; }
   a { color: #1E8A86; }
   a:hover { color: #146560; }
-  .ct-card { break-inside: avoid; margin-bottom: 18px; transition: transform 0.18s ease, box-shadow 0.18s ease; display: block; text-decoration: none; }
-  .ct-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(46,59,64,0.16); }
+  @keyframes ct-twinkle { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.62; transform: scale(0.82); } }
+  .ct-dot { transition: left 1s cubic-bezier(0.22,1,0.36,1), top 1s cubic-bezier(0.22,1,0.36,1); }
+  .ct-dot span { animation: ct-twinkle 3.2s ease-in-out infinite; }
+  .ct-dot:hover span, .ct-dot:focus span { animation-play-state: paused; opacity: 1 !important; transform: scale(1.35) !important; }
+  .ct-label { transition: left 1s cubic-bezier(0.22,1,0.36,1), top 1s cubic-bezier(0.22,1,0.36,1), opacity 0.6s ease; }
+  @media (max-width: 600px){
+    [style*="padding: 70px 28px"]{padding:44px 20px !important;}
+    [style*="padding: 52px 28px"]{padding:40px 20px !important;}
+  }
 </style>
 <script src="./image-slot.js"></script>
-<style id="in-mobile">
-@media (max-width: 1000px){
-  [style*="grid-template-columns: 1.05fr 1fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: 1.05fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns: repeat(3, minmax(0"]{grid-template-columns:1fr !important;}
-  img,svg,video{max-width:100% !important;}
-  [style*="font-size: 300px"]{display:none !important;}
-  [style*="font-size: 60px"][style*="height: 300px"]{height:auto !important;}
-  [style*="72px 120px"]{padding:56px 0 48px 0 !important;}
-  [style*="width: 700px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 800px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 900px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 1200px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 1000px"]{width:auto !important;max-width:100% !important;}
-  [style*="width: 950px"]{width:auto !important;max-width:100% !important;}
-  [style*="height: 350px"],[style*="height: 250px"],[style*="height: 200px"],[style*="height: 180px"],[style*="height: 170px"],[style*="height: 130px"],[style*="height: 100px"]{height:auto !important;min-height:0 !important;}
-}
-@media (max-width: 600px){
-  [style*="padding: 70px 28px"]{padding:44px 20px !important;}
-  [style*="padding: 72px 28px"]{padding:44px 20px !important;}
-  [style*="padding: 66px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 62px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 60px 44px"]{padding:36px 24px !important;}
-  [style*="padding: 40px 44px"]{padding:28px 22px !important;}
-  [style*="padding: 52px 28px"]{padding:36px 20px !important;}
-  [style*="padding: 56px 28px"]{padding:38px 20px !important;}
-  [style*="padding: 64px 28px"]{padding:40px 20px !important;}
-  [style*="padding: 40px 80px"]{padding:30px 20px !important;}
-  [style*="padding: 40px 40px"]{padding:28px 20px !important;}
-  [style*="padding: 44px 44px"]{padding:28px 20px !important;}
-  [style*="font-size: 130px"]{font-size:64px !important;line-height:1 !important;}
-  [style*="font-size: 60px"]{font-size:34px !important;line-height:1.15 !important;}
-}
-</style>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
 
   <dc-import name="Nav" active-page="community" hint-size="100%,64px"></dc-import>
 
-  <!-- HERO -->
-  <section style="background: #F0D23C; color: #1A1A1A;">
+  <!-- HERO (unchanged) -->
+  <section data-screen-label="Hero" style="background: #F0D23C; color: #1A1A1A;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 52px 28px 60px;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A; flex: 0 0 auto;"></span><span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; color: #1A1A1A;">Constellation</span></div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 22px; max-width: 16ch; text-wrap: balance;">Separate points of light. One shape.</h1>
@@ -72,83 +44,113 @@
     </div>
   </section>
 
-  <!-- COPY-PENDING NOTE -->
+  
+
+  
+
+  <!-- THE SKY -->
+  <section data-screen-label="The Sky" style="background: #16242E; color: #FAF4E2;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 44px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.6);">Arrange by</span>
+          <sc-for list="{{ modeButtons }}" as="m" hint-placeholder-count="2">
+            <button onClick="{{ m.onClick }}" style="{{ m.style }}">{{ m.label }}</button>
+          </sc-for>
+        </div>
+        <span style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.04em; color: rgba(250,244,226,0.55);">{{ skyHint }}</span>
+      </div>
+
+      <div style="position: relative; width: 100%; height: clamp(440px, 58vw, 620px);">
+        <sc-for list="{{ labels }}" as="lb" hint-placeholder-count="4">
+          <div class="ct-label" style="{{ lb.style }}">{{ lb.text }}</div>
+        </sc-for>
+        <sc-for list="{{ dots }}" as="d" hint-placeholder-count="20">
+          <button class="ct-dot" onClick="{{ d.onClick }}" onMouseEnter="{{ d.enter }}" onMouseLeave="{{ d.leave }}" aria-label="{{ d.title }}" style="{{ d.style }}"><span style="{{ d.inner }}"></span></button>
+        </sc-for>
+
+        <!-- DOT POPUP -->
+        <sc-if value="{{ hasSel }}" hint-placeholder-val="{{ false }}">
+          <div onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeSoon }}" style="{{ popStyle }}">
+            <button onClick="{{ closeSel }}" aria-label="Close" style="position: absolute; right: 6px; top: 6px; width: 44px; height: 44px; border: none; background: transparent; color: rgba(46,59,64,0.6); font-family: 'Archivo', sans-serif; font-size: 22px; line-height: 1; cursor: pointer;">×</button>
+            <div style="position: relative; display: flex; flex-direction: column; padding: 22px 24px 22px 50px;">
+              <span style="{{ selDot }}"></span>
+              <span style="position: absolute; left: 15px; top: 40px; writing-mode: vertical-rl; white-space: nowrap; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(46,59,64,0.6);">{{ selFormat }}</span>
+              <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #2E3B40; margin: 0 30px 8px 0;">{{ selMeta }}</div>
+              <h3 style="font-family: 'Newsreader', serif; font-weight: 700; font-size: 30px; line-height: 1.05; margin: 0 0 10px; text-wrap: balance;">{{ selTitle }}</h3>
+              <p style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.4; margin: 0; color: rgba(46,59,64,0.82);">{{ selCaption }}</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+                <sc-if value="{{ hasRead }}" hint-placeholder-val="{{ false }}"><a href="{{ selRead }}" style="text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 12px 24px; display: inline-flex; align-items: center; line-height: 1.2;">READ →</a></sc-if>
+                <sc-if value="{{ hasMedia }}" hint-placeholder-val="{{ false }}"><a href="{{ selMedia }}" target="_blank" rel="noopener" style="text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; color: #2E3B40; background: transparent; border: 1.5px solid rgba(46,59,64,0.5); border-radius: 999px; padding: 12px 24px; display: inline-flex; align-items: center; line-height: 1.2;">{{ mediaLabel }} →</a></sc-if>
+                <sc-if value="{{ hasView }}" hint-placeholder-val="{{ false }}"><a href="{{ selView }}" target="_blank" rel="noopener" style="text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; color: #2E3B40; background: transparent; border: 1.5px solid rgba(46,59,64,0.5); border-radius: 999px; padding: 12px 24px; display: inline-flex; align-items: center; line-height: 1.2;">VIEW →</a></sc-if>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- LEGEND -->
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 10px; border-top: 1px solid rgba(250,244,226,0.14); padding-top: 16px;">
+        <sc-for list="{{ legend }}" as="lg" hint-placeholder-count="10">
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(250,244,226,0.75);"><span style="{{ lg.swatch }}"></span>{{ lg.label }}</span>
+        </sc-for>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DRAFT NOTE -->
   <section style="max-width: 1320px; margin: 0 auto; padding: 26px 28px 0;">
-    <div style="border-left: 3px solid #FAB414; background: rgba(250,180,20,0.12); padding: 16px 22px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.72);">Structure in place — copy pending from Yunsun. The wall below fills with real entries as they arrive; it is built to grow indefinitely, with no fixed end state.</div>
+    <div style="border-left: 3px solid #F0D23C; background: rgba(240,210,60,0.16); padding: 16px 22px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: rgba(46,59,64,0.72);">Prototype v1 — all copy is draft; seed entries are placeholders. Arrange by Time and by ME=WE Arc, contributor filter, and inline playback come in v2.</div>
   </section>
 
-  <!-- GROWING WALL -->
-  <section style="max-width: 1320px; margin: 0 auto; padding: 34px 28px 12px;">
-    <div style="column-width: 300px; column-gap: 18px;">
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #FAB414; color: #2E3B40; padding: 26px 26px 24px;">
-        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 12px;">Song</div>
-        <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.3; margin: 0;">"The harmony was already in them."</p>
-      </a>
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #F3EAD0; color: #2E3B40; padding: 0;">
-        <image-slot id="ct-photo-1" shape="rect" placeholder="A neighbor's photo entry" style="display:block; width: 100%; aspect-ratio: 3 / 4;"></image-slot>
-        <div style="padding: 18px 22px 22px;">
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 8px;">Photo</div>
-          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; margin: 0; color: rgba(46,59,64,0.82);">A moment someone noticed MEWE in the world.</p>
+  <!-- HOW IT WORKS -->
+  <section data-screen-label="How it works" style="max-width: 1320px; margin: 0 auto; padding: 44px 28px 20px;">
+    <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.02; letter-spacing: -0.01em; margin: 0 0 26px;">How a light gets here</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; align-items: stretch; max-width: 1100px;">
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(50% 14%, 76% 100%, 24% 100%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(76% 100%, 82% 100%, 54% 14%, 50% 14%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">1</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Make something, or notice something. A few honest sentences, a drawing, a photo, a film, a song.</p>
         </div>
-      </a>
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #1E648C; color: #FAF4E2; padding: 26px 26px 24px;">
-        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.8); margin-bottom: 12px;">Writing</div>
-        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.92);">A short reflection a BridgeBuilder wrote after a gathering.</p>
-      </a>
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #F3EAD0; border: 1.5px solid #2E3B40; color: #2E3B40; padding: 26px 26px 24px;">
-        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.55); margin-bottom: 12px;">Drawing</div>
-        <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 20px; line-height: 1.32; margin: 0;">"Perhaps we were already connected."</p>
-      </a>
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #E6328C; color: #FAF4E2; padding: 26px 26px 24px;">
-        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.82); margin-bottom: 12px;">Act</div>
-        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.92);">Something small a neighbor did that rippled outward.</p>
-      </a>
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #F3EAD0; color: #2E3B40; padding: 0;">
-        <image-slot id="ct-photo-2" shape="rect" placeholder="A creation — a neighbor's entry" style="display:block; width: 100%; aspect-ratio: 1 / 1;"></image-slot>
-        <div style="padding: 18px 22px 22px;">
-          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #1E8A86; margin-bottom: 8px;">Creation</div>
-          <p style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; margin: 0; color: rgba(46,59,64,0.82);">Made by a neighbor, shared with the collection.</p>
-        </div>
-      </a>
-
-      <a href="Story.EN.dc.html" class="ct-card" style="background: #46325A; color: #FAF4E2; padding: 26px 26px 24px;">
-        <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,244,226,0.78); margin-bottom: 12px;">Reflection</div>
-        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.42; margin: 0; color: rgba(250,244,226,0.92);">A quiet noticing, placed along the Arc.</p>
-      </a>
-
-      <div class="ct-card" style="background: #FAF4E2; border: 1.5px dashed rgba(46,59,64,0.4); color: #2E3B40; padding: 30px 26px; text-align: center;">
-        <div style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 22px; line-height: 1.15; margin: 0 0 8px;">Your point of light</div>
-        <p style="font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.42; margin: 0 0 14px; color: rgba(46,59,64,0.7);">The collection keeps growing. Add yours.</p>
-        <a href="Story.EN.dc.html" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #1E8A86;">Add to Constellation →</a>
       </div>
-
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(4% 0, 26% 0, 60% 100%, 38% 100%);"></div><div style="position: absolute; inset: 0; background: #FAB414; clip-path: polygon(24% 0, 34% 0, 68% 100%, 56% 100%);"></div><div style="position: absolute; inset: 0; background: #35C0B4; clip-path: polygon(74% 0, 96% 0, 62% 100%, 40% 100%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(66% 0, 76% 0, 44% 100%, 30% 100%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">2</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Share it through the Story form. One thing, one caption. Fifteen minutes is enough.</p>
+        </div>
+      </div>
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(38% 8%, 72% 46%, 38% 84%, 4% 46%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(72% 46%, 76% 46%, 42% 8%, 38% 8%);"></div><div style="position: absolute; inset: 0; background: #35C0B4; clip-path: polygon(66% 44%, 96% 78%, 66% 112%, 36% 78%);"></div><div style="position: absolute; inset: 0; background: #CDE3CF; clip-path: polygon(96% 78%, 100% 78%, 70% 44%, 66% 44%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">3</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">It appears here as a new light. Everything you add appears in the Constellation we are creating together. Some stories are also chosen for the Story page.</p>
+        </div>
+      </div>
+      <div style="background: #F3EAD0; color: #2E3B40; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 96px; overflow: hidden; background: #16242E;"><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 184px;"><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(22% 28%, 38% 46%, 22% 64%, 6% 46%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(38% 46%, 41% 46%, 25% 28%, 22% 28%);"></div><div style="position: absolute; inset: 0; background: #35C0B4; clip-path: polygon(56% 8%, 72% 26%, 56% 44%, 40% 26%);"></div><div style="position: absolute; inset: 0; background: #CDE3CF; clip-path: polygon(72% 26%, 75% 26%, 59% 8%, 56% 8%);"></div><div style="position: absolute; inset: 0; background: #7BC4F0; clip-path: polygon(76% 50%, 94% 70%, 76% 90%, 58% 70%);"></div><div style="position: absolute; inset: 0; background: #F0D23C; clip-path: polygon(94% 70%, 97% 70%, 79% 50%, 76% 50%);"></div></div></div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; gap: 10px;">
+          <div style="font-family: 'Archivo', 'Noto Sans KR', sans-serif; font-weight: 800; font-size: 15px; color: #B87A00;">4</div>
+          <p style="font-family: 'Newsreader', 'Noto Serif KR', serif; font-size: 19px; line-height: 1.45; margin: 0; color: rgba(46,59,64,0.85);">Add as many as you like. Each one joins your name's own small constellation.</p>
+        </div>
+      </div>
+      </div>
+    <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; line-height: 1.5; margin: 30px 0 0; color: rgba(46,59,64,0.72); max-width: 62ch;">Anyone can add — no workshop needed. And IN keeps adding too: every workshop ends with participants placing their pieces here. Many pieces begin in the Möbius Making workshop.</p>
+    <div style="margin-top: 26px;">
+      <a href="Story-Submission.EN.dc.html" style="text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">ADD YOURS</a>
     </div>
   </section>
 
-  <!-- WHAT'S NEXT (future phase) -->
-  <section style="max-width: 1320px; margin: 0 auto; padding: 30px 28px 8px;">
-    <div style="background: #F3EAD0; padding: 34px 36px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between;">
-      <div style="flex: 1 1 420px; min-width: 280px;">
-        <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #3C8246; margin-bottom: 12px;">What's next</div>
-        <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.46; margin: 0; color: rgba(46,59,64,0.82); max-width: 60ch;">In a later phase, points will begin to talk to one another — leading to a Talk Series, and eventually open public contribution. The structure here is built so that can be added without a rebuild.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="background: #F0D23C; color: #2E3B40; margin-top: 80px;">
+  <!-- CTA (unchanged) -->
+  <section data-screen-label="CTA" style="background: #F0D23C; color: #2E3B40; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.7); margin: 0 0 18px;">Are you IN?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Add your light to the collection.</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
-        <a href="Story.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Share your story</a>
-        <a href="ME=WE.EN.dc.html" style="text-decoration: none; color: #2E3B40; background: transparent; border: 1.5px solid rgba(46,59,64,0.5); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">What is MEWE?</a>
+        <a href="Story-Submission.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Share your story</a>
+        <a href="MEWE.EN.dc.html" style="text-decoration: none; color: #2E3B40; background: transparent; border: 1.5px solid rgba(46,59,64,0.5); border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">What is MEWE?</a>
       </div>
     </div>
   </section>
@@ -157,6 +159,144 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 1300}}"></script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1320, &quot;height&quot;: 1300}}">
+class Component extends DCLogic {
+  state = { mode: 'format', sel: null };
+
+  closeSoon() { clearTimeout(this._t); this._t = setTimeout(() => this.setState({ sel: null }), 260); }
+
+  colors() {
+    return { writing:'#F0D23C', drawing:'#E6328C', photo:'#35C0B4', video:'#FF5A5A', music:'#9B7BE0', dance:'#F5A81E', craft:'#6FCB7C', recipe:'#C9962B', symbol:'#7BC4F0', other:'#FAF4E2' };
+  }
+
+  // Seed data — draft. Structured one-entry-per-row so it can be fed from the card-content CSV workflow later.
+  data() {
+    return [
+      { id:'this-is-us',  title:'“This is us”',                              by:'A teacher',            format:'writing', topic:'Classroom',            arc:'ME = WE', date:'2026-03', caption:'I stopped teaching and asked one real question. By the end, a boy pointed at what they’d made and said: this is us.', read:'Story-Index.EN.dc.html?story=this-is-us' },
+      { id:'connected',   title:'“Perhaps we were already connected.”',      by:'Anonymous',            format:'music',   topic:'Collective',           date:'2026-02', caption:'A participant reflection, carried out of a MEWE Core session.', read:'Story-Index.EN.dc.html?story=connected' },
+      { id:'two-hands',   title:'Two hands, one line',                       by:'A participant',        format:'drawing', topic:'Collective',           date:'2026-02', caption:'A drawing made during Möbius Making — where the ME and WE surfaces became one.', read:'Story-Index.EN.dc.html?story=two-hands' },
+      { id:'song-whole',  title:'A song for the whole',                      by:'A collective',         format:'music',   topic:'Collective',           date:'2026-01', caption:'Recorded after a retreat — voices that learned to listen before they sang.' },
+      { id:'week-after',  title:'The week after the workshop',               by:'A participant',        format:'writing', topic:'Family',               date:'2026-01', caption:'A participant writes about the small action they chose — and what it changed at home.' },
+      { id:'street-exp',  title:'A neighbor’s small experiment',             by:'A neighbor',           format:'writing', topic:'Neighbors',            date:'2025-12', caption:'One person tried a single MEWE action for a week — and wrote down what changed on their street.' },
+      { id:'harmony',     title:'“The harmony was already in them.”',        by:'A facilitator',        format:'music',   topic:'Collective',           date:'2025-12', caption:'Overheard after a singing circle — the group found the chord before anyone taught it.' },
+      { id:'noticed',     title:'A moment someone noticed MEWE',            by:'Anonymous',            format:'photo',   topic:'Noticed in the world', date:'2025-11', caption:'A photo of strangers becoming, briefly, one thing.', view:'project-img/light-shadow-shift-women3.jpg' },
+      { id:'hasaad',      title:'Hasaad — food grown for neighbors',         by:'A UAE youth venture',  format:'video',   topic:'Nature',               date:'2025-11', caption:'A participant venture in organic food and farming, Dubai.', media:'https://youtu.be/Pl1IBR7fnTU' },
+      { id:'what-held',   title:'What held after the bootcamp',              by:'The UNC film team',    format:'video',   topic:'Collective',           date:'2025-10', caption:'A camera followed Nepali youth for two years — to see what lasted.', media:'https://youtu.be/d1J4AECO_9g' },
+      { id:'circle-dance',title:'A circle dance at closing',                 by:'Anonymous',            format:'dance',   topic:'Collective',           date:'2025-10', caption:'Nobody planned it. The last session ended and the chairs moved themselves.' },
+      { id:'plate',       title:'A plate for a neighbor',                    by:'Rana',                 format:'craft',   topic:'Neighbors',            date:'2025-09', caption:'Made in an afternoon, given the same evening.' },
+      { id:'soup',        title:'My grandmother’s soup, doubled',            by:'Anonymous',            format:'recipe',  topic:'Family',               date:'2025-09', caption:'The recipe says feeds six. She always made it feed twelve.' },
+      { id:'wire-mobius', title:'A Möbius strip in wire',                    by:'A workshop group',     format:'symbol',  topic:'Noticed in the world', date:'2025-08', caption:'Bent by four hands taking turns — one surface, no inside or outside.' },
+      { id:'our-street',  title:'The street where we all live',              by:'Amina, age 11',        format:'drawing', topic:'Neighbors',            date:'2025-08', caption:'Every house drawn with its door open.' },
+      { id:'mural',       title:'Flashlight mural, mid-shift',               by:'A retreat circle',     format:'photo',   topic:'Collective',           date:'2025-07', caption:'Shadow made visible by hand, after dark.', view:'project-img/shadow-shifter3.jpg' },
+      { id:'letter',      title:'A letter I wrote to myself',                by:'Anonymous',            format:'writing', topic:'Family',               date:'2025-07', caption:'Opened a year later. Half of it had come true; the other half still asks.' },
+      { id:'farm-song',   title:'A farm-to-table song',                      by:'Friends in Yamaguchi', format:'music',   topic:'Nature',               date:'2025-06', caption:'Sung while carrying vegetables from the field to the table.' },
+      { id:'leaf',        title:'A found leaf, pressed',                     by:'Anonymous',            format:'other',   topic:'Nature',               date:'2025-06', caption:'Carried back into the room beside a few words on reforming from within.' },
+      { id:'dawn-yoga',   title:'Movement at dawn, day two',                 by:'A retreat circle',     format:'dance',   topic:'Nature',               date:'2025-05', caption:'Two days spent in mind and heart, closed in the body.' }
+    ];
+  }
+
+  // Mode switch holds four modes; Time and ME=WE Arc ship in v2.
+  modes() {
+    return [
+      { id:'format', label:'Format', key: d => d.format },
+      { id:'topic',  label:'Topic',  key: d => d.topic }
+      // v2: { id:'time', label:'Time', key: d => d.date.slice(0,4) },
+      // v2: { id:'arc',  label:'MEWE Loop', key: d => d.arc || 'Unplaced' }
+    ];
+  }
+
+  renderVals() {
+    const colors = this.colors();
+    const all = this.data();
+    const mode = this.modes().find(m => m.id === this.state.mode) || this.modes()[0];
+    const groups = [];
+    const byGroup = {};
+    all.forEach(d => { const g = mode.key(d); if (!byGroup[g]) { byGroup[g] = []; groups.push(g); } byGroup[g].push(d); });
+
+    // cluster centers on a loose grid
+    const k = groups.length;
+    const cols = Math.min(k, Math.max(2, Math.ceil(Math.sqrt(k * 1.7))));
+    const rows = Math.ceil(k / cols);
+    const centers = {};
+    groups.forEach((g, i) => {
+      const c = i % cols, r = Math.floor(i / cols);
+      const stagger = (r % 2) ? 4 : -4;
+      centers[g] = {
+        x: 10 + (c + 0.5) / cols * 80 + stagger,
+        y: 14 + (r + 0.5) / rows * 68
+      };
+    });
+
+    const dots = [];
+    groups.forEach(g => {
+      byGroup[g].forEach((d, i) => {
+        const n = byGroup[g].length;
+        const ang = i * 2.39996 + g.length; // deterministic golden-angle spiral, seeded by group
+        const rad = n === 1 ? 0 : 3.5 + 8.5 * Math.sqrt((i + 1) / n);
+        const x = Math.min(95, Math.max(4, centers[g].x + Math.cos(ang) * rad * 1.15));
+        const y = Math.min(92, Math.max(6, centers[g].y + Math.sin(ang) * rad));
+        const col = colors[d.format] || '#FAF4E2';
+        const on = this.state.sel === d.id;
+        if (on) this._selPos = { x, y };
+        dots.push({
+          title: d.title,
+          onClick: () => this.setState({ sel: this.state.sel === d.id ? null : d.id }),
+          enter: () => { clearTimeout(this._t); if (this.state.sel !== d.id) this.setState({ sel: d.id }); },
+          leave: () => this.closeSoon(),
+          style: `position:absolute; left:${x}%; top:${y}%; width:44px; height:44px; margin:-22px 0 0 -22px; border:none; background:transparent; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0;`,
+          inner: `display:block; width:${on ? 20 : 14}px; height:${on ? 20 : 14}px; border-radius:50%; background:${col}; box-shadow:0 0 ${on ? 26 : 14}px ${on ? 6 : 2}px ${col}55${on ? `, 0 0 0 3px rgba(250,244,226,0.9)` : ''}; animation-delay:${(d.id.length * 0.37) % 3}s;`
+        });
+      });
+    });
+
+    const labels = groups.map(g => ({
+      text: g,
+      style: `position:absolute; left:${centers[g].x}%; top:${Math.max(2, centers[g].y - 16)}%; transform:translateX(-50%); font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(250,244,226,0.55); white-space:nowrap; pointer-events:none;`
+    }));
+
+    const modeButtons = this.modes().map(m => {
+      const on = m.id === this.state.mode;
+      return {
+        label: m.label,
+        onClick: () => this.setState({ mode: m.id, sel: this.state.sel }),
+        style: `font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; border-radius:999px; padding:11px 22px; cursor:pointer; line-height:1.2; border:1.5px solid ${on ? '#F0D23C' : 'rgba(250,244,226,0.35)'}; background:${on ? '#F0D23C' : 'transparent'}; color:${on ? '#1A1613' : 'rgba(250,244,226,0.85)'};`
+      };
+    });
+
+    const legend = Object.keys(colors).map(f => ({
+      label: f,
+      swatch: `display:inline-block; width:11px; height:11px; border-radius:50%; background:${colors[f]}; box-shadow:0 0 8px 1px ${colors[f]}66;`
+    }));
+
+    const sel = all.find(d => d.id === this.state.sel) || null;
+    const selCol = sel ? (colors[sel.format] || '#2E3B40') : '#2E3B40';
+    const pos = sel && this._selPos ? this._selPos : { x: 50, y: 50 };
+    const px = Math.min(78, Math.max(22, pos.x));
+    const below = pos.y < 42;
+    const popStyle = `position:absolute; left:${px}%; top:${pos.y}%; transform:translate(-50%, ${below ? '30px' : 'calc(-100% - 30px)'}); width:400px; max-width:94%; background:rgba(243,234,208,0.95); color:#2E3B40; z-index:20; box-shadow:0 18px 60px rgba(0,0,0,0.45);`;
+    return {
+      modeButtons, labels, dots, legend,
+      skyHint: all.length + ' lights and growing — hover or tap one',
+      hasSel: !!sel,
+      popStyle,
+      cancelClose: () => clearTimeout(this._t),
+      closeSoon: () => this.closeSoon(),
+      closeSel: () => this.setState({ sel: null }),
+      selTitle: sel ? sel.title : '',
+      selCaption: sel ? sel.caption : '',
+      selMeta: sel ? (sel.by + ' · ' + sel.date) : '',
+      selFormat: sel ? sel.format : '',
+      selDot: `position:absolute; left:19px; top:22px; width:8px; height:8px; border-radius:50%; background:${selCol};`,
+      hasRead: !!(sel && sel.read),
+      selRead: sel && sel.read ? sel.read : '#',
+      hasMedia: !!(sel && sel.media),
+      selMedia: sel && sel.media ? sel.media : '#',
+      mediaLabel: sel && sel.format === 'video' ? 'WATCH' : 'LISTEN',
+      hasView: !!(sel && sel.view),
+      selView: sel && sel.view ? sel.view : '#'
+    };
+  }
+}
+</script>
 </body>
 </html>

@@ -30,6 +30,7 @@
     .si-railscroll { display: flex !important; flex-wrap: wrap; }
   }
 </style>
+<script src="data/stories.js"></script>
 </helmet>
 
 <div style="font-family: 'Newsreader', Georgia, serif; min-height: 100vh; overflow-x: hidden;">
@@ -80,35 +81,36 @@
           <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 28px; border-bottom: 1.5px solid rgba(26,22,19,0.16);">
             <span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #1A1613;">{{ current.eyebrow }}</span>
             <span style="width: 4px; height: 4px; border-radius: 50%; background: rgba(26,22,19,0.4);"></span>
+            <span style="font-family: 'Newsreader', serif; font-size: 17px; color: rgba(26,22,19,0.55);">{{ current.credit }}</span>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: rgba(26,22,19,0.4);"></span>
             <span style="font-family: 'Newsreader', serif; font-size: 17px; color: rgba(26,22,19,0.55);">{{ current.dateLabel }}</span>
           </div>
 
-          <sc-if value="{{ isThisIsUs }}" hint-placeholder-val="{{ true }}">
-            <div class="story-body" style="padding-top: 40px;">
-              <p style="font-size: 26px !important; line-height: 1.5 !important; color: #1A1613 !important;">Twenty minutes into the lesson on constellations, no one had looked up.</p>
-              <p>I could hear how flat my own voice was. The words were on the board &mdash; definitions, distances, names &mdash; and none of it was landing. I remember thinking: <em>why can&rsquo;t I reach them?</em> I had planned this well. I was doing everything I was supposed to do.</p>
-              <p>What I didn&rsquo;t see then was how hard I was working to hold the room together by myself. That was the job, as I understood it. Thirty students, one of me, and a wall between us that it was my responsibility to get across.</p>
-              <p>So when I stopped, it wasn&rsquo;t wisdom. It was exhaustion.</p>
-              <p>I put down the lesson plan and asked them something I genuinely didn&rsquo;t have the answer to. <em>Why do you think stars connect?</em></p>
-              <p>&ldquo;Stars, I guess,&rdquo; someone said. Then someone else, quieter: &ldquo;Connected stars?&rdquo;</p>
-              <p>I sat down among them &mdash; not at the front &mdash; and asked what kind of star each of them would be. A bright one. Part of a cluster. A lonely one, one boy said, and didn&rsquo;t look up.</p>
-              <p>Then something happened that I didn&rsquo;t do.</p>
-              <p>They stopped answering me and started answering each other. <em>What if we combined these two shapes? Add a star here.</em> They were up, moving, drawing. My part had shrunk to almost nothing, and the lesson was working better than it ever had when I was carrying it.</p>
-              <p>I felt the old panic first &mdash; if I&rsquo;m not holding this, it falls apart. It didn&rsquo;t fall apart. It got better. That was the hardest and best thing I learned that day: the room was never mine to hold. I was one of them, not above them, and the moment I sat down, they could feel it.</p>
-              <p>By the end they&rsquo;d made a map, every star one of them. A boy pointed at it and said, &ldquo;This is us.&rdquo;</p>
-            </div>
-            <div style="border-top: 1.5px solid rgba(201,150,43,0.5); margin-top: 48px; padding-top: 34px;">
-              <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.24; letter-spacing: -0.015em; margin: 0; color: #1A1613; text-wrap: balance;">I thought MEWE was the thing I&rsquo;d write on the board.<br><span style="color: #B87A00;">It was the thing that happened when I sat down.</span></p>
-            </div>
-            <a href="Story-This-Is-Us.EN.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 40px; text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; color: #FAF4E2; background: #1A1613; border-radius: 999px; padding: 14px 28px;">Open on its own page &rarr;</a>
+          <sc-if value="{{ current.hasImage }}" hint-placeholder-val="{{ false }}">
+            <div role="img" aria-label="{{ current.title }}" style="{{ current.imgStyle }}"></div>
           </sc-if>
 
-          <sc-if value="{{ notThisIsUs }}" hint-placeholder-val="{{ false }}">
-            <div style="padding-top: 36px;">
-              <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.6; margin: 0 0 22px; color: rgba(26,22,19,0.6); max-width: 56ch;">This story is part of the constellation, but its full telling hasn&rsquo;t been added yet. &ldquo;This is us&rdquo; is the first full example &mdash; select it in the index to read one end to end.</p>
-              <a href="Story-Submission.EN.dc.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; color: #1A1613; background: transparent; border: 1.5px solid rgba(26,22,19,0.4); border-radius: 999px; padding: 13px 26px;">Share your story</a>
+          <div class="story-body" style="padding-top: 40px;">
+            <sc-for list="{{ current.paras }}" as="p" hint-placeholder-count="6">
+              <p style="{{ p.style }}">{{ p.t }}</p>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ current.hasKicker }}" hint-placeholder-val="{{ false }}">
+            <div style="border-top: 1.5px solid rgba(201,150,43,0.5); margin-top: 48px; padding-top: 34px;">
+              <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.24; letter-spacing: -0.015em; margin: 0 0 10px; color: #1A1613; text-wrap: balance;">{{ current.kicker1 }}</p>
+              <p style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.24; letter-spacing: -0.015em; margin: 0; color: #B87A00; text-wrap: balance;">{{ current.kicker2 }}</p>
             </div>
           </sc-if>
+
+          <sc-if value="{{ current.isDraft }}" hint-placeholder-val="{{ false }}">
+            <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; line-height: 1.5; margin: 30px 0 0; padding: 16px 20px; background: #F3EAD0; color: rgba(26,22,19,0.7);">A fuller telling of this story is still being written — this is what we can share so far.</p>
+          </sc-if>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; border-top: 1.5px solid rgba(26,22,19,0.16); margin-top: 52px; padding-top: 26px;">
+            <button type="button" onClick="{{ toTop }}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #FAF4E2; background: #1A1613; border: none; border-radius: 999px; padding: 14px 26px;">&uarr; Choose another story</button>
+            <span style="font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.4; color: rgba(26,22,19,0.6);">Back to the top of the index.</span>
+          </div>
 
         </article>
       </div>
@@ -153,7 +155,7 @@
   <section style="background: #FAB414; color: #2E3B40; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
       <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.7); margin: 0 0 18px;">Share</p>
-      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 16px; letter-spacing: -0.01em; text-wrap: balance;">Fifteen minutes. One honest moment.</h2>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 16px; letter-spacing: -0.01em; text-wrap: balance;">Three honest sentences is a story.</h2>
       <p style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.5; max-width: 640px; margin: 0 auto 28px; color: rgba(46,59,64,0.82);">A story is a free gift — your experience, offered so others can see further. It doesn't need to be polished; it needs to be honest.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
         <a href="Story-Submission.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Share your story</a>
@@ -170,6 +172,10 @@ class Component extends DCLogic {
   state = { mode: 'format', filter: 'All', query: '', current: 0, limit: 14 };
 
   componentDidMount() {
+    if (!window.IN_STORIES) {
+      const t = setInterval(() => { if (window.IN_STORIES) { clearInterval(t); this.forceUpdate(); } }, 40);
+      setTimeout(() => clearInterval(t), 6000);
+    }
     try {
       const p = new URLSearchParams(location.search);
       const id = p.get('story');
@@ -185,61 +191,27 @@ class Component extends DCLogic {
     } catch (e) {}
   }
 
-  // ── ONE array = the future Excel sheet. Each row is a story.
-  //    Columns: date · eyebrow · title · body · format · topic · color · href
+  // ── The stories live in data/stories.js — one record, both languages.
+  //    Add or edit a story THERE and it updates the index, the home card and
+  //    the constellation at once. Never paste story copy into this page.
+  LANG = 'en';
+
   data() {
-    const real = [
-      { id: 'this-is-us', date: '2026-07-16', eyebrow: 'A teacher', title: '“This is us”', body: 'I stopped teaching and asked one real question. By the end, a boy pointed at what they’d made and said: this is us.', format: 'Writing', topic: 'Transformation', color: '#1E8A86', href: 'Story-This-Is-Us.EN.dc.html' },
-      { id: 'connected', date: '2026-07-09', eyebrow: 'A participant reflection', title: '“Perhaps we were already connected.”', body: 'A song carried out of a MEWE Core session, recorded later by a participant who could not stop humming it.', format: 'Music', topic: 'Signature', color: '#46325A', href: '#' },
-      { id: 'two-hands', date: '2026-06-28', eyebrow: 'Möbius Making', title: 'Two hands, one line', body: 'A drawing made during Möbius Making — where the ME and WE surfaces became one continuous edge.', format: 'Drawing', topic: 'Art', color: '#BDDAE7', href: '#' },
-      { id: 'song-whole', date: '2026-06-14', eyebrow: 'Recorded by a collective', title: 'A song for the whole', body: 'Voices that learned to listen before they sang — recorded after a retreat.', format: 'Music', topic: 'Collective', color: '#3C8246', href: '#' },
-      { id: 'week-after', date: '2026-06-03', eyebrow: 'A participant', title: 'The week after the workshop', body: 'A participant writes about the small action they chose — and what it changed at home.', format: 'Writing', topic: 'Transformation', color: '#F0961E', href: '#' },
-      { id: 'the-table', date: '2026-05-22', eyebrow: 'Community workshop', title: 'The table we built together', body: 'Documented after a community workshop — a shared object that outlasted the session.', format: 'Photo', topic: 'Community', color: '#1E648C', href: '#' },
-      { id: 'letters', date: '2026-05-08', eyebrow: 'Across two cities', title: 'Letters between two cities', body: 'Participants from two countries kept writing after the exchange ended — a correspondence that became its own practice.', format: 'Writing', topic: 'Family', color: '#D21E28', href: '#' },
-    ];
-
-    // ── Placeholder volume, so the index shows how it scales to hundreds.
-    //    (Unlinked — the design pattern only; real rows arrive from the sheet.)
-    const formats = ['Writing', 'Music', 'Drawing', 'Photo', 'Dance', 'Video', 'Recipe', 'Poem'];
-    const colors  = { Writing:'#1E8A86', Music:'#46325A', Drawing:'#BDDAE7', Photo:'#1E648C', Dance:'#E5188C', Video:'#F0961E', Recipe:'#3C8246', Poem:'#C9962B' };
-    const topics  = ['Signature','Transformation','Community','Workshop','Art','Family','Collective','Nature','Ancestor','Noticed in the world'];
-    const eyebrows= ['A participant','A facilitator','A neighbor','A collective','A family','Noticed in the world'];
-    const titles  = [
-      'The bench that started talking','We cooked for the whole floor','What the choir heard','The map we drew on the wall',
-      'A recipe from two grandmothers','The video we never planned','Dancing in the parking lot','The letter I finally sent',
-      'When the meeting sang','Our street’s first supper','The mural nobody signed','Three minutes of silence',
-      'The stew that fed forty','A duet with a stranger','The photo we all stood in','What the river taught us',
-      'The step we learned together','A poem passed hand to hand','The garden on the rooftop','We answered each other',
-      'The chair left empty','A meal without a host','The line we couldn’t break','Two verses, one voice',
-      'The workshop that kept going','A film shot on one phone','The dance that had no lead','Bread for the whole block',
-      'The notebook we shared','A song for leaving','The wall of small thanks','What the children built',
-      'The recipe with no author','A photo taken by everyone','The circle that widened','We drew until midnight',
-      'The verse we finished later','A dance in the stairwell','The soup kitchen’s tune','The story told in turns',
-    ];
-    const bodies = [
-      'A moment someone lived, offered so the rest of us can see a little further.',
-      'Fifteen honest minutes — a small thing that turned out to hold a whole idea.',
-      'Not polished, just true. One ray of light, passed on to the next person.',
-      'What happened when ME and WE stopped being two words and became one.',
-    ];
-
-    const gen = [];
-    let d = new Date('2026-04-24');
-    for (let i = 0; i < 41; i++) {
-      const fmt = formats[i % formats.length];
-      d = new Date(d.getTime() - (2 + (i % 4)) * 86400000);
-      gen.push({
-        date: d.toISOString().slice(0, 10),
-        eyebrow: eyebrows[i % eyebrows.length],
-        title: titles[i % titles.length],
-        body: bodies[i % bodies.length],
-        format: fmt,
-        topic: topics[i % topics.length],
-        color: colors[fmt],
-        href: '#'
-      });
-    }
-    return real.concat(gen).sort((a, b) => b.date.localeCompare(a.date));
+    const L = this.LANG, T = window.IN_TAXONOMY;
+    if (!window.IN_STORIES || !T) return [];
+    return window.IN_STORIES.map(r => Object.assign({}, r[L], {
+      id: r.id,
+      date: r.date,
+      color: r.color,
+      href: r.href,
+      draft: !!r.draft,
+      format: T.format[r.format][L],
+      topic: T.topic[r.topic][L],
+      image: r.media && r.media.image,
+      imgFit: r.media && r.media.fit,
+      imgRatio: r.media && r.media.ratio,
+      imgPos: r.media && r.media.pos
+    })).sort((x, y) => y.date.localeCompare(x.date));
   }
 
   dateLabel(iso) {
@@ -250,24 +222,33 @@ class Component extends DCLogic {
 
   renderVals() {
     const all = this.data();
+    if (!all.length) return {};
     const mode = this.state.mode, active = this.state.filter, q = this.state.query.trim().toLowerCase();
     const key = mode === 'format' ? 'format' : 'topic';
 
     const counts = {};
     all.forEach(s => { counts[s[key]] = (counts[s[key]] || 0) + 1; });
-    const opts = ['All', ...Array.from(new Set(all.map(s => s[key])))];
+    // Every format the submission form offers is always listed — even at zero.
+    const ALL_FORMATS = Object.values(window.IN_TAXONOMY.format).map(v => v[this.LANG]);
+    const opts = mode === 'format'
+      ? ['All', ...ALL_FORMATS, ...Array.from(new Set(all.map(s => s.format))).filter(f => ALL_FORMATS.indexOf(f) < 0)]
+      : ['All', ...Array.from(new Set(all.map(s => s[key])))];
 
     const pill = (on) => 'display:flex; align-items:center; justify-content:space-between; gap:8px; text-align:left; cursor:pointer; font-family:\'Archivo\',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.02em; padding:9px 14px; border-radius:999px; border:1.5px solid ' + (on ? '#1A1613' : 'rgba(26,22,19,0.2)') + '; background:' + (on ? '#1A1613' : 'transparent') + '; color:' + (on ? '#FAF4E2' : '#1A1613') + ';';
     const countStyle = (on) => 'font-size:11px; font-weight:700; color:' + (on ? 'rgba(250,244,226,0.7)' : 'rgba(26,22,19,0.4)') + ';';
     const toggle = (on) => 'cursor:pointer; font-family:\'Archivo\',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; padding:8px 16px; border-radius:999px; border:1.5px solid #1A1613; background:' + (on ? '#1A1613' : 'transparent') + '; color:' + (on ? '#FAF4E2' : '#1A1613') + ';';
 
-    const filters = opts.map(o => ({
-      label: o,
-      count: o === 'All' ? all.length : (counts[o] || 0),
-      countStyle: countStyle(o === active),
-      style: pill(o === active),
-      pick: () => this.setState({ filter: o, limit: 14 })
-    }));
+    const filters = opts.map(o => {
+      const n = o === 'All' ? all.length : (counts[o] || 0);
+      const on = o === active;
+      return {
+        label: o,
+        count: n === 0 ? '—' : n,
+        countStyle: countStyle(on),
+        style: pill(on) + (n === 0 && !on ? ' opacity:0.45;' : ''),
+        pick: () => this.setState({ filter: o, limit: 14 })
+      };
+    });
 
     // filtered set (group filter + search)
     let shown = active === 'All' ? all.slice() : all.filter(s => s[key] === active);
@@ -275,8 +256,19 @@ class Component extends DCLogic {
 
     // featured story
     const cur = all[this.state.current] || all[0];
-    const current = Object.assign({}, cur, { dateLabel: this.dateLabel(cur.date) });
-    const isThisIsUs = cur.id === 'this-is-us';
+    const current = Object.assign({}, cur, {
+      dateLabel: this.dateLabel(cur.date),
+      paras: (cur.paras || []).map((t, i) => t.startsWith('## ')
+        ? { t: t.slice(3), style: "font-family:'Archivo',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#1E8A86; margin:44px 0 18px; padding-top:22px; border-top:1.5px solid rgba(30,138,134,0.35);" }
+        : { t, style: i === 0 ? 'font-size:26px; line-height:1.5; color:#1A1613; margin:0 0 24px;' : '' }),
+      hasImage: !!cur.image,
+      imgStyle: cur.image ? 'width:100%; aspect-ratio:' + (cur.imgRatio || '16/10') + '; margin-top:34px; background-image:url(\'' + cur.image + '\'); background-size:' + (cur.imgFit || 'cover') + '; background-repeat:no-repeat; background-position:' + (cur.imgPos || 'center') + '; background-color:#F3EAD0;' : '',
+      hasKicker: !!cur.kicker,
+      kicker1: cur.kicker ? cur.kicker[0] : '',
+      kicker2: cur.kicker ? cur.kicker[1] : '',
+      isDraft: !!cur.draft,
+      hasPage: cur.href && cur.href !== '#'
+    });
 
     // paginate, then group by month
     const limited = shown.slice(0, this.state.limit);
@@ -299,8 +291,9 @@ class Component extends DCLogic {
 
     return {
       filters, groups, current,
-      isThisIsUs, notThisIsUs: !isThisIsUs,
-      totalLine: all.length + ' stories and counting — the archive fills as neighbors add their own.',
+      toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+
+      totalLine: all.length + ' stories and counting — the Constellation grows as neighbors add their own.',
       filterHeading: mode === 'format' ? 'Filter by format' : 'Filter by topic',
       indexHeading: (active === 'All' ? 'All stories' : active) + ' · newest first',
       shownCount: shown.length + (q || active !== 'All' ? '' : ' total'),

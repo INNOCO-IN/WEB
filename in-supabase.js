@@ -8,6 +8,26 @@ window.IN_SUPABASE = {
   anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt1d3FhYWpxdnd5enlneGtpd2FiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ4Nzg4MzIsImV4cCI6MjEwMDQ1NDgzMn0.9TbQZtl8wcVnFWNQTM4t6WSu5SK68Hi2iSfgnRssLp8"
 };
 
+window.INUpload = async function (bucket, file) {
+  var cfg = window.IN_SUPABASE || {};
+  if (!cfg.url || !cfg.anonKey) throw new Error("Supabase is not configured yet (in-supabase.js).");
+  var base = cfg.url.replace(/\/$/, "");
+  var safe = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+  var path = Date.now() + "-" + Math.random().toString(36).slice(2, 8) + "-" + safe;
+  var res = await fetch(base + "/storage/v1/object/" + bucket + "/" + path, {
+    method: "POST",
+    headers: {
+      apikey: cfg.anonKey,
+      Authorization: "Bearer " + cfg.anonKey,
+      "Content-Type": file.type || "application/octet-stream",
+      "x-upsert": "false"
+    },
+    body: file
+  });
+  if (!res.ok) throw new Error("Upload failed: " + ((await res.text()) || res.status));
+  return base + "/storage/v1/object/public/" + bucket + "/" + path;
+};
+
 window.INSubmit = async function (table, row) {
   var cfg = window.IN_SUPABASE || {};
   if (!cfg.url || !cfg.anonKey) throw new Error("Supabase is not configured yet (in-supabase.js).");
