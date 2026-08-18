@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Story submission · IN</title>
+<link rel="icon" href="innoco-mark.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Story submission · IN">
+<meta property="og:image" content="IN_Logo.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -22,6 +27,7 @@
   .in-lbl { display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(46,59,64,0.6); margin-bottom: 8px; }
 </style>
 <script src="./image-slot.js"></script>
+<script src="./supabase-config.js"></script>
 <script src="./in-supabase.js"></script>
 <style id="in-mobile">
 @media (max-width: 1000px){
@@ -101,7 +107,7 @@
             <div style="display: flex; gap: 12px; align-items: baseline;"><span style="flex:0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; color: #B87A00; width: 18px;">1</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; color: rgba(46,59,64,0.85);"><strong style="font-weight: 600;">The moment</strong> — where were you, and when?</span></div>
             <div style="display: flex; gap: 12px; align-items: baseline;"><span style="flex:0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; color: #B87A00; width: 18px;">2</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; color: rgba(46,59,64,0.85);"><strong style="font-weight: 600;">What happened</strong> — what you did, or what you noticed?</span></div>
             <div style="display: flex; gap: 12px; align-items: baseline;"><span style="flex:0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; color: #B87A00; width: 18px;">3</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; color: rgba(46,59,64,0.85);"><strong style="font-weight: 600;">What moved</strong> — in you, or between people?</span></div>
-            <div style="display: flex; gap: 12px; align-items: baseline;"><span style="flex:0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; color: #B87A00; width: 18px;">4</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; color: rgba(46,59,64,0.85);"><strong style="font-weight: 600;">Why</strong> — why is this MEWE to you?</span></div>
+            <div style="display: flex; gap: 12px; align-items: baseline;"><span style="flex:0 0 auto; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; color: #B87A00; width: 18px;">4</span><span style="font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.45; color: rgba(46,59,64,0.85);"><strong style="font-weight: 600;">Why</strong> — why is this ME=WE to you?</span></div>
           </div>
           <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 15px; line-height: 1.4; margin: 12px 0 0; color: rgba(46,59,64,0.6);">Three honest sentences is a story. Skip any beat that doesn't fit.</p>
         </div>
@@ -180,7 +186,7 @@
   <!-- CTA (teal · constant) -->
   <section style="background: #FAB414; color: #2E3B40; margin-top: 80px;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 70px 28px; text-align: center;">
-      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.7); margin: 0 0 18px;">Are you IN?</p>
+      <p style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,59,64,0.7); margin: 0 0 18px;">Are You IN?</p>
       <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4.6vw, 58px); line-height: 1.06; margin: 0 0 28px; letter-spacing: -0.01em; text-wrap: balance;">Read what others have shared.</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px;">
         <a href="Story.EN.dc.html" style="text-decoration: none; color: #FAF4E2; background: #2E3B40; border-radius: 999px; padding: 15px 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; min-height: 24px;">Back to Story</a>
