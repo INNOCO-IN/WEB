@@ -87,7 +87,7 @@
       <div>
         <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B87A00; margin-bottom: 8px;">Step 1 — Your story <span style="color: rgba(46,59,64,0.5);">· required</span></div>
         <h2 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(38px, 5.2vw, 68px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 18px;">Tell it however it arrives.</h2>
-        <p style="font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.5; margin: 0 0 22px; max-width: 660px; color: rgba(46,59,64,0.8);">Something you lived. Something you noticed. Something someone told you. Something you can only imagine — that counts too.</p>
+        <p style="font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.5; margin: 0 0 22px; max-width: 660px; color: rgba(46,59,64,0.8);">Something you lived. Something you noticed. Something you heard. Something you can only imagine — that counts too.</p>
         <textarea class="in-field" name="story" rows="8" onInput="{{ onType }}" placeholder="Start anywhere. A rough first telling is exactly right."></textarea>
         <sc-if value="{{ typed }}" hint-placeholder-val="{{ false }}">
           <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(46,59,64,0.15);">
@@ -96,7 +96,7 @@
               <span onClick="{{ pick1 }}" style="{{ chip1 }}">lived</span>
               <span onClick="{{ pick2 }}" style="{{ chip2 }}">noticed</span>
               <span onClick="{{ pick3 }}" style="{{ chip3 }}">imagined</span>
-              <span onClick="{{ pick4 }}" style="{{ chip4 }}">were told</span>
+              <span onClick="{{ pick4 }}" style="{{ chip4 }}">heard</span>
               <span onClick="{{ pick5 }}" style="{{ chip5 }}">can't say</span>
             </div>
           </div>
@@ -214,7 +214,7 @@ class Component extends DCLogic {
   }
   renderVals() {
     const k = this.state.kind, set = (v) => () => this.setState({ kind: v });
-    const kinds = ["", "lived", "noticed", "imagined", "were told", "can't say"];
+    const kinds = ["", "lived", "noticed", "imagined", "heard", "can't say"];
     const val = (sel) => { const el = this.formRef.current && this.formRef.current.querySelector(sel); return el ? el.value.trim() : ""; };
     const out = {};
     this.FORMATS.forEach((label, i) => {
