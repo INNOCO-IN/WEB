@@ -2,7 +2,7 @@
 
 Static site, no build step. This folder **is** the Vercel project: its contents
 become the repo root of `INNOCO-IN/WEB` (branch `main`), which Vercel serves as-is.
-Copied unchanged from the project root on 2026-08-22.
+Copied unchanged from the project root on 2026-08-25.
 
 ## Deploy
 
@@ -27,7 +27,12 @@ Copied unchanged from the project root on 2026-08-22.
 - Imagery: `community-img/`, `project-img/`, `story-img/`, `story-photos/`,
   `workshop-img/`, `slot-img/`, `team/`, root logo PNGs
 
-## Fixed in this export (2026-08-22)
+## Fixed in this export (2026-08-25)
+- `Workshop-Mobius-Making.EN` and `.KO` had drifted behind root and are now current.
+- **Missing image added: `mobius-strips-cut.jpg`** — referenced by both Möbius Making
+  pages but never exported, so it was a broken image in production.
+
+## Fixed in the 2026-08-22 export
 - **Dropped photos now ship as files.** Images dragged into `image-slot`s were stored
   only in `.image-slots.state.json`, which is not deployed — so live, those slots
   showed their empty placeholder. They are baked to `slot-img/*.webp` and written
